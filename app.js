@@ -286,6 +286,18 @@ function bindGlobal(){
   $("#submitExamBtn").onclick=()=>submitExam(false);
   $("#quitBtn").onclick=()=>{ if(S.mode!=="exam"||confirm("לצאת מהמבחן? ההתקדמות לא תישמר.")) quit(); };
   $("#backHomeBtn").onclick=quit;
+  // clicking the brand/title returns to the home (questions) screen
+  function goHome(){
+    const inExamQuiz = S.mode==="exam" && !$("#screen-quiz").classList.contains("hidden");
+    if(inExamQuiz && !confirm("לצאת מהמבחן? ההתקדמות לא תישמר.")) return;
+    quit();
+  }
+  const brand=$("#brandHome");
+  if(brand){
+    brand.style.cursor="pointer";
+    brand.onclick=goHome;
+    brand.onkeydown=e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); goHome(); } };
+  }
   $("#resetProgress").onclick=()=>{ if(confirm("לאפס את כל ההתקדמות וההיסטוריה?")){ P={stats:{answered:0,correct:0},perQ:{}}; saveProgress(); renderTopStats(); renderTopicGrid(); updatePoolInfo(); } };
   document.addEventListener("keydown",e=>{
     if($("#screen-quiz").classList.contains("hidden")) return;

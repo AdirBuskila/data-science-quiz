@@ -118,6 +118,23 @@ function assert(cond, msg){ if(!cond){ console.error("ASSERT FAILED:", msg); pro
   assert(ov.sw <= ov.cw + 1, "no horizontal overflow after navigating");
   await pg.screenshot({ path: SHOT("learn-mobile-content.png") });
 
+  // brand/title click returns to the home (questions) screen
+  await pg.setViewport({ width: 1100, height: 1400, deviceScaleFactor: 1 });
+  await pg.click("#learnEntry");
+  await pg.waitForSelector("#screen-learn:not(.hidden)");
+  await pg.click("#brandHome");
+  await pg.waitForSelector("#screen-start:not(.hidden)");
+  const homeOk = await pg.$eval("#screen-start", e => !e.classList.contains("hidden"));
+  assert(homeOk, "clicking the brand returns to the home screen");
+
+  // intro chapter renders the 5-stage list as a real <ol>
+  await pg.click("#learnEntry");
+  await pg.waitForSelector("#learnToc button");
+  await pg.evaluate(() => document.querySelectorAll("#learnToc button")[0].click());
+  const introOl = await pg.$eval("#learnContent", e => e.querySelectorAll("ol > li").length);
+  assert(introOl >= 5, "intro chapter renders the stages as an ordered list (got " + introOl + " items)");
+
+  console.log("brand->home      : ok | intro <ol> items:", introOl);
   console.log("mobile chapters  : in-flow dropdown, display:none when closed, no x-overflow");
   console.log("TOC chapters     :", tocCount);
   console.log("ch10 images      :", imgStats.length, "all loaded:", imgStats.every(s => s.w > 0));

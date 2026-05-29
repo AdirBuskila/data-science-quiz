@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>משחק תרגול — מבוא למדעי הנתונים</title>
-<link rel="stylesheet" href="styles.css?v=4">
+<link rel="stylesheet" href="styles.css?v=5">
 <script>
   // Apply saved theme before first paint to avoid a flash of the wrong theme.
   (function(){ try{ var t=localStorage.getItem("dsq_theme"); if(t==="light"||t==="dark") document.documentElement.dataset.theme=t; }catch(e){} })();
@@ -12,7 +12,7 @@
 </head>
 <body>
 <header class="topbar">
-  <div class="brand">
+  <div class="brand" id="brandHome" role="button" tabindex="0" title="לדף הבית" aria-label="חזרה לדף הבית">
     <span class="logo">📊</span>
     <div>
       <h1>תרגול למדעי הנתונים</h1>
@@ -145,8 +145,8 @@
   <span class="disclaimer">תשובות המסומנות "לא רשמי" נגזרו מחומר הקורס — מומלץ לאמת מול המקור.</span>
 </footer>
 
-<script src="questions.js?v=4"></script>
-<script src="learn.js?v=4"></script>
-<script src="app.js?v=4"></script>
+<script src="questions.js?v=5"></script>
+<script src="learn.js?v=5"></script>
+<script src="app.js?v=5"></script>
 </body>
 </html>

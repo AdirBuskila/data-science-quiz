@@ -135,6 +135,23 @@ def split_sections(md_text):
     return page_title, out
 
 
+_LIST_RE = re.compile(r"^(\s*)([-*+]|\d+\.)\s+")
+
+def normalize_lists(md):
+    """Insert a blank line before a list that directly follows a text line.
+    Python-Markdown won't recognize a list unless a blank line precedes it,
+    but the source often writes `intro text:` immediately above `1. item`."""
+    out = []
+    for ln in md.split("\n"):
+        if _LIST_RE.match(ln):
+            prev = out[-1] if out else ""
+            p = prev.strip()
+            if p and not _LIST_RE.match(prev) and not p.startswith("#") and not p.startswith("|"):
+                out.append("")
+        out.append(ln)
+    return "\n".join(out)
+
+
 def optimize_image(src_path, dst_path):
     """Resize+re-encode; returns final size in KB."""
     im = Image.open(src_path)
@@ -181,12 +198,14 @@ def main():
         md_text = f.read()
 
     page_title, sections = split_sections(md_text)
+    # normalize_lists() inserts the blank line that sane_lists requires before
+    # a list that follows a text line (e.g. the intro's 5 stages).
     md = markdown.Markdown(extensions=["tables", "fenced_code", "sane_lists", "attr_list"])
 
     learn, all_imgs, big = [], [], []
     for sid, title, body in sections:
         md.reset()
-        body_html = md.convert(body)
+        body_html = md.convert(normalize_lists(body))
         fig_html, manifest = figures_html(sid)
         for name, kb, cap in manifest:
             all_imgs.append((name, kb))

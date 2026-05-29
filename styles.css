@@ -378,11 +378,18 @@ main{max-width:840px;margin:1.6rem auto;padding:0 1rem}
   .learn-backdrop{display:none !important}
 }
 @media(max-width:560px){
-  .topbar{padding:.7rem 1rem}
-  .topbar-right{flex-wrap:wrap;justify-content:flex-end;gap:.45rem}
-  .topstats{order:3;flex-basis:100%;justify-content:flex-end}
-  .stat{padding:.25rem .55rem;font-size:.72rem}
-  .stat b{font-size:.9rem}
+  /* compact, two-row header: [logo+title | 📖 🌙] then a centered stats strip */
+  .topbar{padding:.55rem .85rem;gap:.4rem;align-items:center}
+  .brand{gap:.55rem}
+  .brand .sub{display:none}
+  .logo{width:2.05rem;height:2.05rem;font-size:1.05rem;border-radius:11px}
+  h1{font-size:1.02rem}
+  .topbar-right{flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:.4rem}
+  .learn-entry{padding:.4rem .65rem;font-size:.82rem}
+  .theme-toggle{width:2.05rem;height:2.05rem;font-size:1rem}
+  .topstats{order:3;flex-basis:100%;justify-content:center;gap:.4rem;margin-top:.05rem}
+  .stat{padding:.18rem .55rem;font-size:.7rem;border-radius:10px}
+  .stat b{font-size:.84rem}
   main{margin:1rem auto}
   .card{padding:1.2rem 1.1rem}
   .modes{grid-template-columns:1fr}
