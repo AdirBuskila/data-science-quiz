@@ -21,6 +21,7 @@
   </div>
   <div class="topbar-right">
     <div class="topstats" id="topStats"></div>
+    <button id="learnEntry" class="btn ghost learn-entry" type="button">📖 מצב לימוד</button>
     <button id="themeToggle" class="theme-toggle" type="button" aria-label="החלפת מצב תצוגה (בהיר/כהה)" title="מצב בהיר/כהה"></button>
   </div>
 </header>
@@ -97,6 +98,24 @@
     </div>
   </section>
 
+  <!-- LEARN -->
+  <section id="screen-learn" class="screen hidden">
+    <div class="learn-bar">
+      <button id="learnBackBtn" class="btn ghost">⟵ חזרה לתרגול</button>
+      <div class="learn-progress" aria-hidden="true"><div id="learnProgressFill"></div></div>
+      <button id="learnTocToggle" class="btn ghost learn-toc-toggle" type="button" aria-expanded="false">☰ פרקים</button>
+    </div>
+    <div class="learn-layout">
+      <nav id="learnToc" class="learn-toc" aria-label="ניווט פרקים"></nav>
+      <article id="learnContent" class="card learn-content" tabindex="-1"></article>
+    </div>
+    <div class="learn-foot">
+      <button id="learnPrev" class="btn ghost">⟶ הקודם</button>
+      <span id="learnPos" class="learn-pos"></span>
+      <button id="learnNext" class="btn primary">הבא ⟵</button>
+    </div>
+  </section>
+
   <!-- RESULTS -->
   <section id="screen-results" class="screen hidden">
     <div class="card">
@@ -113,6 +132,11 @@
   </section>
 </main>
 
+<div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="תצוגת תמונה מוגדלת">
+  <button id="lightboxClose" class="lightbox-close" type="button" aria-label="סגירה">✕</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
 <footer class="appfoot">
   <span id="datasetInfo"></span> ·
   <button id="resetProgress" class="linkbtn">איפוס התקדמות</button>
@@ -120,6 +144,7 @@
 </footer>
 
 <script src="questions.js"></script>
+<script src="learn.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

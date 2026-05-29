@@ -319,6 +319,75 @@ function bindGlobal(){
   }
 })();
 
+/* ---------- learning section ---------- */
+(function initLearn(){
+  const data = Array.isArray(window.LEARN) ? window.LEARN : [];
+  const entry = document.getElementById("learnEntry");
+  const screen = document.getElementById("screen-learn");
+  if(!entry || !screen) return;
+  if(!data.length){ entry.style.display = "none"; return; }
+
+  const toc     = $("#learnToc");
+  const content = $("#learnContent");
+  const fill    = $("#learnProgressFill");
+  const pos     = $("#learnPos");
+  const prevB   = $("#learnPrev");
+  const nextB   = $("#learnNext");
+  const toggle  = $("#learnTocToggle");
+  const backB   = $("#learnBackBtn");
+  const lb      = $("#lightbox");
+  const lbImg   = $("#lightboxImg");
+  const lbClose = $("#lightboxClose");
+  let idx = 0, built = false;
+
+  function buildToc(){
+    toc.innerHTML = data.map((s,i)=>`<button data-i="${i}">${escapeHtml(s.title)}</button>`).join("");
+    toc.querySelectorAll("button").forEach(b=> b.onclick=()=>{ go(+b.dataset.i); closeDrawer(); });
+    built = true;
+  }
+  function go(i){
+    idx = Math.max(0, Math.min(data.length-1, i));
+    const s = data[idx];
+    content.innerHTML = `<h2 class="learn-h">${escapeHtml(s.title)}</h2>` + s.html;
+    toc.querySelectorAll("button").forEach((b,j)=> b.classList.toggle("active", j===idx));
+    const active = toc.querySelector("button.active");
+    if(active) active.scrollIntoView({block:"nearest"});
+    fill.style.width = ((idx+1)/data.length*100) + "%";
+    pos.textContent = `${idx+1} / ${data.length}`;
+    prevB.disabled = idx===0;
+    nextB.disabled = idx===data.length-1;
+    window.scrollTo({top:0, behavior:"smooth"});
+    content.focus({preventScroll:true});
+  }
+  function openLearn(){ if(!built) buildToc(); show("screen-learn"); go(idx); }
+  function closeDrawer(){ toc.classList.remove("open"); toggle.setAttribute("aria-expanded","false"); }
+
+  entry.onclick  = openLearn;
+  backB.onclick  = ()=>{ closeDrawer(); show("screen-start"); };
+  prevB.onclick  = ()=> go(idx-1);
+  nextB.onclick  = ()=> go(idx+1);
+  toggle.onclick = ()=>{ const o=toc.classList.toggle("open"); toggle.setAttribute("aria-expanded", o?"true":"false"); };
+
+  // lightbox: click a figure image to zoom
+  content.addEventListener("click", e=>{
+    const img = e.target.closest(".learn-fig img");
+    if(!img) return;
+    lbImg.src = img.src; lbImg.alt = img.alt || "";
+    lb.classList.remove("hidden");
+  });
+  function closeLb(){ lb.classList.add("hidden"); lbImg.src = ""; }
+  lb.addEventListener("click", e=>{ if(e.target===lb) closeLb(); });
+  lbClose.onclick = closeLb;
+
+  document.addEventListener("keydown", e=>{
+    if(!lb.classList.contains("hidden")){ if(e.key==="Escape") closeLb(); return; }
+    if(screen.classList.contains("hidden")) return;
+    if(e.key==="ArrowLeft") go(idx+1);
+    else if(e.key==="ArrowRight") go(idx-1);
+    else if(e.key==="Escape"){ closeDrawer(); show("screen-start"); }
+  });
+})();
+
 /* ---------- boot ---------- */
 if(!QS.length){
   document.getElementById("app").innerHTML="<div class='card'><h2>לא נטענו שאלות</h2><p>ודאו ש-<code>questions.js</code> נמצא לצד הדף.</p></div>";
