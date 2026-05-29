@@ -380,7 +380,7 @@ main{max-width:840px;margin:1.6rem auto;padding:0 1rem}
 }
 @media(max-width:560px){
   /* single compact row: [logo+title] ... [stats] [📖] [🌙] */
-  .topbar{flex-wrap:nowrap;gap:.4rem;padding:.5rem .7rem;align-items:center}
+  .topbar{flex-wrap:nowrap;gap:.4rem;padding:.85rem .7rem;align-items:center}
   .brand{gap:.4rem;min-width:0;flex:0 1 auto}
   .brand>div{min-width:0}
   .brand .sub{display:none}
