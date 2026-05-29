@@ -134,6 +134,19 @@ function assert(cond, msg){ if(!cond){ console.error("ASSERT FAILED:", msg); pro
   const introOl = await pg.$eval("#learnContent", e => e.querySelectorAll("ol > li").length);
   assert(introOl >= 5, "intro chapter renders the stages as an ordered list (got " + introOl + " items)");
 
+  // intro content must fit the viewport at a narrow width (no long-token blowout)
+  await pg.setViewport({ width: 390, height: 780, deviceScaleFactor: 2 });
+  await pg.reload({ waitUntil: "networkidle0" });
+  await pg.click("#learnEntry");
+  await pg.waitForSelector("#learnTocToggle");
+  await pg.evaluate(() => {
+    document.querySelector("#learnTocToggle").click();
+    document.querySelectorAll("#learnToc button")[0].click();
+  });
+  await new Promise(r => setTimeout(r, 200));
+  const introW = await pg.$eval("#learnContent", e => e.getBoundingClientRect().width);
+  assert(introW <= 390, "intro content fits viewport width (got " + Math.round(introW) + "px <= 390)");
+
   console.log("brand->home      : ok | intro <ol> items:", introOl);
   console.log("mobile chapters  : in-flow dropdown, display:none when closed, no x-overflow");
   console.log("TOC chapters     :", tocCount);
