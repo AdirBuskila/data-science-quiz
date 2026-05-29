@@ -1,0 +1,427 @@
+[
+  {
+    "num": 1,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "ml_python",
+    "question": "מה ההבדל בין למידה מונחית ולמידה בלתי מונחית?",
+    "options": [
+      "בלמידה מונחית יש משימה. בלמידה בלתי מונחית מה שיוצא יוצא",
+      "בלמידה מונחית יש תויות, בלמידה בלתי מונחית אין",
+      "בלמידה מונחית המתכנת בודק את התוצאות ומנחה את האלגוריתם איך להתאמן במהלך האימון. בלמידה בלתי מונחית אין.",
+      "בלמידה מונחית משתמשים באלגוריתם בקרה, בלמידה בלתי מונחית לא."
+    ],
+    "correctIndex": 1,
+    "official": true,
+    "explanation": "ההבחנה המרכזית היא קיום תוויות: בלמידה מונחית יש תוויות לאימון, בלמידה בלתי מונחית אין.",
+    "hasImage": false
+  },
+  {
+    "num": 2,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "supervised",
+    "question": "מה ההבדל בין סיווג ונסיגה (רגרסיה)?",
+    "options": [
+      "סיווג זה תהליך שבו מחליטים אילו נתונים בלתי מסווגים וניתן לאמן איתם את המודל ואילו מסווגים ולא ניתן למודל להיחשף אליהם. נסיגה זה תהליך שבו המודל חוזר לנתונים שהוא כבר נחשף אליהם.",
+      "בסיווג, התויות הינה שמית או סודרת. בנסיגה התויות היא מספר.",
+      "בסיווג, הנתונים הינם קטגוריאליים ובנסיגה הנתונים הינם מספריים",
+      "בסיווג יש תויות ובנסיגה אין."
+    ],
+    "correctIndex": 1,
+    "official": true,
+    "explanation": "ההבדל הוא בסוג התווית: בסיווג התווית שמית/סודרת ובנסיגה התווית היא ערך מספרי רציף.",
+    "hasImage": false
+  },
+  {
+    "num": 3,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "cleaning",
+    "question": "מה מהבאים נכון לגבי ההבדל בין סולם רווח וסולם מנה?",
+    "options": [
+      "בסולם רווח אנחנו מחשבים פונקציית רווח ובסולם מנה אנחנו מחשבים פונקציית הפסד (כלומר אחד חלקי הרווח)",
+      "בסולם רווח אנחנו עולים כל פעם שלב אחד בתהליך הלמידה ובסולם מנה תהליך הלמידה הוא רציף",
+      "בסולם רווח אפשר לחשב ממוצע אלגברי ובסולם מנה אפשר לחשב ממוצע הנדסי",
+      "בסולם רווח המספרים הם שלמים (כלומר יש בינהם מרווח קבוע שהוא מספר שלם) ובסולם מנה הם רציונליים (המרווחים בינהם יכולים להיות מבוטאים כמנה של שני מספרים)"
+    ],
+    "correctIndex": 2,
+    "official": true,
+    "explanation": "בסולם רווח ניתן לחשב ממוצע אלגברי (חשבוני), ובסולם מנה — בעל אפס מוחלט — אפשר גם ממוצע הנדסי.",
+    "hasImage": false
+  },
+  {
+    "num": 4,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "nlp",
+    "question": "אילו מחרוזות יחזיר הביטוי הרגולרי r'\\b[Aa]\\w+'",
+    "options": [
+      "מלים שמתחילות באות A גדולה או קטנה",
+      "מלים שמכילות את האות a",
+      "מחרוזות שמתחילות באות A ונגמרות ברווח",
+      "מחרוזות באנגלית שמתחילות בצירוף Aa כמו למשל Aardvark"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "‎\\b[Aa]\\w+ מתאים למילים שמתחילות באות A גדולה או קטנה ואחריה תווי-מילה.",
+    "hasImage": false
+  },
+  {
+    "num": 5,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "eda",
+    "question": "מהו תרשים כינור?",
+    "options": [
+      "תרשים שמשלב תרשים קופסה יחד עם ההתפלגות של נתון מסויים",
+      "תרשים שממפה גלי קול ממרחב הזמן למרחב התדר",
+      "תרשים שמראה את התדירות של הופעה של נתון מסויים",
+      "מדד שיערוך למודל סיווג שמתבסס על דציבלים"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "תרשים כינור (violin) משלב תרשים קופסה עם הצגת ההתפלגות (KDE) של הנתון.",
+    "hasImage": false
+  },
+  {
+    "num": 6,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "cleaning",
+    "question": "מהו Z-Score?",
+    "options": [
+      "ערך שמחושב מתוך התפלגות הנתונים ומייצג את הערך המקסימלי בסט נתונים.",
+      "מדד שמציין את מספר סטיות התקן שהערך נמצא מעל או מתחת לממוצע.",
+      "מדד שמייצג את הסיכוי של ערך מסוים להופיע בסט נתונים נורמלי.",
+      "פונקציה מתמטית שמחשבת את ההסתברות שהערך יהיה מעל הממוצע"
+    ],
+    "correctIndex": 1,
+    "official": true,
+    "explanation": "Z-Score מציין כמה סטיות תקן הערך נמצא מעל או מתחת לממוצע.",
+    "hasImage": false
+  },
+  {
+    "num": 7,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "eda",
+    "question": "איזה מושג מתואר בדיאגרמה הבאה?",
+    "options": [
+      "הטיית אישור",
+      "הטיית השורד",
+      "קטיף דובדבנים",
+      "הטיית הבדיעבד"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "הדיאגרמה מתארת הטיית אישור — נטייה לחפש ולפרש מידע שמאשר אמונה קיימת.",
+    "hasImage": true
+  },
+  {
+    "num": 8,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "eda",
+    "question": "חשבו את סטיית התקן הלא מוטית של הנתונים הבאים: [4,8,6,5,3]",
+    "options": [
+      "1.92",
+      "1.58",
+      "2.58",
+      "1.87"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "סטיית התקן הלא-מוטה (חלוקה ב-n-1) של הסדרה היא כ-1.92.",
+    "hasImage": false
+  },
+  {
+    "num": 9,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "eda",
+    "question": "מה ניתן לומר על המתאם בין המאפיינים X1, X2 בכל אחד מהתרשימים הבאים?",
+    "options": [
+      "בגרף הימני יש מתאם קרוב לאפס, בגרף האמצעי שלילי ובגרף השמאלי חיובי",
+      "בגרף הימני יש מתאם שלילי, בגרף האמצעי חיובי ובגרף השמאלי קרוב לאפס",
+      "בגרף הימני יש מתאם חיובי, בגרף האמצעי שלילי ובגרף השמאלי קרוב לאפס",
+      "רק בגרף השמאלי יש מתאם"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "קריאת סימן המתאם מהתרשימים: ימני קרוב לאפס, אמצעי שלילי, שמאלי חיובי.",
+    "hasImage": true
+  },
+  {
+    "num": 10,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "ml_python",
+    "question": "איזו ספרייה בפייתון משמשת לביצוע ניתוח וטיפול במידע?",
+    "options": [
+      "Pandas",
+      "Matplotlib",
+      "SciPy",
+      "Huggingface"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "Pandas היא ספריית הניתוח והטיפול בנתונים הטבלאיים בפייתון.",
+    "hasImage": false
+  },
+  {
+    "num": 11,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "eda",
+    "question": "מבין האפשרויות הבאות, מהי המטרה המרכזית של ויזואליזציה?",
+    "options": [
+      "לבצע דחיסה של הנתונים",
+      "לתקשר מידע באופן אפקטיבי",
+      "להאיץ את מהירות החישוב",
+      "לאחסן נתונים באופן יעיל"
+    ],
+    "correctIndex": 1,
+    "official": true,
+    "explanation": "המטרה המרכזית של ויזואליזציה היא לתקשר מידע באופן אפקטיבי.",
+    "hasImage": false
+  },
+  {
+    "num": 12,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "ml_python",
+    "question": "מה ההבדל בין DataFrame לבין Series?",
+    "options": [
+      "DataFrame משמש לנתונים מספריים בלבד בעוד Series יכול לשמש לכל סוג של נתונים",
+      "DataFrame הוא דו מימדי בעוד Series הוא חד מימדי",
+      "DataFrame משמש לאחסון וייצוג של נתוני עתק (big data) בעוד series משמש לנתנים רגילים",
+      "אין הבדל, אלו שני שמות לאותו מבנה נתונים"
+    ],
+    "correctIndex": 1,
+    "official": true,
+    "explanation": "DataFrame הוא מבנה דו-ממדי (טבלה) בעוד Series הוא מבנה חד-ממדי (עמודה).",
+    "hasImage": false
+  },
+  {
+    "num": 13,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "acquisition",
+    "question": "איזו ספרייה מהבאות משמשת לביצוע scraping?",
+    "options": [
+      "BeautifulSoup",
+      "flask",
+      "pandas",
+      "matplotlib"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "BeautifulSoup היא הספרייה המשמשת לחילוץ ופירוק HTML ב-scraping.",
+    "hasImage": false
+  },
+  {
+    "num": 14,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "acquisition",
+    "question": "למה משמשת פקודת find_all()?",
+    "options": [
+      "למצוא ולהחליף טקסט במסמך",
+      "להחזיר רשימה של כל התגיות שמתאימות לקריטריון נתון במסמך",
+      "למצוא את כל הקישורים החיצוניים במסמך ולהוריד אותם לקובץ",
+      "למצוא את כל סגנונות ה CSS בקובץ HTML"
+    ],
+    "correctIndex": 1,
+    "official": true,
+    "explanation": "find_all() מחזירה רשימה של כל התגיות התואמות לקריטריון הנתון במסמך.",
+    "hasImage": false
+  },
+  {
+    "num": 15,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "acquisition",
+    "question": "איזה קוד HTTP מסמן פקודת GET שהצליחה?",
+    "options": [
+      "404",
+      "500",
+      "200",
+      "302"
+    ],
+    "correctIndex": 2,
+    "official": true,
+    "explanation": "קוד HTTP 200 מסמן בקשת GET שהצליחה.",
+    "hasImage": false
+  },
+  {
+    "num": 16,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "acquisition",
+    "question": "איזו פקודה משמשת לקבלת התוכן של response שקיבלנו בפקודת get?",
+    "options": [
+      "response.content()",
+      "response.text",
+      "response.html()",
+      "response.data()"
+    ],
+    "correctIndex": 1,
+    "official": true,
+    "explanation": "response.text מחזיר את תוכן התגובה כטקסט (שימו לב: response.content בלי סוגריים, לא response.content()).",
+    "hasImage": false
+  },
+  {
+    "num": 17,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "eda",
+    "question": "איזו תת ספרייה מקובל לייבא כ plt?",
+    "options": [
+      "matplotlib.pyplot",
+      "plotly",
+      "plotlib.graph",
+      "visplot"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "מקובל לייבא את matplotlib.pyplot בכינוי plt.",
+    "hasImage": false
+  },
+  {
+    "num": 18,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "eda",
+    "question": "איך מוסיפים מקרא לגרף?",
+    "options": [
+      "plt.show_legend()",
+      "plt.legend_display()",
+      "plt.legend()",
+      "plt.add_legend()"
+    ],
+    "correctIndex": 2,
+    "official": true,
+    "explanation": "מוסיפים מקרא לגרף באמצעות plt.legend().",
+    "hasImage": false
+  },
+  {
+    "num": 19,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "cleaning",
+    "question": "השלימו את קטע הקוד הבא:\n\nimport pandas as pd\nimport numpy as np\ndf = pd.DataFrame({\n    'A': [1, 2, np.nan, 4, 5],\n    'B': [3, np.nan, np.nan, 8, 9],\n    'C': [10, 11, 12, np.nan, 14]\n })\n### YOUR CODE HERE ###",
+    "options": [
+      "df.fillna(df.mean().to_dict, inplace=True)",
+      "df.fillna(df.median(), inplace='True')",
+      "df = df.replace(np.nan, df.mean())",
+      "df.dropna(df.sum()/3, inplace = 'False')"
+    ],
+    "correctIndex": 2,
+    "official": true,
+    "explanation": "df = df.replace(np.nan, df.mean()) ממלא את ה-NaN בממוצע; בשאר התשובות יש שגיאות סינטקס.",
+    "hasImage": false
+  },
+  {
+    "num": 20,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "clustering",
+    "question": "מה מהבאים הוא מודל למידה לא מונחית?",
+    "options": [
+      "Kmeans",
+      "KNN",
+      "Linear regression",
+      "Gradient descent"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "K-means הוא אלגוריתם אשכול — למידה לא מונחית.",
+    "hasImage": false
+  },
+  {
+    "num": 21,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "supervised",
+    "question": "איזו מהספריות הבאות בפייתון משמשת לעיתים קרובות עבור למידה מונחית?",
+    "options": [
+      "NumPy",
+      "pandas",
+      "scikit-learn",
+      "matplotlib"
+    ],
+    "correctIndex": 2,
+    "official": true,
+    "explanation": "scikit-learn היא הספרייה הנפוצה ללמידה מונחית בפייתון.",
+    "hasImage": false
+  },
+  {
+    "num": 22,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "supervised",
+    "question": "איזה מאלגוריתמי הלמידה הבאים שייך ללמידה מונחית?",
+    "options": [
+      "K-Means",
+      "SVM (Support Vector Machine)",
+      "PCA (Principal Component Analysis)",
+      "DBSCAN"
+    ],
+    "correctIndex": 1,
+    "official": true,
+    "explanation": "SVM הוא אלגוריתם סיווג השייך ללמידה מונחית.",
+    "hasImage": false
+  },
+  {
+    "num": 23,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "clustering",
+    "question": "כיצד ניתן להשתמש ב-KMeans מתוך הספרייה scikit-learn?",
+    "options": [
+      "באמצעות from sklearn.cluster import KMeans",
+      "באמצעות from sklearn.tree import KMeans",
+      "באמצעות from sklearn.linear_model import KMeans",
+      "באמצעות from sklearn.decomposition import KMeans"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "KMeans מיובא מ-sklearn.cluster: from sklearn.cluster import KMeans.",
+    "hasImage": false
+  },
+  {
+    "num": 24,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "cleaning",
+    "question": "מה תחזיר הפקודה הבאה ב-DataFrame בשם df?\n\ndf.loc[df['A'].isnull(), 'B'] = df['B'].mean()",
+    "options": [
+      "היא תמלא את הערכים הריקים (NaN) בעמודה A עם הממוצע של עמודה B.",
+      "היא תמלא את הערכים הריקים (NaN) בעמודה B עם הממוצע של עמודה B, רק עבור השורות שבהן הערך ב-A הוא NaN.",
+      "היא תסיר את כל השורות שבהן הערך ב-A הוא NaN.",
+      "היא תגרום לשגיאה כיוון שלא ניתן להשתמש בפקודה loc בצורה זו."
+    ],
+    "correctIndex": 1,
+    "official": true,
+    "explanation": "הפקודה מציבה את ממוצע עמודה B בעמודה B, אך רק בשורות שבהן הערך בעמודה A הוא NaN.",
+    "hasImage": false
+  },
+  {
+    "num": 25,
+    "examCode": "25-S",
+    "year": 2025,
+    "topic": "cleaning",
+    "question": "כיצד ניתן לזהות Outliers (חריגים) בעמודה column1 ב-DataFrame באמצעות השיטה של טווח בין-רבעוני (IQR)?",
+    "options": [
+      "df[df['column1'] > df['column1'].mean() + 3 * df['column1'].std()]",
+      "q1 = df['column1'].quantile(0.25)\nq3 = df['column1'].quantile(0.75)\niqr = q3 - q1\ndf[(df['column1'] < q1 - 1.5 * iqr) | (df['column1'] > q3 + 1.5 * iqr)]",
+      "df[df['column1'] > df['column1'].median() + 1.5 * df['column1'].std()]",
+      "df[df['column1'] < df['column1'].quantile(0.05) | df['column1'] > df['column1'].quantile(0.95)]"
+    ],
+    "correctIndex": 1,
+    "official": true,
+    "explanation": "שיטת IQR מזהה חריגים מחוץ לטווח [Q1−1.5·IQR, Q3+1.5·IQR], כפי שמיושם בתשובה ב.",
+    "hasImage": false
+  }
+]

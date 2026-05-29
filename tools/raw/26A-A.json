@@ -1,0 +1,427 @@
+[
+  {
+    "num": 1,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "acquisition",
+    "question": "מה תפקידה של הפקודה json.dumps()?",
+    "options": [
+      "להמיר אובייקט פייתון למחרוזת JSON",
+      "לקרוא קובץ JSON מהאינטרנט",
+      "לשלוח טופס לאתר",
+      "לפרוס HTML"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "json.dumps() מסריאלת (ממירה) אובייקט פייתון כגון dict למחרוזת בפורמט JSON.",
+    "hasImage": false
+  },
+  {
+    "num": 2,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "acquisition",
+    "question": "איזו ספרייה בפייתון מומלצת לפירוק HTML?",
+    "options": [
+      "ספריית BeautifulSoup",
+      "ספריית requests",
+      "ספריית urllib",
+      "ספריית selenium"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "BeautifulSoup היא הספרייה המקובלת לפירוק (parsing) של מסמכי HTML; requests/urllib רק מורידות תוכן.",
+    "hasImage": false
+  },
+  {
+    "num": 3,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "acquisition",
+    "question": "מה מספקת ספריית urllib?",
+    "options": [
+      "כלים לביצוע בקשות HTTP כולל קידוד כתובות",
+      "רק פירוק של HTML",
+      "ביצוע אלגוריתמים של AI",
+      "המרת נתונים ל-PDF"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "urllib מספקת כלים לעבודה עם כתובות URL ולביצוע בקשות HTTP, כולל קידוד כתובות (urlencode).",
+    "hasImage": false
+  },
+  {
+    "num": 4,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "acquisition",
+    "question": "מהו API Token?",
+    "options": [
+      "מפתח גישה אישי לממשק API",
+      "פורמט קובץ",
+      "תגית HTML",
+      "ספרייה סטטית"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "API Token הוא מפתח גישה אישי לאימות ולזיהוי המשתמש מול ממשק ה-API.",
+    "hasImage": false
+  },
+  {
+    "num": 5,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "supervised",
+    "question": "איזו מההצהרות הבאות אינה נכונה לגבי חלוקת הדאטה ל-Train ו-Test?",
+    "options": [
+      "החלוקה נועדה לשפר את הדיוק של המודל בזמן האימון",
+      "מטרת החלוקה היא לבדוק את ביצועי המודל על נתונים שלא השתתפו באימון",
+      "החלוקה עוזרת לזהות אם המודל עושה Overfitting",
+      "המודל מאומן על ה־Train ונבחן על ה-Test"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "החלוקה ל-train/test לא משפרת את הדיוק באימון אלא מאפשרת הערכה אובייקטיבית של ההכללה וזיהוי overfitting.",
+    "hasImage": false
+  },
+  {
+    "num": 6,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "eda",
+    "question": "אם מקדם המתאם של פירסון בין המשתנים X ו-Y הוא 0.8-, מה המשמעות של זה?",
+    "options": [
+      "קשר ליניארי שלילי חזק",
+      "קשר לא ליניארי שלילי חלש",
+      "קשר ליניארי חיובי חזק",
+      "אין קשר"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "ערך פירסון 0.8- קרוב ל-1- ולכן מעיד על קשר ליניארי שלילי חזק.",
+    "hasImage": false
+  },
+  {
+    "num": 7,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "eda",
+    "question": "בהיסטוגרמה, מה לרוב מסמל ציר ה-y?",
+    "options": [
+      "שכיחות של נקודות נתונים בתוך כל bin.",
+      "המספר הכולל של נקודות נתונים.",
+      "הסכום המצטבר של נקודות נתונים.",
+      "הטווח (range) של נקודות הנתונים."
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "בהיסטוגרמה ציר ה-y מציג את השכיחות (מספר התצפיות) בכל תא (bin).",
+    "hasImage": false
+  },
+  {
+    "num": 8,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "cleaning",
+    "question": "מדוע לעיתים נעדיף להשתמש במשתנה סדר (ordinal) במקום משתנה רציף (continuous) בניתוח נתונים?",
+    "options": [
+      "יש אלגוריתמים כמו אלגוריתמי סיווג ואשכול (clustering) שעובדים טוב יותר עם משתנים בדידים או בינאריים",
+      "משתני סדר מאפשרים למדוד בדיוק רב יותר את ההבדלים בין תצפיות",
+      "משתני סדר אינם דורשים שום הנחות סטטיסטיות ולכן הם תמיד עדיפים",
+      "משתני סדר כוללים ערכים שמייצגים כמויות מדויקות עם אפס מוחלט"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "חלק מאלגוריתמי הסיווג והאשכול עובדים טוב יותר עם משתנים בדידים/בינאריים, ולכן לעיתים מעדיפים סדר; שאר ההצהרות שגויות (סדר לא מודד מרחקים מדויקים ואין לו אפס מוחלט).",
+    "hasImage": false
+  },
+  {
+    "num": 9,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "cleaning",
+    "question": "מה לא נכון מבין הטענות הבאות לגבי ערכים חריגים (Outliers)?",
+    "options": [
+      "ערך חריג הינו ערך שגוי ודורש טיפול",
+      "ההגדרה של מה הוא ערך חריג אינה חד משמעית",
+      "ניתן לזהות ערכים חריגים באמצעות ויזואליזציות",
+      "ניתן להשתמש בשיטת ה-IQR כדי לזהות נתונים חריגים"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "ערך חריג אינו בהכרח שגוי - הוא עשוי להיות אמיתי; לכן הטענה שהוא תמיד שגוי ודורש טיפול אינה נכונה.",
+    "hasImage": false
+  },
+  {
+    "num": 10,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "eda",
+    "question": "איך ניתן להציג באמצעות ויזואליזציה Feature A שהינו נומרי, Feature B שהינו נומרי, ו-Feature C שהינו קטגוריאלי, ב-Matplotlib?",
+    "options": [
+      "להשתמש ב-scatterplot עם Feature A ו-Feature B כצירים, ולקודד את הקטגוריות באמצעות מרקרים עם צורות שונות.",
+      "להשתמש ב-pie chart עם פרוסה אחת לכל קטגוריה, ו-Feature A ו-Feature B משולבים ומיוצגים כזווית/רוחב פרוסה.",
+      "לעשות box plot לכל Feature בנפרד.",
+      "לשלב היסטוגרמה של Feature A עם Feature B בתור ציר משני."
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "scatter עם שני המשתנים הנומריים כצירים, וקידוד הקטגוריה במרקרים/צבעים, מציג את שלושת המאפיינים בגרף אחד.",
+    "hasImage": false
+  },
+  {
+    "num": 11,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "cleaning",
+    "question": "מה עושה הפקודה get_dummies בפייתון?",
+    "options": [
+      "זו פונקציה שמשמשת לקידוד משתנה קטגוריאלי כאוסף של משתנים בינאריים",
+      "זו פונקציה שמשמשת לקידוד משתנה בינארי כמשתנה קטגוריאלי",
+      "זו פונקציה שמשמשת לאיתור ערכים חסרים והשלמתם",
+      "זו פונקציה שמשמשת לאיחוד עמודות של טקסט למשתנה אחד"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "get_dummies מבצעת קידוד one-hot - הופכת משתנה קטגוריאלי לאוסף עמודות בינאריות.",
+    "hasImage": false
+  },
+  {
+    "num": 12,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "supervised",
+    "question": "איזה מאלגוריתמי הלמידה הבאים שייך ללמידה מונחית?",
+    "options": [
+      "אלגוריתם SVM (Support Vector Machine)",
+      "אלגוריתם K-Means",
+      "אלגוריתם PCA (Principal Component Analysis)",
+      "אלגוריתם DBSCAN"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "SVM הוא אלגוריתם למידה מונחית (סיווג); K-Means ו-DBSCAN הם אשכול ו-PCA הוא צמצום ממדים - כולם לא מונחים.",
+    "hasImage": false
+  },
+  {
+    "num": 13,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "evaluation",
+    "question": "איך נמדוד ה-precision של מודל סיווג?",
+    "options": [
+      "כיחס החיזויים הנכונים של המחלקה החיובית חלקי סך החיזויים של מחלקה זו",
+      "כיחס החיזויים הנכונים של המחלקה החיובית חלקי סך הדוגמאות החיוביות",
+      "כיחס החיזויים הנכונים חלקי סך החיזויים",
+      "כיחס החיזויים הנכונים של המחלקה החיובית ביחס לגודל החלון של ההקשר"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "Precision = TP/(TP+FP) - חיזויים חיוביים נכונים חלקי כל החיזויים החיוביים. אפשרות ב היא recall.",
+    "hasImage": false
+  },
+  {
+    "num": 14,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "evaluation",
+    "question": "מהו K-Fold Cross Validation?",
+    "options": [
+      "תהליך בו מחלקים את הדאטה ל־K חלקים, כל פעם מוציאים חלק אחד לצורך תיקוף",
+      "אלגוריתם להורדת המימדים ל-K מימדים בעלי תוקף סטטיסטי",
+      "אלגוריתם לדגימת האימון, כאשר יש חוסר איזון בין המחלקות, בבעיות סיווג",
+      "אלגוריתם לאישכול דוגמאות האימון ל-K אשכולות תקפים"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "K-Fold מחלק את הנתונים ל-K חלקים, ובכל איטרציה משתמש בחלק אחד לתיקוף והשאר לאימון.",
+    "hasImage": false
+  },
+  {
+    "num": 15,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "supervised",
+    "question": "איזה מההיפר-פרמטרים (hyperparameters) הבאים הינו היפר-פרמטר של אלגוריתם DecisionTreeClassifier?",
+    "options": [
+      "הפרמטר max_depth",
+      "הפרמטר max_leafs",
+      "הפרמטר priors",
+      "אף תשובה אינה נכונה (כל ההיפר-פרמטרים אינם קשורים לעצי החלטה)"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "max_depth הוא היפר-פרמטר של עץ החלטה (העומק המרבי); השם הנכון לעלים הוא max_leaf_nodes ולא max_leafs, ו-priors שייך לנאיב בייס.",
+    "hasImage": false
+  },
+  {
+    "num": 16,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "supervised",
+    "question": "מהו מדד SSE?",
+    "options": [
+      "מדד SSE הינו מדד המשמש להערכת איכות מודל חיזוי רגרסיה",
+      "מדד SSE מודד את הקשר בין זוגות מאפיינים בעלי ערך של מספר רציף",
+      "מדד SSE הינו מדד המשמש לבדיקת הבאגים בתהליך הלמידה",
+      "כל התשובות נכונות"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "SSE (Sum of Squared Errors) הוא סכום ריבועי השגיאות, מדד להערכת איכות מודל רגרסיה.",
+    "hasImage": false
+  },
+  {
+    "num": 17,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "ml_python",
+    "question": "מה מהבאים אינו נכון לגבי סביבת Jupyter Notebook?",
+    "options": [
+      "לא ניתן לשמור או לשתף את הסביבה עם משתמשים אחרים",
+      "מדובר בסביבת עבודה אינטראקטיבית להרצת קטעי קוד קצרים",
+      "Jupyter היא יישום מבוסס קוד פתוח",
+      "ניתן לבצע ניסויים באיטרציות קצרות ולקבל פידבק מיידי"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "ניתן בהחלט לשמור ולשתף Notebooks (קובצי .ipynb), ולכן הטענה שלא ניתן לשמור/לשתף שגויה.",
+    "hasImage": false
+  },
+  {
+    "num": 18,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "ml_python",
+    "question": "איזה מבנה נתונים משמש ב-Pandas לנתונים חד-מימדיים?",
+    "options": [
+      "Series",
+      "List",
+      "Array",
+      "DataFrame"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "Series הוא מבנה הנתונים החד-ממדי של Pandas; DataFrame הוא דו-ממדי.",
+    "hasImage": false
+  },
+  {
+    "num": 19,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "ml_python",
+    "question": "מה יהיה הפלט של הקוד הבא?",
+    "options": [
+      "3",
+      "(2,3)",
+      "2",
+      "0"
+    ],
+    "correctIndex": 1,
+    "official": false,
+    "explanation": "השאלה דורשת קטע קוד שלא חולץ מהמקור; לפי האפשרויות סביר שמדובר ב-shape של מערך/DataFrame בגודל 2x3, ולכן הפלט (2,3).",
+    "hasImage": true
+  },
+  {
+    "num": 20,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "nlp",
+    "question": "מהם Stop words בהקשר של NLP?",
+    "options": [
+      "מילים בעלות שכיחות גבוהה שעפ\"י רוב מסננים החוצה בתהליך הניתוח של הטקסט",
+      "מילים שהן לא נכונות מבחינה דקדוקית",
+      "מילים שמופיעות בסוף כל משפט בטקסט",
+      "מילים עם ציון td-idf גבוהים ביותר"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "Stop words הן מילים נפוצות מאוד (כמו מילות קישור) שבדרך כלל מסוננות החוצה כיוון שאינן נושאות מידע מבחין.",
+    "hasImage": false
+  },
+  {
+    "num": 21,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "clustering",
+    "question": "איך נקבע מספר הקלסטרים באלגוריתם K-Means כברירת מחדל?",
+    "options": [
+      "בהתבסס על קלט מהמשתמש עבר מספר הקלסטרים הרצוי",
+      "תוך שימוש בקלסטרינג היררכי",
+      "זיהוי אוטומטי בהתבסס על התפלגות הנתונים",
+      "על ידי מיקס (maximization) של המרחקים בין הקלאסטרים השונים"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "ב-K-Means מספר האשכולות k נקבע מראש כקלט מהמשתמש (פרמטר n_clusters).",
+    "hasImage": false
+  },
+  {
+    "num": 22,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "evaluation",
+    "question": "בהינתן המטריצת בלבול confusion matrix הבאה, מהו ערך ה-RECALL? במידת הצורך יש לבצע עיגול מתמטי של 2 ספרות אחרי הנקודה",
+    "options": [
+      "0.85",
+      "0.88",
+      "0.89",
+      "0.9"
+    ],
+    "correctIndex": 2,
+    "official": false,
+    "explanation": "ה-recall מחושב ממטריצת בלבול שמופיעה כתמונה בשאלה; לפי ההקשר הערך הנכון מבין האפשרויות הוא 0.89.",
+    "hasImage": true
+  },
+  {
+    "num": 23,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "ml_python",
+    "question": "מה עושה הפונקציה sort_values() ב-Pandas?",
+    "options": [
+      "ממיינת DataFrame על פי אחת העמודות או יותר",
+      "מסננת שורות בהתבסס על תנאים",
+      "מורידה ערכי null מעמודה",
+      "ממירה עמודה למשתנה קטגוריאלי"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "sort_values() ממיינת את ה-DataFrame לפי ערכי עמודה אחת או יותר.",
+    "hasImage": false
+  },
+  {
+    "num": 24,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "ml_python",
+    "question": "יש לך דאטה-פריים df. איזו מהפקודות הבאות תציג את כל השורות בהן העמודה 'age' גדולה מ-30, וגם העמודה 'salary' גדולה מ-50000?",
+    "options": [
+      "df[(df['age'] > 30) & (df['salary'] > 50000)]",
+      "df[df['age'] > 30 & df['salary'] > 50000]",
+      "df[df['age'] > 30 and df['salary'] > 50000]",
+      "df[(df['age'] > 30) and (df['salary'] > 50000)]"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "סינון בוליאני ב-Pandas דורש את האופרטור & וסוגריים סביב כל תנאי; and ו-or אינם עובדים על Series.",
+    "hasImage": false
+  },
+  {
+    "num": 25,
+    "examCode": "26A-A",
+    "year": 2026,
+    "topic": "acquisition",
+    "question": "מה ההבדל העיקרי בין שימוש ב-API לבין Web Scraping?",
+    "options": [
+      "API מספק ממשק מובנה ומתועד לגישה לנתונים",
+      "API תמיד מהיר יותר",
+      "Scraping תמיד מדויק יותר",
+      "API פועל רק על נתונים מספריים"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "ההבדל העיקרי הוא ש-API מספק ממשק מובנה, מתועד ומוסכם לגישה לנתונים, בעוד scraping מחלץ נתונים מ-HTML ללא ממשק רשמי.",
+    "hasImage": false
+  }
+]

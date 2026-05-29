@@ -1,0 +1,4591 @@
+[
+ {
+  "examCode": "24A-A",
+  "year": 2024,
+  "topic": "acquisition",
+  "question": "נרצה ליצור dataset המכיל נתונים עבור מאפיינים של בגדים, לשם כך נרצה לבצע הרכשה של נתונים מאתר Shein. כיצד נוכל לעשות זאת?",
+  "options": [
+   "נבדוק האם לאתר יש API. אם קיים, נשתמש בו. אם אין - נבצע crawling",
+   "נוכל לבצע את ההרכשה באמצעות API ופענוח התוצאות ע\"י BeautifulSoup",
+   "נטען את הדאטה סט באמצעות הדאטה סטים המוכנים שיש כבר בפייתון",
+   "נוכל לבצע את ההרכשה באמצעות API ופענוח התוצאות ע\"י JSON"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "מעדיפים API אם קיים (הדלת הראשית); כשאין API מבצעים crawling/scraping של האתר.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד א׳",
+  "id": "24A-A-Q11",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "24A-A",
+  "year": 2024,
+  "topic": "acquisition",
+  "question": "מה השימוש המרכזי של ספריית requests בפייתון?",
+  "options": [
+   "פניות HTTP או HTTPS לשרתי רשת",
+   "אימון מודלים של למידת מכונה",
+   "מענה על שאילתות לניתוח נתוני עתק",
+   "בקשות מידע למסדי נתונים מסוג SQL"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "ספריית requests משמשת לשליחת בקשות HTTP/HTTPS לשרתי רשת (למשל GET/POST).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד א׳",
+  "id": "24A-A-Q16",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "24A-A",
+  "year": 2024,
+  "topic": "acquisition",
+  "question": "כדי לטעון קובץ CSV לתוך מסגרת נתונים (dataframe) תשתמשו בפקודה הבאה:",
+  "options": [
+   "read_csv",
+   "load_csv",
+   "import_csv",
+   "אי אפשר לטעון קבצי CSV לתוך מסגרת נתונים, רק קבצי JSON או מילונים"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "pd.read_csv טוענת קובץ CSV ל-DataFrame.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד א׳",
+  "id": "24A-A-Q19",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "24A-B",
+  "year": 2024,
+  "topic": "acquisition",
+  "question": "באיזו פונקציה ב-Beautiful Soup ניתן לאחזר את תוכן הטקסט של אלמנט HTML?",
+  "options": [
+   "get_text()",
+   "find_text()",
+   "extract_text()",
+   "parse_text()"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "get_text() מחזירה את תוכן הטקסט של אלמנט ב-BeautifulSoup. רמז: (get_text); course_summary §2-3 (Crawling).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
+  "id": "24A-B-Q7",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "24A-B",
+  "year": 2024,
+  "topic": "acquisition",
+  "question": "איזה מאפיין של אלמנט HTML מייצג את המחלקה שלו?",
+  "options": [
+   "Class",
+   "Id",
+   "Name",
+   "Tag"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "מאפיין class ב-HTML מייצג את המחלקה של האלמנט. רמז: (class); course_summary §Crawling.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
+  "id": "24A-B-Q8",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "24B-A",
+  "year": 2024,
+  "topic": "acquisition",
+  "question": "איזה מהמודולים (ספריות) הבאים נשתמש כנראה לצורך הרכשת נתונים בעזרת web-API?",
+  "options": [
+   "המודול requests",
+   "המודול BeautifulSoup",
+   "המודול Selenium",
+   "כל התשובות נכונות"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "להרכשת נתונים דרך web-API משתמשים ב-requests לשליחת בקשות HTTP; BeautifulSoup ו-Selenium משמשים ל-scraping של HTML.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
+  "id": "24B-A-Q11",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "24B-A",
+  "year": 2024,
+  "topic": "acquisition",
+  "question": "איזו מהתשובות הבאות קשורה ל-json?",
+  "options": [
+   "פורמט אפשרי לקבלת תשובה משאילתא ל-web-API",
+   "תת מקרה של קורולציה בין ערכים מספריים מסולם מנה",
+   "תת מקרה של קורולציה בין ערכים מספריים מסולם רווח",
+   "טרנספורמציה אפשרית של קוד פייתון לקוד java"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "JSON הוא פורמט נפוץ לקבלת תגובה משאילתת web-API.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
+  "id": "24B-A-Q14",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "24B-A",
+  "year": 2024,
+  "topic": "acquisition",
+  "question": "כדי לכתוב DataFrame לקובץ csv יש להשתמש בפקודה הבאה:",
+  "options": [
+   "to_csv",
+   "write_csv",
+   "dump_csv",
+   "dumps_csv"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "df.to_csv() כותב DataFrame לקובץ CSV.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
+  "id": "24B-A-Q8",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "24B-B",
+  "year": 2024,
+  "topic": "acquisition",
+  "question": "איזו פקודה תמיר json למבנה נתונים של dictionary?",
+  "options": [
+   "הפקודה loads",
+   "הפקודה load",
+   "הפקודה dumps",
+   "הפקודה dump"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "json.loads ממיר מחרוזת JSON למילון פייתון (dump/dumps עושים את ההמרה ההפוכה, load קורא מקובץ).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
+  "id": "24B-B-Q8",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "acquisition",
+  "question": "איזו ספרייה מהבאות משמשת לביצוע scraping?",
+  "options": [
+   "BeautifulSoup",
+   "flask",
+   "pandas",
+   "matplotlib"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "BeautifulSoup היא הספרייה המשמשת לחילוץ ופירוק HTML ב-scraping.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q13",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "acquisition",
+  "question": "למה משמשת פקודת find_all()?",
+  "options": [
+   "למצוא ולהחליף טקסט במסמך",
+   "להחזיר רשימה של כל התגיות שמתאימות לקריטריון נתון במסמך",
+   "למצוא את כל הקישורים החיצוניים במסמך ולהוריד אותם לקובץ",
+   "למצוא את כל סגנונות ה CSS בקובץ HTML"
+  ],
+  "correctIndex": 1,
+  "official": true,
+  "explanation": "find_all() מחזירה רשימה של כל התגיות התואמות לקריטריון הנתון במסמך.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q14",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "acquisition",
+  "question": "איזה קוד HTTP מסמן פקודת GET שהצליחה?",
+  "options": [
+   "404",
+   "500",
+   "200",
+   "302"
+  ],
+  "correctIndex": 2,
+  "official": true,
+  "explanation": "קוד HTTP 200 מסמן בקשת GET שהצליחה.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q15",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "acquisition",
+  "question": "איזו פקודה משמשת לקבלת התוכן של response שקיבלנו בפקודת get?",
+  "options": [
+   "response.content()",
+   "response.text",
+   "response.html()",
+   "response.data()"
+  ],
+  "correctIndex": 1,
+  "official": true,
+  "explanation": "response.text מחזיר את תוכן התגובה כטקסט (שימו לב: response.content בלי סוגריים, לא response.content()).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q16",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "acquisition",
+  "question": "מהו JSON?",
+  "options": [
+   "פורמט להעברת נתונים",
+   "שפת תכנות",
+   "סוג של גרף",
+   "שיטת מיון"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "JSON הוא פורמט טקסטואלי קל-משקל להעברת ואחסון נתונים, נפוץ בתגובות API.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q10",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "acquisition",
+  "question": "מה ההבדל העיקרי בין שימוש ב-API לבין Web Scraping?",
+  "options": [
+   "API מספק ממשק מובנה ומתועד לגישה לנתונים",
+   "API תמיד מהיר יותר",
+   "Scraping תמיד מדויק יותר",
+   "API פועל רק על נתונים מספריים"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "API מספק דרך מובנית ומתועדת לקבלת נתונים (לרוב JSON נקי), בעוד scraping מחלץ מתוך HTML כשאין API.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q24",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "acquisition",
+  "question": "מהו תפקידה של הספרייה BeautifulSoup?",
+  "options": [
+   "חילוץ מידע מדפי HTML",
+   "יצירת גרפים יפים",
+   "תצוגת דפי HTML בצורה יפה",
+   "אלגוריתמים ללמידה לא מונחית"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "BeautifulSoup היא ספריית parsing לחילוץ מידע מתוך מסמכי HTML/XML ב-web scraping.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q4",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "acquisition",
+  "question": "מה השימוש העיקרי של JSON במסגרת עבודתו של מדען הנתונים?",
+  "options": [
+   "פורמט לשמירת נתונים מובנים והעברתם בין מערכות",
+   "לבצע אנליזה סטטיסטית",
+   "לעשות ויזואליזציה של נתונים בצורה אינטראקטיבית",
+   "לטפל במסדי נתונים נומריים גדולים"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "JSON הוא פורמט טקסט להעברת ושמירת נתונים מובנים בין מערכות, נפוץ בתגובות API.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q3",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "acquisition",
+  "question": "מה המשמעות של סטטוס 404 ב-HTTP?",
+  "options": [
+   "המשאב (הדף) המבוקש לא נמצא",
+   "הבקשה עברה בהצלחה",
+   "השרת נתקל בטעות בטעינת הדף",
+   "הבקשה לדף עברה redirection"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "קוד 404 (Not Found) מציין שהמשאב המבוקש לא נמצא בשרת.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q4",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "acquisition",
+  "question": "כשמשתמשים ב-BeautifulSoup, איזו שורת קוד תחזיר את הטקסט של כל תגיות ה-<p> בדף?",
+  "options": [
+   "soup.find_all('p')",
+   "soup.get_all('p')",
+   "soup.select_all('paragraph')",
+   "soup.text('p')"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "find_all('p') מחזירה את כל תגיות הפסקה <p> שבדף; שאר השמות אינם פונקציות תקפות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q5",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "acquisition",
+  "question": "מה תפקידה של הפקודה json.dumps()?",
+  "options": [
+   "להמיר אובייקט פייתון למחרוזת JSON",
+   "לקרוא קובץ JSON מהאינטרנט",
+   "לשלוח טופס לאתר",
+   "לפרוס HTML"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "json.dumps() מסריאלת (ממירה) אובייקט פייתון כגון dict למחרוזת בפורמט JSON.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q1",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "acquisition",
+  "question": "איזו ספרייה בפייתון מומלצת לפירוק HTML?",
+  "options": [
+   "ספריית BeautifulSoup",
+   "ספריית requests",
+   "ספריית urllib",
+   "ספריית selenium"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "BeautifulSoup היא הספרייה המקובלת לפירוק (parsing) של מסמכי HTML; requests/urllib רק מורידות תוכן.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q2",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "acquisition",
+  "question": "מה מספקת ספריית urllib?",
+  "options": [
+   "כלים לביצוע בקשות HTTP כולל קידוד כתובות",
+   "רק פירוק של HTML",
+   "ביצוע אלגוריתמים של AI",
+   "המרת נתונים ל-PDF"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "urllib מספקת כלים לעבודה עם כתובות URL ולביצוע בקשות HTTP, כולל קידוד כתובות (urlencode).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q3",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "acquisition",
+  "question": "מהו API Token?",
+  "options": [
+   "מפתח גישה אישי לממשק API",
+   "פורמט קובץ",
+   "תגית HTML",
+   "ספרייה סטטית"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "API Token הוא מפתח גישה אישי לאימות ולזיהוי המשתמש מול ממשק ה-API.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q4",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "acquisition",
+  "question": "איזה מהטיעונים הבאים מהווה יתרון עבור עבודה עם Web API על פני Scraping?",
+  "options": [
+   "הנתונים מגיעים במבנה מוגדר מראש (כמו JSON).",
+   "שימוש ב-API הוא תמיד חינמי וללא הגבלת כמות בקשות, בניגוד ל-Scraping.",
+   "API מאפשר לגשת לנתונים של משתמשים אחרים ללא צורך בהרשאות או בסיסמאות.",
+   "דרך API ניתן להוריד את קוד המקור של השרת עצמו ולא רק את הנתונים."
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "יתרון מרכזי של API הוא שהנתונים מגיעים במבנה מובנה ומוגדר מראש (כגון JSON), בניגוד ל-scraping של HTML גולמי.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q23",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "acquisition",
+  "question": "איזו פקודת JSON אחראית על העברה של Dictionary למסמך טקסט?",
+  "options": [
+   "dump",
+   "write",
+   "put",
+   "loads"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "הפקודה json.dump כותבת מבנה כמו Dictionary לקובץ/מסמך טקסט, בעוד loads קוראת מטקסט.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q3",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "acquisition",
+  "question": "במודול requests, מהו המאפיין (property) המכיל את קוד התגובה של השרת (למשל 200 או 404)?",
+  "options": [
+   "status_code",
+   "response_code",
+   "header_status",
+   "protocol_result"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "בספריית requests המאפיין status_code מחזיק את קוד התגובה של השרת (כגון 200 או 404).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q5",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "acquisition",
+  "question": "כדי לטעון קובץ CSV לתוך דאטה פריים צריך להשתמש בפקודה הבאה:",
+  "options": [
+   "from_csv",
+   "to_csv",
+   "load_csv",
+   "read_csv"
+  ],
+  "correctIndex": 3,
+  "official": false,
+  "explanation": "הפקודה read_csv של pandas טוענת קובץ CSV לתוך DataFrame.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · הרכשה ואחסון נתונים - API",
+  "year": null,
+  "id": "P-1",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "acquisition",
+  "question": "איזה רצף תגים מתאר נכון מבנה של טבלה ב-HTML?",
+  "options": [
+   "< table >< tr >< tt >",
+   "< thead >< body >< tr >",
+   "< table >< tr >< td >",
+   "< table >< head >< tfoot >"
+  ],
+  "correctIndex": 2,
+  "official": false,
+  "explanation": "מבנה טבלה תקין הוא table המכיל שורות tr ובתוכן תאים td.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · הרכשה ואחסון נתונים - Crawling",
+  "year": null,
+  "id": "P-10",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "acquisition",
+  "question": "כדי לשמור קובץ CSV מתוך דאטה פריים צריך להשתמש בפקודה הבאה:",
+  "options": [
+   "write_csv",
+   "to_csv",
+   "save_csv",
+   "dump_csv"
+  ],
+  "correctIndex": 1,
+  "official": false,
+  "explanation": "המתודה to_csv של DataFrame שומרת את הנתונים לקובץ CSV.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · הרכשה ואחסון נתונים - API",
+  "year": null,
+  "id": "P-2",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "acquisition",
+  "question": "אם תרצו ללמוד על השימוש ב-CSV בפנדס תפנו ל:",
+  "options": [
+   "לתיעוד המקיף של פנדס",
+   "חיפוש בגוגל על pandas csv",
+   "חומרים של הקורס הזה",
+   "כל התשובות נכונות"
+  ],
+  "correctIndex": 3,
+  "official": false,
+  "explanation": "כל המקורות הללו לגיטימיים ללמידה על שימוש ב-CSV בפנדס, ולכן כל התשובות נכונות.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · הרכשה ואחסון נתונים - API",
+  "year": null,
+  "id": "P-3",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "acquisition",
+  "question": "איזה מקטע קוד ידפיס את הטקסט (המחרוזת) שבתוך תגית ה-title של מסמך HTML באמצעות BeautifulSoup?",
+  "options": [
+   "from bs4 import BeautifulSoup soup = BeautifulSoup(html_doc,'html.parser') print soup.title.name",
+   "from bs4 import BeautifulSoup soup = BeautifulSoup(html_doc,'html.parser') print soup.title.string",
+   "from bs4 import BeautifulSoup soup = BeautifulSoup(html_doc,'html.parser') print soup.title.get_text",
+   "None of the above"
+  ],
+  "correctIndex": 1,
+  "official": false,
+  "explanation": "soup.title.string מחזיר את תוכן הטקסט שבתוך תגית ה-title, בעוד .name מחזיר את שם התגית.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · תרגול ביניים",
+  "year": null,
+  "id": "P-52",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "24A-A",
+  "year": 2024,
+  "topic": "cleaning",
+  "question": "מה הדרך המועדפת מבין האפשרויות הבאות כדי למלא את הערכים החסרים בקוד הבא (במקום הפקודה הרשומה כ-XXXX)?\nimport pandas as pd\ndf = pd.DataFrame({'A': [1, 2, None, 4]})\ndf['A'].fillna(df['A'].XXXX(), inplace=True)",
+  "options": [
+   "median",
+   "max",
+   "mode",
+   "dropna"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "למילוי ערכים חסרים במשתנה מספרי מעדיפים מדד מרכוז עמיד כמו החציון (median).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד א׳",
+  "id": "24A-A-Q18",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "24A-A",
+  "year": 2024,
+  "topic": "cleaning",
+  "question": "מה מהבאים נכון לגבי ההבדל בין סולם סודר (ordinal) וסולם רווח (interval)?",
+  "options": [
+   "בסולם סודר ובסולם רווח אפשר לחשב שכיח, ובסולם רווח אפשר לחשב גם ממוצע",
+   "בסולם סודר אנחנו מודדים מעלות פרנהייט, בסולם רווח אנחנו מודדים מעלות צלזיוס",
+   "בסולם סודר אפשר לחבר ולחסר ובסולם רווח אפשר גם לכפול ולחלק",
+   "בסולם סודר המרווחים הם שלמים ובסולם רווח המרווחים יכולים להיות גם ממשיים"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "בסולם סודר ניתן לקבוע סדר ושכיח אך לא ממוצע; בסולם רווח ההפרשים בעלי משמעות ולכן ניתן לחשב גם ממוצע.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד א׳",
+  "id": "24A-A-Q3",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "24A-A",
+  "year": 2024,
+  "topic": "cleaning",
+  "question": "חשבו את ה-IQR של הנתונים הבאים: [16,19,23,36,39,81,85,90]",
+  "options": [
+   "62",
+   "37.5",
+   "49",
+   "83"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "Q1=21, Q3=83, ולכן IQR = Q3 − Q1 = 62.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד א׳",
+  "id": "24A-A-Q8",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "24A-B",
+  "year": 2024,
+  "topic": "cleaning",
+  "question": "מהי הדרך המועדפת מבין האפשרויות הבאות כדי למלא את הערכים החסרים בקוד הבא (במקום הפקודה הרשומה כ-XXXX)?",
+  "options": [
+   "mode",
+   "median",
+   "max",
+   "dropna"
+  ],
+  "correctIndex": 1,
+  "official": false,
+  "explanation": "למילוי ערכים חסרים מספריים מעדיפים חציון (median), שעמיד לחריגים. רמז: (median); course_summary §4-5 (טיפול בחסרים).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
+  "id": "24A-B-Q11",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "24A-B",
+  "year": 2024,
+  "topic": "cleaning",
+  "question": "איזה סולם מייצג בצורה הטובה ביותר את מדידת ציוני הסטודנטים בקורס (בטווח של 0-100)?",
+  "options": [
+   "סולם מנה",
+   "סולם סדר",
+   "סולם שמי",
+   "סולם הפרש"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "ציון 0-100 הוא סולם מנה (יש אפס מוחלט ויחסים בעלי משמעות). רמז: (מנה); course_summary §4-5 (סולמות מדידה).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
+  "id": "24A-B-Q13",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "24B-A",
+  "year": 2024,
+  "topic": "cleaning",
+  "question": "איזה מדד/מטריקה מהמדדים הבאים משמש להחלפת ערכים חסרים בנתונים קטגוריאליים?",
+  "options": [
+   "הערך השכיח",
+   "מדד שפיצר",
+   "הערך החציוני",
+   "מדד איכות"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "לנתונים קטגוריאליים ממלאים ערכים חסרים בערך השכיח (mode), שכן אין משמעות לממוצע/חציון.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
+  "id": "24B-A-Q10",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "24B-A",
+  "year": 2024,
+  "topic": "cleaning",
+  "question": "מהו התהליך המכונה Outlier Detection?",
+  "options": [
+   "תהליך זיהוי ערכים החריגים באופן משמעותי מיתר הערכים במאפיין (features) מסוים",
+   "תהליך זיהוי חיזויים שגויים במהלך תהליך שערוך איכות המודל (performance evaluation)",
+   "תהליך חיזוי \"שקר\" בבעיית ניתוח רגרסיה",
+   "כל התשובות שגויות"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "זיהוי ערכים חריגים הוא איתור ערכים שסוטים משמעותית משאר הערכים במאפיין נתון (למשל בשיטת IQR).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
+  "id": "24B-A-Q2",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "24B-B",
+  "year": 2024,
+  "topic": "cleaning",
+  "question": "כיצד יש לנהוג במקרה בו ישנם ערכים חסרים במאפיין מספרי?",
+  "options": [
+   "כל התשובות נכונות בתנאים מסוימים",
+   "החלפת הערך החסר בשכיח",
+   "החלפת הערך החסר בערך 0 כברירת מחדל",
+   "מחיקת המאפיין בו נמצאים הערכים החסרים"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "כל אחת מהאסטרטגיות (שכיח, 0, מחיקה, וגם ממוצע/חציון) עשויה להתאים בהתאם להקשר, ולכן 'כל התשובות נכונות בתנאים מסוימים'.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
+  "id": "24B-B-Q10",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "24B-B",
+  "year": 2024,
+  "topic": "cleaning",
+  "question": "מהו ההבדל העיקרי בין סולם סדר (ordinal) וסולם רווח (interval)?",
+  "options": [
+   "בסולם רווח המרווחים בין הערכים שווים, בסולם סדר לא בהכרח",
+   "בסולם סדר אפשר לחשב ממוצע, בסולם רווח לא",
+   "סולם סדר מתאים רק למספרים שלמים, סולם רווח למספרים ממשיים",
+   "אין הבדל משמעותי ביניהם"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "בסולם רווח המרחקים בין הערכים שווים ומשמעותיים, בעוד שבסולם סדר יש דירוג בלבד ללא הפרשים שווים.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
+  "id": "24B-B-Q19",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "cleaning",
+  "question": "השלימו את קטע הקוד הבא:\n\nimport pandas as pd\nimport numpy as np\ndf = pd.DataFrame({\n    'A': [1, 2, np.nan, 4, 5],\n    'B': [3, np.nan, np.nan, 8, 9],\n    'C': [10, 11, 12, np.nan, 14]\n })\n### YOUR CODE HERE ###",
+  "options": [
+   "df.fillna(df.mean().to_dict, inplace=True)",
+   "df.fillna(df.median(), inplace='True')",
+   "df = df.replace(np.nan, df.mean())",
+   "df.dropna(df.sum()/3, inplace = 'False')"
+  ],
+  "correctIndex": 2,
+  "official": true,
+  "explanation": "df = df.replace(np.nan, df.mean()) ממלא את ה-NaN בממוצע; בשאר התשובות יש שגיאות סינטקס.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q19",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "cleaning",
+  "question": "מה תחזיר הפקודה הבאה ב-DataFrame בשם df?\n\ndf.loc[df['A'].isnull(), 'B'] = df['B'].mean()",
+  "options": [
+   "היא תמלא את הערכים הריקים (NaN) בעמודה A עם הממוצע של עמודה B.",
+   "היא תמלא את הערכים הריקים (NaN) בעמודה B עם הממוצע של עמודה B, רק עבור השורות שבהן הערך ב-A הוא NaN.",
+   "היא תסיר את כל השורות שבהן הערך ב-A הוא NaN.",
+   "היא תגרום לשגיאה כיוון שלא ניתן להשתמש בפקודה loc בצורה זו."
+  ],
+  "correctIndex": 1,
+  "official": true,
+  "explanation": "הפקודה מציבה את ממוצע עמודה B בעמודה B, אך רק בשורות שבהן הערך בעמודה A הוא NaN.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q24",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "cleaning",
+  "question": "כיצד ניתן לזהות Outliers (חריגים) בעמודה column1 ב-DataFrame באמצעות השיטה של טווח בין-רבעוני (IQR)?",
+  "options": [
+   "df[df['column1'] > df['column1'].mean() + 3 * df['column1'].std()]",
+   "q1 = df['column1'].quantile(0.25)\nq3 = df['column1'].quantile(0.75)\niqr = q3 - q1\ndf[(df['column1'] < q1 - 1.5 * iqr) | (df['column1'] > q3 + 1.5 * iqr)]",
+   "df[df['column1'] > df['column1'].median() + 1.5 * df['column1'].std()]",
+   "df[df['column1'] < df['column1'].quantile(0.05) | df['column1'] > df['column1'].quantile(0.95)]"
+  ],
+  "correctIndex": 1,
+  "official": true,
+  "explanation": "שיטת IQR מזהה חריגים מחוץ לטווח [Q1−1.5·IQR, Q3+1.5·IQR], כפי שמיושם בתשובה ב.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q25",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "cleaning",
+  "question": "מה מהבאים נכון לגבי ההבדל בין סולם רווח וסולם מנה?",
+  "options": [
+   "בסולם רווח אנחנו מחשבים פונקציית רווח ובסולם מנה אנחנו מחשבים פונקציית הפסד (כלומר אחד חלקי הרווח)",
+   "בסולם רווח אנחנו עולים כל פעם שלב אחד בתהליך הלמידה ובסולם מנה תהליך הלמידה הוא רציף",
+   "בסולם רווח אפשר לחשב ממוצע אלגברי ובסולם מנה אפשר לחשב ממוצע הנדסי",
+   "בסולם רווח המספרים הם שלמים (כלומר יש בינהם מרווח קבוע שהוא מספר שלם) ובסולם מנה הם רציונליים (המרווחים בינהם יכולים להיות מבוטאים כמנה של שני מספרים)"
+  ],
+  "correctIndex": 2,
+  "official": true,
+  "explanation": "בסולם רווח ניתן לחשב ממוצע אלגברי (חשבוני), ובסולם מנה — בעל אפס מוחלט — אפשר גם ממוצע הנדסי.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q3",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "cleaning",
+  "question": "מהו Z-Score?",
+  "options": [
+   "ערך שמחושב מתוך התפלגות הנתונים ומייצג את הערך המקסימלי בסט נתונים.",
+   "מדד שמציין את מספר סטיות התקן שהערך נמצא מעל או מתחת לממוצע.",
+   "מדד שמייצג את הסיכוי של ערך מסוים להופיע בסט נתונים נורמלי.",
+   "פונקציה מתמטית שמחשבת את ההסתברות שהערך יהיה מעל הממוצע"
+  ],
+  "correctIndex": 1,
+  "official": true,
+  "explanation": "Z-Score מציין כמה סטיות תקן הערך נמצא מעל או מתחת לממוצע.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q6",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "cleaning",
+  "question": "נתונה סדרת המספרים הבאה: [8, 2, 4, 4, 6, 12, 17, 6, 6]. מהו ה-IQR של הסדרה?",
+  "options": [
+   "4",
+   "10",
+   "6",
+   "8"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "לפי שיטת np.percentile (אינטרפולציה לינארית): Q1=4, Q3=8, ולכן IQR = 8−4 = 4. (השאלה סומנה כפגומה במבחן).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q2",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "cleaning",
+  "question": "מה המטרה של הפונקציה fillna ב-Pandas?",
+  "options": [
+   "להחליף ערכים חסרים בדאטה",
+   "למחוק את כל הנתונים החסרים מהדאטה",
+   "לזהות שורות כפולות (duplicate) בדאטה",
+   "לקבץ דאטה בהתבסס על נתונים חסרים מסוג null"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "fillna ממלאת/מחליפה ערכים חסרים (NaN) בערך נתון כגון ממוצע, חציון או שכיח.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q6",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "cleaning",
+  "question": "איזו פקודה מוחקת שורות עם ערכים חסרים בפנדס?",
+  "options": [
+   "dropna()",
+   "deletena()",
+   "drop_values()",
+   "cleanna()"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "dropna() היא פקודת Pandas למחיקת שורות (או עמודות) עם ערכים חסרים.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q10",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "cleaning",
+  "question": "למה מתייחס המונח \"ערך חריג\" או outlier במדע הנתונים?",
+  "options": [
+   "נקודה שרחוקה מהממוצע",
+   "ערך חסר",
+   "שורה כפולה",
+   "נקודה שמתלכדת עם סטיית התקן"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "ערך חריג הוא תצפית שרחוקה משמעותית משאר הנתונים (מהממוצע/הגוש המרכזי).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q2",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "cleaning",
+  "question": "מה המשמעות של ה-Interquartile Range (IQR)?",
+  "options": [
+   "טווח הערכים בין הרבעון הראשון והשלישי (first and third quartiles)",
+   "טווח הערכים בין המקסימום למינימום",
+   "הממוצע של כל נקודות הנתונים",
+   "טווח השונות הפנימית של הנתונים"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "IQR = Q3 − Q1, הטווח שבין הרבעון הראשון לשלישי.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q6",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "cleaning",
+  "question": "איזה מהבאים הוא דוגמא קלאסית למשתנה בסולם רווח (Interval)?",
+  "options": [
+   "טמפרטורה במעלות צלזיוס",
+   "גובה בסנטימטרים",
+   "דירוג סרט באמצעות כוכבים",
+   "קבוצת דם"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "טמפרטורה בצלזיוס היא סולם רווח: מרווחים שווים אך ללא אפס מוחלט. גובה בס\"מ הוא סולם מנה.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q7",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "cleaning",
+  "question": "מה עושה הפקודה get_dummies בפייתון?",
+  "options": [
+   "זו פונקציה שמשמשת לקידוד משתנה קטגוריאלי כאוסף של משתנים בינאריים",
+   "זו פונקציה שמשמשת לקידוד משתנה בינארי כמשתנה קטגוריאלי",
+   "זו פונקציה שמשמשת לאיתור ערכים חסרים והשלמתם",
+   "זו פונקציה שמשמשת לאיחוד עמודות של טקסט למשתנה אחד"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "get_dummies מבצעת קידוד one-hot - הופכת משתנה קטגוריאלי לאוסף עמודות בינאריות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q11",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "cleaning",
+  "question": "מדוע לעיתים נעדיף להשתמש במשתנה סדר (ordinal) במקום משתנה רציף (continuous) בניתוח נתונים?",
+  "options": [
+   "יש אלגוריתמים כמו אלגוריתמי סיווג ואשכול (clustering) שעובדים טוב יותר עם משתנים בדידים או בינאריים",
+   "משתני סדר מאפשרים למדוד בדיוק רב יותר את ההבדלים בין תצפיות",
+   "משתני סדר אינם דורשים שום הנחות סטטיסטיות ולכן הם תמיד עדיפים",
+   "משתני סדר כוללים ערכים שמייצגים כמויות מדויקות עם אפס מוחלט"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "חלק מאלגוריתמי הסיווג והאשכול עובדים טוב יותר עם משתנים בדידים/בינאריים, ולכן לעיתים מעדיפים סדר; שאר ההצהרות שגויות (סדר לא מודד מרחקים מדויקים ואין לו אפס מוחלט).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q8",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "cleaning",
+  "question": "מה לא נכון מבין הטענות הבאות לגבי ערכים חריגים (Outliers)?",
+  "options": [
+   "ערך חריג הינו ערך שגוי ודורש טיפול",
+   "ההגדרה של מה הוא ערך חריג אינה חד משמעית",
+   "ניתן לזהות ערכים חריגים באמצעות ויזואליזציות",
+   "ניתן להשתמש בשיטת ה-IQR כדי לזהות נתונים חריגים"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "ערך חריג אינו בהכרח שגוי - הוא עשוי להיות אמיתי; לכן הטענה שהוא תמיד שגוי ודורש טיפול אינה נכונה.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q9",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "cleaning",
+  "question": "מהו חיסרון אפשרי לתהליך הקיבוץ לסלים (Binning) שבוצע בדוגמא בשיעור על גילאים?",
+  "options": [
+   "התהליך יכול לגרום לאיבוד נתונים או רזולוציה, שכן האלגוריתם לא יוכל להבדיל יותר בין שני מופעים שנפלו לאותו הסל (למשל, בן 12 ובן 19).",
+   "תהליך ה-Binning הופך את כל הנתונים למחרוזות (Strings), מה שמונע ביצוע חישובים מתמטיים.",
+   "האלגוריתם עלול להיכנס ללולאה אינסופית אם יש סל שנשאר ריק לחלוטין (כמו הסל של גילאי 80-120, אם אין אנשים מאוד מבוגרים בנתונים).",
+   "התהליך מחייב ייצור של אלפי משתני דמה (Dummy Variables) עבור כל גיל בנפרד, מה שמכביד על זיכרון המחשב."
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "קיבוץ לסלים מאחד ערכים שונים לאותו סל ולכן גורם לאיבוד רזולוציה/מידע, ולא ניתן עוד להבחין בין ערכים שנפלו לאותו טווח.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q19",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "cleaning",
+  "question": "עמודת מחלקת הנוסעים (Pclass) בטיטניק מכילה ערכים מספריים (1, 2 ו-3) המציינים את המחלקה (ראשונה, שניה, ושלישית). מדוע התעקש המרצה להמיר עמודה זו למשתני דמה (Dummy Variables) לפני אימון המודל, למרות שהיא כבר מכילה מספרים?",
+  "options": [
+   "מכיוון שהמספרים הללו משמשים רק כסמל קטגוריאלי, ואנחנו לא רוצים שהמודל יסיק בטעות שמחלקה 3 \"גדולה\" פי שלוש ממחלקה 1 מבחינה מתמטית.",
+   "מכיוון שהאלגוריתם הספציפי הזה לא מסוגל לקרוא מספר מספרים שלמים (Integers), אלא רק משתני דמה בינאריים.",
+   "מכיוון שהפיצ'ר Pclass הכיל גם את האותיות Q, C ו-S יחד עם המספרים.",
+   "מכיוון שפקודת get_dummies מטפלת גם בערכים חסרים ומייצרת יחס סדר בפיצ'ר."
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "הערכים הם קטגוריאליים בלבד, והמרה למשתני דמה מונעת מהמודל לפרש לא נכון יחס מספרי/סדר בין המחלקות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q20",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "cleaning",
+  "question": "איזה מהמשפטים הבאים אינו נכון?",
+  "options": [
+   "בשיטת ה-IQR, 1.5IQR יתן לנו פחות חריגים מ-2IQR",
+   "בחינת ההתפלגות של משתנה יכולה לאפשר לנו לאתר ערכים חריגים.",
+   "אחת השיטות המרכזיות לאיתור ערכים חריגים מתבססת על מרחקי ערכי המשתנה מהממוצע שלו.",
+   "בוקס-פלוט (Boxplot) היא שיטה המציגה בצורה גרפית את שיטת ה-IQR."
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "המשפט אינו נכון: סף 1.5IQR צר יותר מ-2IQR ולכן מזהה יותר חריגים, לא פחות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q21",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "cleaning",
+  "question": "נתון Data Frame בשם df, המכיל עמודה בשם Embarked (נמל עלייה) שבה 3 ערכים קטגוריאליים אפשריים: 'C', 'S' ו-'Q'. מה תהיה התוצאה של הרצת הפקודה הבאה בפייתון? df_dum = pd.get_dummies(df, columns=['Embarked'])",
+  "options": [
+   "הפקודה תייצר Data Frame חדש ובו 3 עמודות חדשות (עבור כל אחד מהנמלים), שיכילו אך ורק את הערכים 0 ו-1, במקום העמודה המקורית.",
+   "הפקודה תחליף את העמודה Embarked בעמודה אחת חדשה, שבה הערכים 'C', 'S' ו-'Q' יומרו למספרים 0, 1 ו-2 בהתאמה.",
+   "הפקודה תסנן מה-Data Frame את כל השורות שבהן חסר ערך (Null) בעמודת Embarked.",
+   "הפקודה תזרוק שגיאה, מכיוון שהיא נועדה לעבוד רק על עמודות המכילות ערכים מספריים ולא על מחרוזות טקסט."
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "get_dummies מבצעת one-hot encoding ויוצרת עמודה בינארית (0/1) לכל קטגוריה, כלומר 3 עמודות חדשות במקום העמודה המקורית.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q24",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "cleaning",
+  "question": "אחר קריאה לפונקציה duplicated עבור דטה בן 4 שורות התקבל הפלט הבא. מה משמעות הערך הרביעי (True) בפלט?",
+  "options": [
+   "השורה הרביעית בנתונים היא כפילות של אחת מהשורות הקודמות – כלומר זהה לאחת מהן",
+   "השורה הרביעית היא ייחודית בנתונים, ואין לה כפילויות",
+   "השורה הרביעית בנתונים זהה לשורה שקדמה לה, כלומר לשורה השלישית",
+   "השורה הרביעית בנתונים מכילה לפחות באחת מהעמודות שלה ערך שווה לערך שמופיע באותה עמודה באחת מהשורות הקודמות."
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "הפונקציה duplicated מחזירה True כאשר השורה כולה זהה לאחת מהשורות הקודמות, כלומר היא כפילות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q7",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "cleaning",
+  "question": "המשתנה mnt הוא משתנה",
+  "options": [
+   "בדיד ורווח",
+   "בדיד וסדר",
+   "רציף ורווח",
+   "רציף ומנה"
+  ],
+  "correctIndex": 1,
+  "official": false,
+  "explanation": "mnt (חודש) מקבל ערכים שלמים בודדים שיש ביניהם סדר, ולכן הוא משתנה בדיד בסולם סדר.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · טיפול בנתונים א'",
+  "year": null,
+  "id": "P-11",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "cleaning",
+  "question": "מהו הסולם המתאים ביותר למשתנה \"מספר יחידות בגרות במתמטיקה\"?",
+  "options": [
+   "שמי",
+   "סדר",
+   "מנה"
+  ],
+  "correctIndex": 1,
+  "official": false,
+  "explanation": "מספר יחידות הבגרות (3/4/5) הוא קטגוריות מדורגות ולכן הסולם המתאים הוא סדר (אורדינלי).",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · טיפול בנתונים א'",
+  "year": null,
+  "id": "P-14",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "cleaning",
+  "question": "מהו הסולם המתאים ביותר למשתנה \"ידע קודם בסטטיסטיקה\"?",
+  "options": [
+   "שמי",
+   "סדר",
+   "מנה"
+  ],
+  "correctIndex": 1,
+  "official": false,
+  "explanation": "רמת ידע קודם ניתנת לדירוג (נמוך/בינוני/גבוה) ולכן הסולם המתאים הוא סדר.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · טיפול בנתונים א'",
+  "year": null,
+  "id": "P-15",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "cleaning",
+  "question": "ההבדל בין שני המשפטים הבאים - \"נתוני גיל חסרים באופן אקראי\" לבין \"נתוני גיל חסרים עבור אנשים שנולדו לפני 1980\" – ממחיש את ההבדל בין שני הסוגים הבאים של פיזור נתונים חסרים:",
+  "options": [
+   "Missing Completely at Random  (MCAR) ו- Missing Not at Random (MNAR)",
+   "Missing at Random (MAR)  ו- Missing Not at Random (MNAR)",
+   "Missing Completely at Random  (MCAR) ו- Missing at Random (MAR)"
+  ],
+  "correctIndex": 2,
+  "official": false,
+  "explanation": "חוסר אקראי לחלוטין הוא MCAR, וחוסר התלוי במשתנה אחר (שנת לידה) הוא MAR.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · טיפול בנתונים ב'",
+  "year": null,
+  "id": "P-19",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "cleaning",
+  "question": "בנתונים שלנו יש משתנה נומרי עם ערכים חסרים שאנו רוצים להשלים. איזה מהמשפטים הבאים אינו נכון?",
+  "options": [
+   "אם התפלגות המשתנה מאופיינת בהרבה ערכים חריגים, כדאי להשתמש בממוצע להשלמת הערכים החסרים.",
+   "אם התפלגות המשתנה מאופיינת בהרבה ערכים חריגים, כדאי להשתמש בחציון להשלמת הערכים החסרים.",
+   "הערך השכיח (mode) אינו מתאים להשלמת הערכים החסרים של משתנה זה – כי המשתנה אינו קטגורי.",
+   "אם הערכים של המשתנה אינם מהווים סדרה עיתית (לאורך ציר זמן), השלמת הערכים החסרים באמצעות ערכים סמוכים בטבלה אינה הולמת."
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "כאשר יש הרבה ערכים חריגים עדיף להשתמש בחציון ולא בממוצע, ולכן המשפט על שימוש בממוצע אינו נכון.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · טיפול בנתונים ב'",
+  "year": null,
+  "id": "P-20",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "cleaning",
+  "question": "ישנן מספר מתודות שיכולות לאפשר לנו לבחון את היקף הנתונים החסרים של משתנה. איזה מהפקודות הבאות אינה מאפשרת זאת?",
+  "options": [
+   "describe",
+   "head",
+   "info",
+   "isnull"
+  ],
+  "correctIndex": 1,
+  "official": false,
+  "explanation": "head מציגה רק את השורות הראשונות ואינה מאפשרת לאמוד את היקף הערכים החסרים.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · טיפול בנתונים ב'",
+  "year": null,
+  "id": "P-21",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "cleaning",
+  "question": "מה הקשר בין unique (מספר הערכים הייחודיים שיש למשתנה קטגורי כלשהו) לבין מספר הדופליקציות (על בסיס הפלט של הפונקציה duplicated) עבור משתנה שאין בו ערכים חסרים? בחר את המשפט המדויק ביותר.",
+  "options": [
+   "מספר הדופליקציות כפול unique שווה למספר הערכים הכולל של המשתנה.",
+   "החיבור של שני הערכים הללו נותן את מספר הערכים הכולל של המשתנה.",
+   "אין קשר",
+   "יש יחס הפוך בין unique לבין מספר הדופליקציות של המשתנה."
+  ],
+  "correctIndex": 1,
+  "official": false,
+  "explanation": "מספר הערכים הייחודיים ועוד מספר הדופליקציות יחד שווה לכלל מספר השורות (הערכים) של המשתנה.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · טיפול בנתונים ב'",
+  "year": null,
+  "id": "P-22",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "cleaning",
+  "question": "איזה מההצגות הגרפיות הבאות אינה מתאימה לאיתור ערכים חריגים?",
+  "options": [
+   "Boxplot",
+   "היסטוגרמה",
+   "Scatter plot",
+   "גרף עוגה"
+  ],
+  "correctIndex": 3,
+  "official": false,
+  "explanation": "גרף עוגה מציג שכיחויות יחסיות של קטגוריות ואינו מאפשר איתור ערכים חריגים.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · טיפול בנתונים ב'",
+  "year": null,
+  "id": "P-24",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "cleaning",
+  "question": "איזה מהמשפטים הבאים אינו נכון?",
+  "options": [
+   "בחינת ההתפלגות של משתנה יכולה לאפשר לנו לאתר ערכים חריגים.",
+   "קריטריון ה- 1.5IQR ייתן לנו פחות חריגים מקריטריון ה- 2IQR.",
+   "אחת השיטות המרכזיות לאיתור ערכים חריגים היא מתבססת על מרחקי ערכי המשתנה מהממוצע שלו.",
+   "Boxplot היא שיטה שמציגה בצורה גרפית את שיטת ה- IQR."
+  ],
+  "correctIndex": 1,
+  "official": false,
+  "explanation": "קריטריון 1.5IQR תוחם טווח צר יותר ולכן מסמן יותר חריגים מאשר 2IQR, ולכן המשפט אינו נכון.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · טיפול בנתונים ב'",
+  "year": null,
+  "id": "P-25",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "cleaning",
+  "question": "מה מהמשפטים הבאים נכון?",
+  "options": [
+   "שיטות מרכזיות לאיתור ערכים חריגים אינן מבוססות על מרחקים מהחציון אלא על מרחקים מהממוצע.",
+   "ערכים חריגים אינם בהכרח ערכים שגויים.",
+   "כאשר מאתרים ערכים חריגים באמצעות היסטוגרמה, הערכים החריגים יכולים להימצא רק ב\"זנב\" הימני של ההיסטוגרמה.",
+   "ההגדרה של מיהו ערך חריג הינה חד משמעית ואובייקטיבית."
+  ],
+  "correctIndex": 1,
+  "official": false,
+  "explanation": "ערך חריג אינו בהכרח שגוי – ייתכן שהוא ערך אמיתי וקיצוני, ולכן זהו המשפט הנכון.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · טיפול בנתונים ב'",
+  "year": null,
+  "id": "P-26",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "cleaning",
+  "question": "מה מהבאים נכון לגבי ערכים חסרים:",
+  "options": [
+   "ערכים חסרים תמיד מחייבים טיפול לפני ביצוע ניתוח נתונים מתקדם",
+   "הדרך המועדפת למילוי ערכים חסרים היא באמצעות ממוצע",
+   "לא תמיד צריך לטפל בערכים חסרים",
+   "אם מדובר בסדרה עיתית, נעדיף שימוש בחציון ע\"פ שימוש בממוצע"
+  ],
+  "correctIndex": 2,
+  "official": false,
+  "explanation": "אין כלל גורף לטיפול בערכים חסרים, ולעיתים ניתן להשאירם ללא טיפול בהתאם להקשר ולשיטת הניתוח.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · תרגול ביניים",
+  "year": null,
+  "id": "P-36",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "cleaning",
+  "question": "לאיזו מהאפשרויות הבאות יכול ה- IQR להיות קשור:",
+  "options": [
+   "בדיקה האם ערך מסוים מהווה outlier ביחס לערכי העמודה",
+   "שיטת ויזואליזציה דו מימדית של עמודות dataframe מסוים",
+   "שיטת חישוב הערך ההופכי של קורלציה (inverse QR)",
+   "אף תשובה אינה נכונה"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "ה-IQR (טווח בין-רבעוני) משמש לזיהוי ערכים חריגים על בסיס מרחקם מהרבעונים.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · תרגול ביניים",
+  "year": null,
+  "id": "P-41",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "cleaning",
+  "question": "בפונקציה boxplot של החבילה seaborn מה מסמנים השפמים:",
+  "options": [
+   "הם מייצרים קו גבול, וערכים שמעבר לשפמים יתפסו כ- outliers",
+   "הם תוחמים את קצה גבול ההתפלגות באמצעות הערכים של min ו- max",
+   "הם מראים את החציון והממוצע",
+   "הם מהווים את הדפנות הצדדיות של הבוקסה (המרובע) שיש בפלוט הזה"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "השפמים (whiskers) מסמנים את גבול הטווח התקין, וערכים מעבר להם נחשבים חריגים (outliers).",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · תרגול ביניים",
+  "year": null,
+  "id": "P-42",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "cleaning",
+  "question": "עבור דטה פריים בשם df, מה מתקיים לגבי הפקודה df.duplicated():",
+  "options": [
+   "נקבל כפלט את סכום הדופליקציות המלאות הקייימות ה- df",
+   "נקבל וקטור של ערכים, שאורכו כמספר השורות ב- df",
+   "נקבל וקטור של ערכים, שאורכו כמספר העמודות ב- df",
+   "נקבל True אם יש דופליקציה כלשהי ב- df"
+  ],
+  "correctIndex": 1,
+  "official": false,
+  "explanation": "df.duplicated() מחזירה סדרה בוליאנית באורך מספר השורות, עם True לכל שורה שהיא כפילות של שורה קודמת.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · תרגול ביניים",
+  "year": null,
+  "id": "P-43",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "cleaning",
+  "question": "נניח שאנחנו רוצים לבדוק כמה ערכים חסרים בעמודות של df (אובייקט מסוג dataframe), איזו מהפקודות או התכונות הבאות יכולה לסייע לנו?",
+  "options": [
+   "df.hist()",
+   "df.shape",
+   "df.info()",
+   "df.missing_vals"
+  ],
+  "correctIndex": 2,
+  "official": false,
+  "explanation": "df.info() מציגה את מספר הערכים הלא-חסרים (non-null) בכל עמודה, ומאפשרת להסיק כמה ערכים חסרים.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · תרגול ביניים",
+  "year": null,
+  "id": "P-45",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "cleaning",
+  "question": "עבור dataframe מסויים (המסומן על ידי df), מה המשמעות של הפרמטר keep='last' בפקודה df.drop_duplicates",
+  "options": [
+   "הורד את כל העמודות הכפולות מלבד האחרונה ב- df",
+   "השאר את כל השורות הכפולות מלבד האחרונה ב-df",
+   "הורד את כל השורות הכפולות מלבד האחרונה ב- df",
+   "השאר את כל העמודות הכפולות מלבד האחרונה ב- df"
+  ],
+  "correctIndex": 2,
+  "official": false,
+  "explanation": "keep='last' שומר את המופע האחרון מבין השורות הכפולות ומוריד את כל יתר הכפילויות.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · תרגול ביניים",
+  "year": null,
+  "id": "P-46",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "source": "practice",
+  "topic": "cleaning",
+  "question": "איזו מהפקודות הבאות מיועדת לסיוע בטיפול (לא בגילוי) של ערכים חסרים ב- dataframe מסויים (המסומן ע\"י df):",
+  "options": [
+   "df.dropna()",
+   "תשובות א, ג נכונות",
+   "df.drop_duplicates()",
+   "אף תשובה איננה נכונה"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "df.dropna() מסירה שורות/עמודות עם ערכים חסרים ולכן מטפלת בערכים חסרים, בעוד drop_duplicates מטפלת בכפילויות.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · תרגול ביניים",
+  "year": null,
+  "id": "P-50",
+  "topicLabel": "ניקוי נתונים"
+ },
+ {
+  "examCode": "24B-A",
+  "year": 2024,
+  "topic": "clustering",
+  "question": "מהי המטרה העיקרית של אלגוריתמי אשכול (clustering)?",
+  "options": [
+   "לזהות דפוסים וקשרים בנתונים",
+   "להפחית ממדיות של נתונים",
+   "לחזות אירועים עתידיים",
+   "לתרגם נתונים גדולים"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "אשכול מקבץ נקודות דומות יחד ובכך מזהה דפוסים וקבוצות בנתונים; הפחתת ממדיות היא PCA וחיזוי הוא למידה מונחית.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
+  "id": "24B-A-Q12",
+  "topicLabel": "אשכול"
+ },
+ {
+  "examCode": "24B-B",
+  "year": 2024,
+  "topic": "clustering",
+  "question": "איזה מהאלגוריתמים הבאים הינו אלגוריתם למידה לא מונחית (unsupervised learning)?",
+  "options": [
+   "כל התשובות נכונות",
+   "אלגוריתם k-מרכזים (K-Means)",
+   "אלגוריתם ניתוח אשכולות היררכי (agglomerative clustering)",
+   "אלגוריתם ניתוח רכיבים ראשיים (PCA)"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "K-Means, אשכול היררכי ו-PCA כולם אלגוריתמים לא מונחים, ולכן 'כל התשובות נכונות'.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
+  "id": "24B-B-Q5",
+  "topicLabel": "אשכול"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "clustering",
+  "question": "מה מהבאים הוא מודל למידה לא מונחית?",
+  "options": [
+   "Kmeans",
+   "KNN",
+   "Linear regression",
+   "Gradient descent"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "K-means הוא אלגוריתם אשכול — למידה לא מונחית.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q20",
+  "topicLabel": "אשכול"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "clustering",
+  "question": "כיצד ניתן להשתמש ב-KMeans מתוך הספרייה scikit-learn?",
+  "options": [
+   "באמצעות from sklearn.cluster import KMeans",
+   "באמצעות from sklearn.tree import KMeans",
+   "באמצעות from sklearn.linear_model import KMeans",
+   "באמצעות from sklearn.decomposition import KMeans"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "KMeans מיובא מ-sklearn.cluster: from sklearn.cluster import KMeans.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q23",
+  "topicLabel": "אשכול"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "clustering",
+  "question": "מה ההבדל בין שיטות של קלסטרינג היררכי לעומת קלסטרינג לא היררכי?",
+  "options": [
+   "בקלסטרינג היררכי קודם נבנה מבנה דמוי עץ, בעוד שבקלסטרינג לא היררכי משייכים באופן ישיר נקודות (רשומות) לקלסטרים.",
+   "בקלסטרינג היררכי יש הנחה מוקדמת לגבי מספר הקלסטרים שנקבע מראש, בעוד שבקלסטרינג לא היררכי אין הנחה מוקדמת כזו.",
+   "בקלסטרינג לא היררכי ניתן להשתמש רק על datasets קטנים.",
+   "בקלסטרינג היררכי צריך נתונים עם תוויות (labeled), בניגוד לקלסטרינג לא היררכי."
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "קלסטרינג היררכי בונה דנדרוגרם (מבנה עץ) של איחודים, בעוד שיטות לא-היררכיות כמו K-Means משייכות נקודות ישירות לאשכולות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q16",
+  "topicLabel": "אשכול"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "clustering",
+  "question": "התבקשנו לצמצם את מספר האשכולות במודלים שלנו. להלן 3 טענות. 1. במודל k-means נצמצם את k. 2. במודל dbscan נגדיל את אפסילון ונצמצם את min_samples. 3. במודל אשכולות היררכיים נגדיל את מספר רמות ההיררכיה. מבין האפשריות שלהלן, מה האפשרות הנכונה?",
+  "options": [
+   "טענות 1 ו-2 נכונות",
+   "כל הטענות נכונות",
+   "טענות 1 ו-3 נכונות",
+   "טענה 1 בלבד היא נכונה"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "צמצום k ב-k-means מקטין אשכולות; ב-DBSCAN הגדלת eps והקטנת min_samples מאחדת נקודות לפחות אשכולות; אך הגדלת רמות ההיררכיה דווקא מגדילה את מספר האשכולות, ולכן רק 1 ו-2 נכונות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q19",
+  "topicLabel": "אשכול"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "clustering",
+  "question": "איך נקבע מספר הקלסטרים באלגוריתם K-Means (כברירת מחדל (default))?",
+  "options": [
+   "בהתבסס על קלט מהמשתמש עבר מספר הקלסטרים הרצוי",
+   "תוך שימוש בקלסטרינג היררכי",
+   "זיהוי אוטומטי בהתבסס על התפלגות הנתונים",
+   "על ידי מיקסום (maximization) של המרחקים בין הקלאסטרים השונים"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "K-Means דורש שהמשתמש יקבע מראש את מספר האשכולות k (פרמטר n_clusters).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q21",
+  "topicLabel": "אשכול"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "clustering",
+  "question": "איך נקבע מספר הקלסטרים באלגוריתם K-Means כברירת מחדל?",
+  "options": [
+   "בהתבסס על קלט מהמשתמש עבר מספר הקלסטרים הרצוי",
+   "תוך שימוש בקלסטרינג היררכי",
+   "זיהוי אוטומטי בהתבסס על התפלגות הנתונים",
+   "על ידי מיקס (maximization) של המרחקים בין הקלאסטרים השונים"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "ב-K-Means מספר האשכולות k נקבע מראש כקלט מהמשתמש (פרמטר n_clusters).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q21",
+  "topicLabel": "אשכול"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "clustering",
+  "question": "בשיעור הוצג dataset בצורת \"שקלים חדשים\" (קשתות/עיגולים קונצנטריים). האלגוריתם ההיררכי הרגיל נכשל בחלוקה נכונה. באיזה Hyperparameter הוצע להשתמש כדי לפתור זאת ולשפר את החלוקה?",
+  "options": [
+   "Connectivity Constraints",
+   "Epsilon Density",
+   "Average Linkage",
+   "K-Means Initialization"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "שימוש ב-Connectivity Constraints מכריח את האשכול ההיררכי להתחשב בקרבה המרחבית/קישוריות, ומאפשר חלוקה נכונה של מבנים קונצנטריים.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q12",
+  "topicLabel": "אשכול"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "clustering",
+  "question": "מהו היתרון המובהק של אלגוריתם DBSCAN על פני K-Means או אישכול היררכי, כפי שהוצג בשיעור?",
+  "options": [
+   "הוא אינו דורש הגדרה מראש של מספר הקלאסטרים, ויודע להתמודד היטב עם Outliers (חריגים).",
+   "הוא מהיר יותר חישובית על דאטה-סטים קטנים מאוד.",
+   "הוא עובד מצוין גם כאשר לקלאסטרים שונים יש צפיפות (Density) שונה מאוד.",
+   "הוא מבוסס על מציאת סנטרואידים, ולכן הוא מדויק יותר גיאומטרית."
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "DBSCAN אינו דורש לקבוע מראש את מספר הקלאסטרים ומזהה רעש/חריגים (Outliers) בנפרד מהאשכולות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q13",
+  "topicLabel": "אשכול"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "clustering",
+  "question": "בגרף הדנדוגרם (Dendrogram), מה מייצג אורך הקווים האנכיים (הגובה) המחברים בין שני קלאסטרים?",
+  "options": [
+   "את המרחק בין שני הקלאסטרים שאוחדו; ככל שהקו ארוך יותר, המרחק ביניהם היה גדול יותר.",
+   "את מספר האיברים (המופעים) שיש בקלאסטר המאוחד.",
+   "את רמת הצפיפות (Density) בתוך הקלאסטר החדש שנוצר.",
+   "את מספר האיטרציות שנדרשו לאלגוריתם כדי למצוא את האיחוד."
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "בדנדוגרם גובה הקו האנכי מייצג את המרחק שבו אוחדו שני הקלאסטרים; קו ארוך יותר משמעו מרחק גדול יותר ביניהם.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q14",
+  "topicLabel": "אשכול"
+ },
+ {
+  "examCode": "24A-A",
+  "year": 2024,
+  "topic": "eda",
+  "question": "מה המטרה של ניתוח חקרני של נתונים (EDA)?",
+  "options": [
+   "לזהות תבניות וקשרים בנתונים שאינם בהכרח מובנים מאליהם",
+   "לשאול את שאלות המחקר עליהן ינתנו התשובות בהמשך המחקר",
+   "לקבוע את הסיבה והמסובב באופן מוחלט",
+   "להכין נתונים למודלי למידת מכונה וניתוח מתקדם יותר"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "מטרת EDA היא לחשוף תבניות, קשרים וחריגות בנתונים לפני המידול, ולא לקבוע סיבתיות מוחלטת.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד א׳",
+  "id": "24A-A-Q1",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24A-A",
+  "year": 2024,
+  "topic": "eda",
+  "question": "כיצד משפיעה הגדלת מספר התאים בהיסטוגרמה על ערכי התאים (כלומר, גובה העמודות המייצגות את כמות הדגימות בכל תא)?",
+  "options": [
+   "ככל שנגדיל את מספר התאים אז ערכי התאים יהיו קטנים יותר",
+   "אין קשר בין כמות התאים שנבחר לבין ערכי התאים",
+   "להיסטוגרמה יש מספר תאים קבוע שמוגדר לפי מספר המשתנים שהיא מייצגת ואין אפשרות להגדיל או להקטין את מספר התאים",
+   "ככל שנגדיל את מספר התאים אז ערכי התאים יהיו גדולים יותר"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "כשמגדילים את מספר התאים, כל תא מכסה טווח צר יותר ומכיל פחות דגימות, ולכן גובה העמודות יורד.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד א׳",
+  "id": "24A-A-Q15",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24A-A",
+  "year": 2024,
+  "topic": "eda",
+  "question": "מבין המדדים הבאים, מהו מדד המשמש למדידת פיזור נתונים?",
+  "options": [
+   "סטיית תקן",
+   "חציון",
+   "ממוצע",
+   "רבעון"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "סטיית תקן מודדת את פיזור הנתונים סביב הממוצע; חציון וממוצע הם מדדי מרכוז.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד א׳",
+  "id": "24A-A-Q20",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24A-A",
+  "year": 2024,
+  "topic": "eda",
+  "question": "חברת צוות טוענת שאפשר להציג שלושה משתנים (מאפיינים / features) ויותר על תרשים פיזור (scatterplot). האם הטענה שלה נכונה?",
+  "options": [
+   "כן, תרשים פיזור הוא אמנם גרף דו-מימדי, אך ניתן להציג שני משתנים ע\"י מיקום, ועוד כמה משתנים ע\"י צורות, צבעים, גדלים וכד'",
+   "לא, תרשים פיזור הוא גרף דו-מימדי, לא ניתן להציג יותר משני משתנים נומריים",
+   "כן, תרשים פיזור הוא גרף דו-מימדי, אבל ניתן להציג עוד משתנה בינארי יחיד ע\"י צבע",
+   "לא, טכנית זה אפשרי כמו בתשובות שטוענות \"כן\", אבל נהוג שלא לעשות כך"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "ניתן לקודד מעבר לשני צירי המיקום מאפיינים נוספים באמצעות צבע, צורה וגודל הנקודות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד א׳",
+  "id": "24A-A-Q5",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24A-A",
+  "year": 2024,
+  "topic": "eda",
+  "question": "מהו תרשים קופסה (box plot)?",
+  "options": [
+   "טכניקה להצגת החציון, הרבעונים והטווח הבין רבעוני",
+   "כלי גרפי להצגת התפלגות נתונים לפי חציונים, רבעונים ושלישונים",
+   "דרך להצגת ההתפלגות הסטטיסטית של נתון מסויים",
+   "תרשים שמציג את הקופסה התוחמת של הנתונים (bounding box)"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "תרשים קופסה מציג חציון, רבעונים (Q1, Q3) ואת הטווח הבין-רבעוני (IQR) יחד עם זנבות וחריגים.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד א׳",
+  "id": "24A-A-Q6",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24A-A",
+  "year": 2024,
+  "topic": "eda",
+  "question": "מהו מתאם פירסון (pearson)?",
+  "options": [
+   "מספר שמצביע לנו על קשר (קורלציה / מתאם) בין שני נתונים בסולם רווח או מנה",
+   "מספר שמצביע לנו על קשר (קורלציה / מתאם) בין שני נתונים בסולם מנה או סודר",
+   "מספר שמצביע לנו על קשר (קורלציה / מתאם) בין שני נתונים בסולם סודר בלבד",
+   "מספר שמצביע לנו על קשר (קורלציה / מתאם) בין שני נתונים בסולם מנה בלבד"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "מתאם פירסון מודד קשר ליניארי בין שני משתנים רציפים בסולם רווח או מנה.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד א׳",
+  "id": "24A-A-Q7",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24A-B",
+  "year": 2024,
+  "topic": "eda",
+  "question": "מה ההשפעה של הקוד המודגש בדוגמה הבאה (ההדגשה היא על whis=5)?",
+  "options": [
+   "נראה פחות נתונים חריגים בתרשים",
+   "נראה יותר נתונים חריגים בתרשים",
+   "התיבה תראה חמישונים במקום רבעונים",
+   "רוחב התיבה ימלא חצי מרוחב התרשים"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "הגדלת whis ל-5 מאריכה את השפמים ל-5·IQR, כך שפחות נקודות נחשבות חריגות. רמז: (פחות חריגים); cheatsheet boxplot/whis.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
+  "id": "24A-B-Q14",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24A-B",
+  "year": 2024,
+  "topic": "eda",
+  "question": "מהו המדד שמשתמשים בו כדי למדוד את מרכוז הנתונים בהתפלגות עם צידוד (skew) גבוה, כמו למשל שכר חודשי?",
+  "options": [
+   "median",
+   "mean",
+   "mode",
+   "quartile"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "בהתפלגות מצודדת מעדיפים חציון (median) כמדד מרכוז כי הוא עמיד לערכים קיצוניים. רמז: (חציון/median); course_summary §EDA (צידוד → חציון).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
+  "id": "24A-B-Q15",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24A-B",
+  "year": 2024,
+  "topic": "eda",
+  "question": "קיבלתם מערך בן 49 נתונים. כיצד תחשבו את האחוזון ה-20?",
+  "options": [
+   "המדידה העשירית בסדר העולה לאחר שהנתונים ממוינים בסדר עולה",
+   "המדידה העשרים בסדר העולה לאחר שהנתונים ממוינים בסדר עולה",
+   "המדידה החמישית בסדר העולה לאחר שהנתונים ממוינים בסדר עולה",
+   "המדידה הארבעים בסדר העולה לאחר שהנתונים ממוינים בסדר עולה"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "אחוזון 20 מתוך 49 ערכים: 0.20·49 ≈ 9.8 ⇒ המדידה ה-10 בסדר עולה. מבוסס חישוב אחוזונים (course_summary §EDA).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
+  "id": "24A-B-Q19",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24A-B",
+  "year": 2024,
+  "topic": "eda",
+  "question": "מה מהטענות הבאות נכון לגבי תרשים עוגה (Pie Chart)?",
+  "options": [
+   "יש להשתמש בתרשימי עוגה כדי להציג את הרכב השלם עבור מספר קטגוריות מועטות.",
+   "תרשימי עוגה הם דרך יעילה להמחיש ולהשוות ערכים במספר רב (10<) של קטגוריות",
+   "תרשימי עוגה הם הכי טובים לוויזואליזציה של נתונים כרונולוגיים לאורך מספר רב של תקופות זמן",
+   "תרשימי עוגה מומלצים להצגה והשוואה של נתונים רציפים."
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "תרשים עוגה מתאים להצגת הרכב חלקים-מתוך-שלם עבור מספר קטן של קטגוריות בלבד. מבוסס ויזואליזציה (course_summary §EDA, עוגה למעט חלקים-משלם).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
+  "id": "24A-B-Q6",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24B-A",
+  "year": 2024,
+  "topic": "eda",
+  "question": "לאיזו מהמטרות הבאות תתאים היסטוגרמה כשיטת ויזואליזציה?",
+  "options": [
+   "הצגת שכיחות טווח של ערכים רציפים באמצעות עמודות מלבניות",
+   "הצגת קשרים וקורלציות בין משתנים שונים",
+   "הצגת נתונים קטגוריאליים באמצעות חלקי עוגה",
+   "הצגת מגמות בעיתיות של נתונים לאורך זמן"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "היסטוגרמה מציגה את התפלגות השכיחות של משתנה רציף לאורך טווחי ערכים (bins).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
+  "id": "24B-A-Q13",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24B-A",
+  "year": 2024,
+  "topic": "eda",
+  "question": "מהי המטרה של ניתוח חקרני של נתונים (EDA)?",
+  "options": [
+   "לזהות תבניות וקשרים בנתונים שאינם בהכרח מובנים מאליהם",
+   "לשאול את שאלות המחקר עליהם ינתנו התשובות בהמשך המחקר",
+   "לקבוע את הסיבה והמסובב באופן מוחלט",
+   "להכין נתונים למודלי למידת מכונה וניתוח מתקדם יותר"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "מטרת EDA היא לחשוף תבניות וקשרים בנתונים שאינם בהכרח גלויים מראש, לפני המידול.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
+  "id": "24B-A-Q17",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24B-A",
+  "year": 2024,
+  "topic": "eda",
+  "question": "איזו מודול (ספריה) מקובל לייבא כ-sns?",
+  "options": [
+   "המודול seaborn",
+   "המודול לניתוח הודעות טקסט",
+   "המודול social networking service",
+   "מודול לביצוע snapping & scraping"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "המוסכמה המקובלת היא import seaborn as sns — ספריית הוויזואליזציה.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
+  "id": "24B-A-Q7",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24B-B",
+  "year": 2024,
+  "topic": "eda",
+  "question": "בסטטיסטיקה, מה מטרת המדידה של סטיית התקן?",
+  "options": [
+   "תיאור התפשטות או פיזור הנתונים",
+   "מדידת נטייה מרכזית",
+   "זיהוי חריגים",
+   "חישוב הסתברויות"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "סטיית התקן מודדת את פיזור הנתונים סביב הממוצע.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
+  "id": "24B-B-Q11",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24B-B",
+  "year": 2024,
+  "topic": "eda",
+  "question": "מהי המטרה העיקרית של אלגוריתם ניתוח רכיבים ראשיים (PCA)?",
+  "options": [
+   "להפחית ממדיות של נתונים",
+   "לזהות דפוסים וקשרים בנתונים",
+   "לחזות אירועים עתידיים",
+   "לתרגם נתונים גדולים"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "המטרה העיקרית של PCA היא צמצום ממדיות תוך שמירת מרב השונות בנתונים.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
+  "id": "24B-B-Q12",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24B-B",
+  "year": 2024,
+  "topic": "eda",
+  "question": "מה ההבדל העיקרי בין מתאם (קורלציה) לסיבתיות (causation)?",
+  "options": [
+   "מתאם מודד את חוזק הקשר, קשר סיבתי מרמז על קשר של סיבה ותוצאה",
+   "מתאם וסיבתי הם מונחים נרדפים",
+   "מתאם מרמז על קשר של סיבה ותוצאה, סיבתיות מודדת את עוצמת הקשר",
+   "לקורלציה ולסיבתיות אין קשר"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "מתאם מכמת את חוזק וכיוון הקשר בין משתנים, ואילו סיבתיות מציינת קשר של סיבה ותוצאה.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
+  "id": "24B-B-Q14",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24B-B",
+  "year": 2024,
+  "topic": "eda",
+  "question": "כיצד משפיעה הגדלת מספר התאים (bins) בהיסטוגרמה על ערכי התאים?",
+  "options": [
+   "ערכי התאים יקטנו",
+   "ערכי התאים יגדלו",
+   "אין השפעה על ערכי התאים",
+   "כל התשובות נכונות בתנאים מסוימים"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "ככל שמספר התאים גדל, כל תא מכסה טווח צר יותר וסופר פחות תצפיות, ולכן ערכי התאים (השכיחויות) קטנים.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
+  "id": "24B-B-Q15",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24B-B",
+  "year": 2024,
+  "topic": "eda",
+  "question": "כמה סוגי נתונים (מאפיינים) מעורבים (מספריים וקטגוריאלים) ניתן להציג בתרשים פיזור (scatterplot)?",
+  "options": [
+   "ניתן להציג עד 6 סוגי נתונים בעזרת מניפולציות שונות ב-scatterplot תלת מימדי",
+   "ניתן להציג עד 3 סוגי נתונים בעזרת scatterplot תלת מימדי",
+   "ניתן להציג עד 4 סוגי נתונים בעזרת scatterplot דו מימדי",
+   "ניתן להציג 2 סוגי נתונים בדיוק ב-scatterplot דו מימדי"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "בעזרת צירים, צבע, צורה וגודל (hue/style/size) ותלת-מימד ניתן לקודד מספר רב של מאפיינים בתרשים פיזור.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
+  "id": "24B-B-Q6",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24B-B",
+  "year": 2024,
+  "topic": "eda",
+  "question": "איך מחשבים את החציון של מערך נתונים?",
+  "options": [
+   "מיון הנתונים ובחירת הערך האמצעי",
+   "מציאת הממוצע של הערך הקטן והגדול ביותר",
+   "סיכום כל הערכים וחלוקה במספר הערכים",
+   "זיהוי הערך השכיח ביותר"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "החציון הוא הערך האמצעי לאחר מיון הנתונים.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
+  "id": "24B-B-Q7",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "eda",
+  "question": "מבין האפשרויות הבאות, מהי המטרה המרכזית של ויזואליזציה?",
+  "options": [
+   "לבצע דחיסה של הנתונים",
+   "לתקשר מידע באופן אפקטיבי",
+   "להאיץ את מהירות החישוב",
+   "לאחסן נתונים באופן יעיל"
+  ],
+  "correctIndex": 1,
+  "official": true,
+  "explanation": "המטרה המרכזית של ויזואליזציה היא לתקשר מידע באופן אפקטיבי.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q11",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "eda",
+  "question": "איזו תת ספרייה מקובל לייבא כ plt?",
+  "options": [
+   "matplotlib.pyplot",
+   "plotly",
+   "plotlib.graph",
+   "visplot"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "מקובל לייבא את matplotlib.pyplot בכינוי plt.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q17",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "eda",
+  "question": "איך מוסיפים מקרא לגרף?",
+  "options": [
+   "plt.show_legend()",
+   "plt.legend_display()",
+   "plt.legend()",
+   "plt.add_legend()"
+  ],
+  "correctIndex": 2,
+  "official": true,
+  "explanation": "מוסיפים מקרא לגרף באמצעות plt.legend().",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q18",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "eda",
+  "question": "מהו תרשים כינור?",
+  "options": [
+   "תרשים שמשלב תרשים קופסה יחד עם ההתפלגות של נתון מסויים",
+   "תרשים שממפה גלי קול ממרחב הזמן למרחב התדר",
+   "תרשים שמראה את התדירות של הופעה של נתון מסויים",
+   "מדד שיערוך למודל סיווג שמתבסס על דציבלים"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "תרשים כינור (violin) משלב תרשים קופסה עם הצגת ההתפלגות (KDE) של הנתון.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q5",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "eda",
+  "question": "חשבו את סטיית התקן הלא מוטית של הנתונים הבאים: [4,8,6,5,3]",
+  "options": [
+   "1.92",
+   "1.58",
+   "2.58",
+   "1.87"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "סטיית התקן הלא-מוטה (חלוקה ב-n-1) של הסדרה היא כ-1.92.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q8",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "eda",
+  "question": "בהיסטוגרמה, מה לרוב מסמל ציר ה-Y?",
+  "options": [
+   "שכיחות של נקודות נתונים בתוך כל bin.",
+   "המספר הכולל של נקודות נתונים.",
+   "הסכום המצטבר של נקודות נתונים.",
+   "הטווח (range) של נקודות הנתונים."
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "בהיסטוגרמה ציר ה-Y מציג את השכיחות (מספר הערכים) בכל תא (bin).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q11",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "eda",
+  "question": "בהינתן גרף פיזור של שני משתנים X ו-Y, נצפה דפוס בצורת פרבולה. מה ערך מקדם המתאם הפירסוני הצפוי?",
+  "options": [
+   "קרוב ל-0",
+   "קרוב ל-1",
+   "קרוב ל-(1-)",
+   "אם פרבולה \"צוחקת\" אז קרוב ל-1 ואם פרבולה \"בוכה\" אז קרוב ל-0"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "מתאם פירסון מודד קשר ליניארי בלבד; לקשר פרבולי (לא-ליניארי) הערך הצפוי קרוב ל-0.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q17",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "eda",
+  "question": "איך ניתן להציג באמצעות ויזואליזציה Feature A שהינו נומרי, Feature B שהינו נומרי, ו-Feature C שהינו קטגוריאלי, ב-Matplotlib?",
+  "options": [
+   "להשתמש ב-scatterplot עם Feature A ו-Feature B כצירים, ולקודד את הקטגוריות באמצעות מרקרים עם צורות שונות.",
+   "להשתמש ב-pie chart עם פרוסה אחת לכל קטגוריה, ו-Feature A ו-Feature B משולבים ומיוצגים כזווית/רוחב פרוסה.",
+   "לעשות box plot לכל Feature בנפרד.",
+   "לשלב היסטוגרמה של Feature A עם Feature B בתור ציר משני."
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "scatterplot עם שני המשתנים הנומריים כצירים וקידוד הקטגוריה (Feature C) באמצעות צורת/צבע המרקר מציג את שלושת המאפיינים בגרף אחד.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q18",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "eda",
+  "question": "מבין הפקודות הבאות, מה הפקודה המתאימה ביותר כדי ליצור היסטוגרמה?",
+  "options": [
+   "plt.hist(data, bins=30)",
+   "vis.histogram(data)",
+   "plt.plot(data)",
+   "vis.bar(data)"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "plt.hist היא הפונקציה ב-matplotlib ליצירת היסטוגרמה, עם פרמטר bins למספר התאים.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q19",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "eda",
+  "question": "נתונה סדרת מספרים עם צידוד/הטיה (skewness) חיובי גבוה (דהיינו רוב הנתונים מרוכזים בצד שמאל, ויש \"זנב\" ארוך יותר בצד ימין). איזו מהטענות הבאות נכונה?",
+  "options": [
+   "הממוצע יהיה גדול מהחציון",
+   "הממוצע יהיה קטן מהחציון",
+   "הממוצע והחציון יהיו שווים",
+   "אי אפשר לדעת את היחס בין הממוצע לחציון"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "בצידוד חיובי (ימני) הזנב הארוך מימין מושך את הממוצע כלפי מעלה, ולכן הממוצע גדול מהחציון.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q22",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "eda",
+  "question": "מה התפקיד של הפונקציה describe ב-Pandas?",
+  "options": [
+   "לייצר נתונים סטטיסטיים עבור העמודות ב-DataFrame",
+   "לספק סיכום של ערכים חסרים",
+   "ליצור ויזואליזציה של הנתונים והתפלגותם",
+   "לתת הסבר ותיאור על הפונקציות של פנדס"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "describe מפיקה סטטיסטיקה תיאורית (count, mean, std, min, רבעונים, max) עבור העמודות המספריות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q25",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "eda",
+  "question": "מה המטרה העיקרית של ניתוח נתונים חקרני (EDA)?",
+  "options": [
+   "לזהות תבניות וקשרים בנתונים שאינם בהכרח מובנים מאליהם",
+   "לבצע חישובים סטטיסטיים מתקדמים",
+   "להכין את הנתונים למודלים של למידת מכונה",
+   "לייצר תחזיות עתידיות מדויקות"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "מטרת ה-EDA היא חקירה ראשונית של הנתונים כדי לחשוף דפוסים, קשרים וחריגות לפני מידול.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q3",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "eda",
+  "question": "מהו תפקידו של מתאם פירסון?",
+  "options": [
+   "מדידת הקשר הלינארי בין משתנים",
+   "חיזוי ערכים עתידיים",
+   "זיהוי נתונים חריגים",
+   "סיווג נתונים לקבוצות"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "מקדם המתאם של פירסון מודד את עוצמת וכיוון הקשר הליניארי בין שני משתנים רציפים.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q8",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "eda",
+  "question": "איזו ספריה בפייתון משמשת בעיקר לצרכי ויזואליזציה?",
+  "options": [
+   "Matplotlib",
+   "NumPy",
+   "Pandas",
+   "Scikit-learn"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "Matplotlib היא ספריית הוויזואליזציה המרכזית בפייתון.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q11",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "eda",
+  "question": "מה המטרה העיקרית של Principal Component Analysis (PCA)?",
+  "options": [
+   "לצמצם את המימדים של הנתונים תוך כדי שמירה על שונות רבה ככל האפשר",
+   "לבצע תחזיות באמצעות דאטה קודם",
+   "לאתר anomalies (חריגות) בנתונים",
+   "לאשכל (לקלסטר) נקודות נתונים דומות ביחד"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "PCA הוא צמצום ממדים שמטרתו לשמר כמה שיותר מהשונות בנתונים.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q12",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "eda",
+  "question": "איזה סוג תרשים הכי מתאים להשוואת התפלגות הציונים בין שתי כיתות שונות?",
+  "options": [
+   "Box Plot מקבילים",
+   "Pie Chart",
+   "Line Plot",
+   "Scatter Plot"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "Box plots מקבילים מאפשרים השוואת התפלגויות (חציון, רבעונים, פיזור) בין קבוצות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q13",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "eda",
+  "question": "איזה סוג של הצגה גרפית (ויזואליזציה) הכי מתאים להצגת שלושה משתנים נומריים ומשתנה קטגוריאלי?",
+  "options": [
+   "Scatterplot עם הבדלי צבעים והבדלים בגודל מרקר",
+   "היסטוגרמה עם צירים נוספים ל-color coding",
+   "Line chart עם קו אחד לכל קטגוריה",
+   "לא ניתן ליצור הצגה גרפים עם 3 משתנים נומריים ומשתנה קטגוריאלי"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "Scatterplot עם שני צירים + גודל מרקר לשלושת המשתנים הנומריים וצבע למשתנה הקטגוריאלי מאפשר הצגה רב-ממדית.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q15",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "eda",
+  "question": "בהנתן דאטה עם נתונים חריגים, איזו ויזואליזציה הכי אפקטיבית על מנת לאתר את החריגים?",
+  "options": [
+   "Box plot",
+   "Pie chart",
+   "Line graph",
+   "Heatmap"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "Box plot מציג רבעונים ומסמן חריגים מעבר לגדר ה-IQR, ולכן יעיל לזיהוי חריגים.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q9",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "eda",
+  "question": "אם מקדם המתאם של פירסון בין המשתנים X ו-Y הוא 0.8-, מה המשמעות של זה?",
+  "options": [
+   "קשר ליניארי שלילי חזק",
+   "קשר לא ליניארי שלילי חלש",
+   "קשר ליניארי חיובי חזק",
+   "אין קשר"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "ערך פירסון 0.8- קרוב ל-1- ולכן מעיד על קשר ליניארי שלילי חזק.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q6",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "eda",
+  "question": "מהו התפקיד של המתודה plt.subplots ב-matplotlib?",
+  "options": [
+   "יצירת איור המכיל מערך של תתי-גרפים",
+   "פיצול של גרף קיים לכמה חלקים לצורך השוואת נתונים",
+   "הוספת תתי חלקים בגרף לכל ציר",
+   "יצירת אנימציה המורכבת ממספר תמונות עוקבות"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "plt.subplots יוצרת איור (figure) עם מערך של תתי-גרפים (axes) בפריסה מסודרת.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q11",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "eda",
+  "question": "מה מאפיין את גרף ה-Heat map (מפת חום) כפי שמוצג בשקף הוויזואליזציות?",
+  "options": [
+   "הוא משתמש בצבעים כדי לייצג עוצמה של ערכים בתוך מטריצה.",
+   "הוא מציג נקודות מפוזרות במרחב דו-ממדי על בסיס PC1 ו-PC2.",
+   "הוא מציג קו רגרסיה ליניארית בין משתנים.",
+   "הוא משמש אך ורק להצגת נתונים קטגוריאליים (כמו שמות של ערים)."
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "מפת חום (Heat map) משתמשת בעוצמת/גוון הצבע כדי לייצג את גודל הערכים בתוך מטריצה.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q17",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "eda",
+  "question": "באיזה סוג גרף נשתמש אם נרצה להציג את הקשרים בין כל זוג משתנים (Features) בדאטה-סט, כולל התפלגות של כל משתנה בנפרד (היסטוגרמות)?",
+  "options": [
+   "Pairplot",
+   "Scatter3D",
+   "Cross Tabulation",
+   "PCA Plot"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "Pairplot מציג מטריצה של גרפי פיזור לכל זוג משתנים יחד עם התפלגות כל משתנה על האלכסון.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q18",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "eda",
+  "question": "מה נכון לגבי מבחן חי בריבוע (Chi-square)?",
+  "options": [
+   "המבחן בודק את הקשר בין שני משתנים קטגוריאליים.",
+   "המבחן בודק את הקשר בין שני משתנים רציפים.",
+   "המבחן בודק קשר לינארי.",
+   "המבחן בודק ביצועים של רגרסיה."
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "מבחן חי בריבוע בודק קיום קשר/תלות בין שני משתנים קטגוריאליים.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q22",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "eda",
+  "question": "איזה סוג גרף הוא המתאים ביותר בדרך כלל להצגת קשר (מתאם) בין שני משתנים נומריים רציפים?",
+  "options": [
+   "גרף פיזור Scatter plot",
+   "גרף עמודות Bar chart",
+   "היסטוגרמה Histogram",
+   "גרף עוגה Pie chart"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "גרף פיזור (Scatter plot) הוא הכלי המתאים ביותר להצגת הקשר/מתאם בין שני משתנים נומריים רציפים.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q25",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "eda",
+  "question": "איזו מתודה ב-Pandas מאפשרת לחשב סטטיסטיקות תיאוריות בסיסיות (כמו ממוצע, סטיית תקן וחציונים) עבור כל העמודות הנומריות?",
+  "options": [
+   "df.describe",
+   "df.summary",
+   "df.stats",
+   "df.info"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "המתודה df.describe() מחזירה סטטיסטיקות תיאוריות בסיסיות לכל העמודות הנומריות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q8",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "source": "practice",
+  "topic": "eda",
+  "question": "חלקו שוב את cnt, הפעם ל-11 מחלקות, וצרו היסטוגרמה של המשתנה. מה מזכירה התפלגותו של המשתנה הזה?",
+  "options": [
+   "קו עולה",
+   "שום צורה שהיא",
+   "קו יורד",
+   "פעמון"
+  ],
+  "correctIndex": 3,
+  "official": false,
+  "explanation": "התפלגות כמות השכירויות cnt נוטה לצורת פעמון (קרובה להתפלגות נורמלית).",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · טיפול בנתונים א'",
+  "year": null,
+  "id": "P-12",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "source": "practice",
+  "topic": "eda",
+  "question": "צרו scatterplot של המשתנים windspeed ו-temp. אלו מהמשפטים הבאים מתאים?",
+  "options": [
+   "אין בין המשתנים קשר",
+   "המשתנים קשורים בקשר לינארי",
+   "אחד מהמשתנים מתנהג בצורה פרבולית ביחס לשני"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "מהירות הרוח והטמפרטורה אינן מציגות קשר ברור בתרשים הפיזור.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · טיפול בנתונים א'",
+  "year": null,
+  "id": "P-13",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "source": "practice",
+  "topic": "eda",
+  "question": "איזו דרך הצגת נתונים מתאימה יותר למשתנה \"ציון סופי\" בקורס?",
+  "options": [
+   "גרף עוגה",
+   "גרף עמודות",
+   "היסטוגרמה"
+  ],
+  "correctIndex": 2,
+  "official": false,
+  "explanation": "ציון סופי הוא משתנה רציף, ולכן היסטוגרמה היא הדרך המתאימה להצגת התפלגותו.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · טיפול בנתונים א'",
+  "year": null,
+  "id": "P-16",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "source": "practice",
+  "topic": "eda",
+  "question": "איזו דרך הצגת נתונים מתאימה יותר למשתנה \"יח' בגרות במתמטיקה\"?",
+  "options": [
+   "Scatter plot",
+   "גרף עמודות",
+   "היסטוגרמה"
+  ],
+  "correctIndex": 1,
+  "official": false,
+  "explanation": "יחידות הבגרות הן מספר קטן של קטגוריות בדידות, ולכן גרף עמודות מתאים יותר.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · טיפול בנתונים א'",
+  "year": null,
+  "id": "P-17",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "source": "practice",
+  "topic": "eda",
+  "question": "איזה גרף מתאים לדעתכם לבדיקת הקשר שבין הגיל לציון סופי בקורס?",
+  "options": [
+   "היסטוגרמה",
+   "Scatter plot",
+   "גרף עמודות"
+  ],
+  "correctIndex": 1,
+  "official": false,
+  "explanation": "לבדיקת קשר בין שני משתנים רציפים מתאים Scatter plot.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · טיפול בנתונים א'",
+  "year": null,
+  "id": "P-18",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "source": "practice",
+  "topic": "eda",
+  "question": "בחן את המשתנים בדטה סט. עבור המשתנה weight, איזה מהמשפטים הבאים מתקיים?",
+  "options": [
+   "זהו משתנה רציף, ואם נרצה לבחון את ההתפלגות שלו נוכל לעשות זאת באמצעות bar plot ו- kernel density plot.",
+   "זהו משתנה בדיד, ואם נרצה לבחון את ההתפלגות שלו נוכל לעשות זאת באמצעות bar plot.",
+   "זהו משתנה רציף, ואם נרצה לבחון את ההתפלגות שלו נוכל לעשות זאת באמצעות היסטוגרמה או kernel density plot.",
+   "זהו משתנה בדיד, ואם נרצה לבחון את ההתפלגות שלו נוכל לעשות זאת באמצעות bar plot או היסטוגרמה."
+  ],
+  "correctIndex": 2,
+  "official": false,
+  "explanation": "weight הוא משתנה רציף, ואת התפלגותו בוחנים באמצעות היסטוגרמה או kernel density plot ולא bar plot.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · ניתוח נתונים מתקדם",
+  "year": null,
+  "id": "P-27",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "source": "practice",
+  "topic": "eda",
+  "question": "מה מייצג הפרמטר hue בקריאה לפונקציה catplot של seaborn לצורך יצירת גרף עמודות?",
+  "options": [
+   "את הצבעים שאנחנו רוצים עבור העמודות.",
+   "את המשתנה הראשי לאורך ציר ה- X.",
+   "משתנה משני, אשר מחלקים את X לפיו.",
+   "פלטה של גוונים לשימוש בגרף."
+  ],
+  "correctIndex": 2,
+  "official": false,
+  "explanation": "הפרמטר hue מקבל משתנה משני (קטגוריאלי) שלפיו מפצלים/מקודדים בצבע את הקטגוריות של ציר ה-X.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · ניתוח נתונים מתקדם",
+  "year": null,
+  "id": "P-28",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "source": "practice",
+  "topic": "eda",
+  "question": "בקריאה ל- pyplot.figure אנו יוצרים או מאקטבים אובייקט Figure. אלו מהדברים הבאים איננו יכולים לשנות באמצעות האובייקט?",
+  "options": [
+   "גודל הגרף/תמונה שנוצרת.",
+   "התנהגות של הצירים.",
+   "חלוקה למספר תת-גרפים (subplots).",
+   "רזולוציה של הגרף/תמונה שנוצרת.",
+   "אף תשובה אינה נכונה."
+  ],
+  "correctIndex": 1,
+  "official": false,
+  "explanation": "אובייקט Figure שולט בגודל, ברזולוציה (dpi) ובחלוקה ל-subplots, אך התנהגות הצירים נקבעת ברמת ה-Axes ולא ב-Figure.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · ניתוח נתונים מתקדם",
+  "year": null,
+  "id": "P-29",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "source": "practice",
+  "topic": "eda",
+  "question": "בחן את הקורלציה (פירסון) בין כלל המשתנים הנומריים בדטה סט של הפוקימונים. איזה משתנה נומרי הוא בקורלציה החיובית הגבוהה ביותר עם weight_kg?",
+  "options": [
+   "height_m",
+   "percentage_male",
+   "attack",
+   "defense"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "גובה (height_m) מתואם בצורה החיובית החזקה ביותר עם משקל (weight_kg), שכן פוקימונים גבוהים יותר נוטים להיות כבדים יותר.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · ניתוח נתונים מתקדם",
+  "year": null,
+  "id": "P-30",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "source": "practice",
+  "topic": "eda",
+  "question": "הקריטריון בקביעת הצירים החדשים ב- PCA הוא:",
+  "options": [
+   "צירים שפורשים בצורה אופטימלית את השונות של הדטה.",
+   "צירים שמאחדים את הדטה.",
+   "הבחירה שרירותית.",
+   "צירים שייצרו את הגרף הכי יפה."
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "ב-PCA הצירים החדשים (רכיבים ראשיים) נבחרים כך שיסבירו את כמות השונות המרבית בנתונים.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · ניתוח נתונים מתקדם",
+  "year": null,
+  "id": "P-32",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "source": "practice",
+  "topic": "eda",
+  "question": "מה משמעות הפרמטר normalize='index' בפקודה pd.crosstab:",
+  "options": [
+   "שיש לחלק את ערכם של הערכים ב- dataframe של ה- cross tabulation בסך הערכים בשורה.",
+   "שיש למצוא מתאם בין בין 2 העמודות, לפי האינדקס של פירסון",
+   "שיש להסיר את השורות כאשר באחת העמודות ישנו outlier.",
+   "שיש להסיר את השורות כאשר באחת העמודות ישנו ערך חסר."
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "normalize='index' מנרמל לפי השורות, כלומר מחלק כל ערך בסכום ערכי השורה שלו.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · תרגול ביניים",
+  "year": null,
+  "id": "P-35",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "source": "practice",
+  "topic": "eda",
+  "question": "לאחר ריצת PCA, מה המשמעות של התכונה explained_variance_ratio_ :",
+  "options": [
+   "ערך המודד את כמות הנתונים שניתן להסביר בעמודה ב-dataframe (שאר הנתונים נחשבים outliers)",
+   "ערך המודד את אחוז השונות שניתן להסביר על ידי כל אחד מה- principal components",
+   "אף תשובה אינה נכונה"
+  ],
+  "correctIndex": 1,
+  "official": false,
+  "explanation": "explained_variance_ratio_ מציין את שיעור (אחוז) השונות שמוסבר על ידי כל רכיב ראשי.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · תרגול ביניים",
+  "year": null,
+  "id": "P-37",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "source": "practice",
+  "topic": "eda",
+  "question": "מה המשמעות של הפרמטרים n1 ו-n2 בקריאה ל-plt.subplots(n1, n2)?",
+  "options": [
+   "כמות ה- ה-subplots שנציג הינה 1n*2n שיסודרו ב- n1 שורות ו-n2 עמודות",
+   "כמות ה- ה-subplots שנציג הינה 1n*2n שיסודרו ב- n1 עמודות ו-n2 שורות",
+   "כמות ה-subplots שנציג הינה n1 ו-n2 מייצג את מספר ה-subplot של ברירת המחדל",
+   "כמות ה-subplots שנציג הינה n2 ו-n1 מייצג את מספר ה-subplot של ברירת המחדל"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "plt.subplots(n1, n2) יוצרת רשת של n1*n2 תת-גרפים המסודרים ב-n1 שורות ו-n2 עמודות.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · תרגול ביניים",
+  "year": null,
+  "id": "P-38",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "source": "practice",
+  "topic": "eda",
+  "question": "מה מבצעת הפקודה df.corr() עבור dataframe בשם df?",
+  "options": [
+   "חישוב קרבת הערכים המספריים ב-df ל- 0 מעלות קלווין (ה- 0 המוחלט).",
+   "בדיקת עמודות בעליית יחס גבוה של corrupt values (כלומר יותר מדי ערכים חסרים).",
+   "חישוב המתאם בין העמודות של df, לפי מקדם המתאם של פירסון.",
+   "כמות הויזואליזציה של ה-correct values ב- df, כלומר הערכים שאינם outliers."
+  ],
+  "correctIndex": 2,
+  "official": false,
+  "explanation": "df.corr() מחשבת את מטריצת המתאם בין העמודות הנומריות, כברירת מחדל לפי מקדם המתאם של פירסון.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · תרגול ביניים",
+  "year": null,
+  "id": "P-39",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "source": "practice",
+  "topic": "eda",
+  "question": "כדי לדעת מהו ערך המינימום של עמודה מסוימת (המסומנת על ידי col_name) ב-dataframe מסויים (המסומן על ידי df), באיזו פקודה אפשר להשתמש?",
+  "options": [
+   "df.describe()",
+   "df.info()",
+   "df[col_name].min()",
+   "אף תשובה אינה נכונה"
+  ],
+  "correctIndex": 2,
+  "official": false,
+  "explanation": "df[col_name].min() מחזירה ישירות את ערך המינימום של העמודה הנבחרת.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · תרגול ביניים",
+  "year": null,
+  "id": "P-40",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "source": "practice",
+  "topic": "eda",
+  "question": "מה משמעות הפרמטר n_components בפקודה PCA:",
+  "options": [
+   "מספר ה-principal components אותם יש להשאיר לאחר ריצת ה- PCA",
+   "מספר העמודות הקטגוריאליות (הבדידות) ב- dataframe אותן יש לבחור, כאשר מעבירים עמודות מרציפות לבדידות.",
+   "מספר העמודות שיש להסיר בהרצת ה- PCA",
+   "אף תשובה איננה נכונה"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "n_components קובע את מספר הרכיבים הראשיים שיישמרו לאחר הרצת ה-PCA.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · תרגול ביניים",
+  "year": null,
+  "id": "P-44",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "source": "practice",
+  "topic": "eda",
+  "question": "מה נצפה לראות בויזואליזציה של גרף עמודות",
+  "options": [
+   "ויזואליזציה של כמות הערכים מכל ערך יחודי",
+   "ויזואליזציה של כמות הערכים הקרובים לממוצע",
+   "ויזואליזציה של כמות הערכים החסרים",
+   "ויזואליזציה של כמות ה-outliers"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "גרף עמודות (bar plot) מציג את השכיחות (כמות המופעים) של כל ערך ייחודי.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · תרגול ביניים",
+  "year": null,
+  "id": "P-47",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "source": "practice",
+  "topic": "eda",
+  "question": "נניח שערך מקדם המתאם של פירסון קרוב ל- 1. מה נוכל ללמוד מכך:",
+  "options": [
+   "ששתי העמודות, עבורן התקבל ערך זה, כמעט ואינן תלויות אחת לשניה.",
+   "ששתי העמודות, עבורן התקבל ערך זה, בעלות תלות גבוה חיובית אחת לשניה.",
+   "ששתי העמודות, עבורן התקבל ערך זה, בעלות תלות גבוה שלילית אחת לשניה.",
+   "אף תשובה איננה נכונה"
+  ],
+  "correctIndex": 1,
+  "official": false,
+  "explanation": "מקדם מתאם פירסון קרוב ל-1 מעיד על קשר לינארי חיובי חזק בין שתי העמודות.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · תרגול ביניים",
+  "year": null,
+  "id": "P-48",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "source": "practice",
+  "topic": "eda",
+  "question": "מה ניתן לטעון על פעולת cross tabulation:",
+  "options": [
+   "אפשר בעזרתה ללמוד על קורולציה בין משתנים מקריים (עמודות ב- dataframe)",
+   "מתאים לביצוע בין משתנים (עמודות ב-dataframe ) קטגוריאליים (בדידים)",
+   "ניתן בעזרתו ללמוד את השכיחות המשותפת של ערכים שונים של משתנים מקריים (עמודות ב-dataframe)",
+   "כל התשובות נכונות"
+  ],
+  "correctIndex": 3,
+  "official": false,
+  "explanation": "cross tabulation מתאים למשתנים קטגוריאליים, מציג שכיחות משותפת ומאפשר ללמוד על קשר בין המשתנים, ולכן כל התשובות נכונות.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · תרגול ביניים",
+  "year": null,
+  "id": "P-51",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "evaluation",
+  "question": "מהי שיטת Cross-Validation?",
+  "options": [
+   "זו שיטה להערכת ביצועי מודל למידת מכונה",
+   "זו שיטה להרכשת נתונים באמצעות הרכשה במקביל ממקורות שונים",
+   "זו שיטה ליצירת גרפים והצגת קשרים בין נתונים",
+   "זו שיטה לאימות נתונים ונכונותם אחרי הרכשה"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "ולידציה צולבת היא שיטה להערכת ביצועי מודל ולהקטנת overfitting על ידי סיבוב אזורי האימון/בדיקה.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q16",
+  "topicLabel": "הערכת מודל"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "evaluation",
+  "question": "בהינתן מודל סיווג (קלאסיפיקציה) בינארי עם Precision = 0.8 ו-Recall = 0.6, מה ערך ה-F1 Score?",
+  "options": [
+   "0.69",
+   "0.7",
+   "0.34",
+   "אין מספיק נתונים כדי לענות על השאלה"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "F1 = 2·(0.8·0.6)/(0.8+0.6) = 0.96/1.4 ≈ 0.69.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q18",
+  "topicLabel": "הערכת מודל"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "evaluation",
+  "question": "מיכל היא אוצרת אומנות במוזאון מפורסם בצפון, חובבת טבע וצילום. מיכל פנתה לחברת \"על רגל אחת למידת מכונה\" בכדי לתייג צילומים עם פריחה ולבלוב. בשלב הבדיקה מדדי הערכה היו גבוהים מ-98%. מיכל החליטה לשלוח צילומים של קולגות לתיוג. כאשר התוצאות חזרו מהמעבדה מיכל הבחינה שהרבה תמונות שסווגו עם פריחה ולבלוב כלל לא היו כאלה עם פריחה ולבלוב (False Positive עלה). מיכל הפנתה את תשומת לבם של עובדי חברת על רגל אחת. אילו מבין המדדים הבאים לא יעזור בהצפת הבעיה?",
+  "options": [
+   "מדד Recall",
+   "מדד Precision",
+   "מדד F1 score",
+   "כל המדדים שרשומים בתשובות מציפים את הבעיה"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "Recall = TP/(TP+FN) אינו מושפע מ-False Positives, ולכן לא יחשוף את בעיית ה-FP; Precision ו-F1 כן יורדים בעקבותיה.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q20",
+  "topicLabel": "הערכת מודל"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "evaluation",
+  "question": "חברת ״על רגל אחת למידת מכונה\", אימנה מודלים והוציאה אותם לשוק מבלי לבצע את שלב הערכה (evaluation). היו דיונים בחברה על ההשלכות שיכולות להגרם כתוצאה מכך. עלו 3 טענות הבאות. 1. לא נדע לגבי כל מודל האם הוא מודל הוא טוב או לא טוב. 2. לא נדע לדרג את המודלים לפי ביצועים. 3. אין מספיק נתונים כרגע - ע\"מ לדעת אם בכלל יהיו לכך השלכות. אלו מהטענות שנטענו נכונות?",
+  "options": [
+   "טענות 1 ו-2 נכונות",
+   "רק טענה 3 נכונה",
+   "רק טענה 1 נכונה",
+   "רק טענה 2 נכונה"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "ללא שלב הערכה לא נדע אם מודל טוב (טענה 1) ולא נוכל לדרג מודלים לפי ביצועים (טענה 2); טענה 3 שגויה.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q22",
+  "topicLabel": "הערכת מודל"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "evaluation",
+  "question": "איך נמדוד ה-precision של מודל סיווג?",
+  "options": [
+   "כיחס החיזויים הנכונים של המחלקה החיובית חלקי סך החיזויים של מחלקה זו",
+   "כיחס החיזויים הנכונים של המחלקה החיובית חלקי סך הדוגמאות החיוביות",
+   "כיחס החיזויים הנכונים חלקי סך החיזויים",
+   "כיחס החיזויים הנכונים של המחלקה החיובית ביחס לגודל החלון של ההקשר"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "Precision = TP/(TP+FP) - חיזויים חיוביים נכונים חלקי כל החיזויים החיוביים. אפשרות ב היא recall.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q13",
+  "topicLabel": "הערכת מודל"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "evaluation",
+  "question": "מהו K-Fold Cross Validation?",
+  "options": [
+   "תהליך בו מחלקים את הדאטה ל־K חלקים, כל פעם מוציאים חלק אחד לצורך תיקוף",
+   "אלגוריתם להורדת המימדים ל-K מימדים בעלי תוקף סטטיסטי",
+   "אלגוריתם לדגימת האימון, כאשר יש חוסר איזון בין המחלקות, בבעיות סיווג",
+   "אלגוריתם לאישכול דוגמאות האימון ל-K אשכולות תקפים"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "K-Fold מחלק את הנתונים ל-K חלקים, ובכל איטרציה משתמש בחלק אחד לתיקוף והשאר לאימון.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q14",
+  "topicLabel": "הערכת מודל"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "evaluation",
+  "question": "במטריצת בלבול Confusion Matrix, מה מייצג התא False Negative (FN) בהקשר של הסטודנטים והקורס?",
+  "options": [
+   "סטודנטים שהמודל חזה שיכשלו (Negative), אך בפועל הם עברו (המודל טעה).",
+   "סטודנטים שהמודל חזה שיכשלו (Negative), ובפועל הם נכשלו.",
+   "סטודנטים שהמודל חזה שיעברו, ובפועל הם עברו.",
+   "סטודנטים שהמודל חזה שיעברו (Positive), אך בפועל הם נכשלו."
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "False Negative הוא מקרה שבו המודל חזה Negative (כישלון) אך בפועל התווית האמיתית היא Positive (עבר), כלומר המודל טעה.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q15",
+  "topicLabel": "הערכת מודל"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "evaluation",
+  "question": "נתון מודל לחיזוי מחלות. המודל זיהה נכונה 90 חולים מתוך סך כל 100 החולים הקיימים במציאות (אך גם סיווג בטעות הרבה בריאים כחולים). איזה מדד יהיה גבוה במקרה זה?",
+  "options": [
+   "Recall (כיסוי)",
+   "Precision (דיוק)",
+   "Accuracy (נכונות)",
+   "Beta Coefficient"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "זיהוי נכון של רוב החולים האמיתיים מבטא Recall גבוה, בעוד שסיווג שגוי של בריאים כחולים פוגע ב-Precision.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q16",
+  "topicLabel": "הערכת מודל"
+ },
+ {
+  "examCode": "24A-A",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "איזו ספרייה בפייתון משמשת לביצוע אלגוריתמים של למידה בלתי מונחית?",
+  "options": [
+   "Sklearn",
+   "Pandas",
+   "Matplotlib",
+   "SciPy"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "scikit-learn (Sklearn) מספקת אלגוריתמי למידת מכונה, כולל למידה בלתי מונחית כגון KMeans ו-DBSCAN.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד א׳",
+  "id": "24A-A-Q10",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24A-A",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "איך מיוצגים מאפיינים (features) ומופעים (instances) ב-dataframe?",
+  "options": [
+   "המאפיינים מיוצגים בעמודות והמופעים בשורות",
+   "המאפיינים מיוצגים בשורות והמופעים בעמודות",
+   "המאפיינים מיוצגים כ-float64 והמופעים כ-object",
+   "המאפיינים מיוצגים כ-object והמופעים כ-float64"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "ב-DataFrame כל עמודה היא מאפיין וכל שורה היא מופע (רשומה).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד א׳",
+  "id": "24A-A-Q12",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24A-A",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "איזו ספרייה מקובל לייבא כ-pd?",
+  "options": [
+   "Pandas",
+   "PythonDuplicates",
+   "DynamicProgramming",
+   "Numpy"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "מקובל לכתוב import pandas as pd.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד א׳",
+  "id": "24A-A-Q13",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24A-A",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "לאחר הלימודים, התקבלתם לעבודה בחברת נטפליקס. קיבלתם משימה ממחלקת השיווק. הלקוחות מאופיינים לפי 50 תכונות שונות שנתונות לנו. ברצוננו לסדר את הלקוחות ב-5 קבוצות שונות, לפי הדמיון ביניהם. איך תסווגו את הבעיה?",
+  "options": [
+   "הבעיה שייכת ללמידה לא מונחית (unsupervised learning) והיא מוגדרת כבעיית אשכול (clustering)",
+   "הבעיה שייכת ללמידה לא מונחית (unsupervised learning) והיא מוגדרת כבעיית נסיגה (רגרסיה)",
+   "הבעיה שייכת ללמידה מונחית (supervised learning) והיא מוגדרת כבעיית סיווג (classification)",
+   "הבעיה שייכת ללמידה מונחית (supervised learning) והיא מוגדרת כבעיית הורדת מימדים (dimension reduction)"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "קיבוץ לקוחות לפי דמיון ללא תוויות הוא בעיית אשכול (clustering) בלמידה לא מונחית.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד א׳",
+  "id": "24A-A-Q17",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24A-B",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "איזה מאפיין של DataFrame ב-Pandas מייצג את מספר העמודות?",
+  "options": [
+   "shape[1]",
+   "count()",
+   "length()",
+   "cols()"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "df.shape מחזיר (שורות, עמודות); לכן shape[1] הוא מספר העמודות. רמז: (shape[1]); course_summary §1 (pandas).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
+  "id": "24A-B-Q10",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24A-B",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "לאחר הלימודים, התקבלתם לעבודה בחברת נטפליקס. קיבלתם משימה ממחלקת השיווק. הלקוחות מאופיינים לפי 50 תכונות שונות שנתונות לנו. הנהלת החברה רוצה להציג את הלקוחות באופן ויזואלי בצורה נוחה למצגת שתוקרן בחדר הישיבות. באיזה סוג של בעיה מדובר?",
+  "options": [
+   "הבעיה שייכת ללמידה לא מונחית (unsupervised learning) והיא מוגדרת כבעיית הורדת מימדים (dimension reduction)",
+   "הבעיה שייכת ללמידה לא מונחית (unsupervised learning) והיא מוגדרת כבעיית אישכול (clustering)",
+   "הבעיה שייכת ללמידה מונחית (supervised learning) והיא מוגדרת כבעיית סיווג (classification)",
+   "הבעיה שייכת ללמידה מונחית (supervised learning) והיא מוגדרת כבעיית נסיגה (regression)"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "הצגה ויזואלית של 50 תכונות = צמצום ממדים (PCA), שהיא למידה לא מונחית. רמז: (dimension reduction); course_summary §6 (PCA).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
+  "id": "24A-B-Q12",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24A-B",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "איזה מבנה נתונים בפייתון מייצג זוגות מפתח-ערך (key-value pairs)?",
+  "options": [
+   "מילון (Dictionary)",
+   "רשימה (List)",
+   "טאפל (Tuple)",
+   "קבוצה (Set)"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "מילון (dict) הוא מבנה הנתונים בפייתון לזוגות מפתח-ערך. רמז: (dict); course_summary §1.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
+  "id": "24A-B-Q16",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24A-B",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "איזו שפת תכנות הנפוצה והמועדפת במדעי הנתונים?",
+  "options": [
+   "פייתון",
+   "C#",
+   "ג'אווה",
+   "ג'אווהסקריפט"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "פייתון היא השפה הנפוצה והמועדפת במדעי הנתונים. רמז: (Python); course_summary §1.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
+  "id": "24A-B-Q17",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24A-B",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "באיזו שיטה ב-Pandas ניתן למיין DataFrame לפי עמודה מסוימת?",
+  "options": [
+   "sort_values()",
+   "arrange()",
+   "order_by()",
+   "sortBy()"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "sort_values() ממיינת DataFrame לפי עמודה ב-pandas. רמז: (sort_values); course_summary §1.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
+  "id": "24A-B-Q18",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24A-B",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "מה השלב הראשון בשלבי עבודתו של מדען הנתונים?",
+  "options": [
+   "ניסוח שאלת מחקר",
+   "ניתוח נתונים חקרני",
+   "איסוף נתונים",
+   "בניית מודל"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "סדר התהליך: שאלת מחקר → הרכשת נתונים → ניקוי → EDA → מידול. השלב הראשון הוא ניסוח שאלת המחקר (course_summary §8, תהליך מדעי הנתונים).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
+  "id": "24A-B-Q3",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24B-A",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "איזה מבנה נתונים מתייחס למערך חד מימדי בספריית pandas?",
+  "options": [
+   "Series",
+   "Dataframe",
+   "Dictionary",
+   "List"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "Series הוא מבנה הנתונים החד-ממדי ב-pandas, בעוד DataFrame הוא דו-ממדי (טבלה).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
+  "id": "24B-A-Q1",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24B-A",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "מה השלב השני בעבודת מדען הנתונים, לאחר ניסוח שאלת המחקר?",
+  "options": [
+   "הרכשת נתונים",
+   "ניתוח נתונים חקרני",
+   "בדיקת המודל",
+   "בניית מודל"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "לאחר ניסוח שאלת המחקר, השלב הבא בתהליך הוא הרכשת הנתונים (API/scraping).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
+  "id": "24B-A-Q18",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24B-A",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "אילו סוגי נתונים ניתן לאחסן במסגרת נתונים ב-pandas?",
+  "options": [
+   "כל התשובות נכונות",
+   "מספרים",
+   "טקסט",
+   "תאריכים"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "DataFrame יכול לאחסן מספרים, טקסט ותאריכים — כל הסוגים שצוינו.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
+  "id": "24B-A-Q19",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24B-A",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "מה מהבאים הינו מבנה נתונים בלתי ניתן לשינוי (immutable)?",
+  "options": [
+   "טאפל (tuple)",
+   "רשימה (list)",
+   "מילון (dictionary)",
+   "קבוצה (set)"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "tuple הוא מבנה הנתונים היחיד מבין האפשרויות שאינו ניתן לשינוי (immutable).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
+  "id": "24B-A-Q20",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24B-A",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "באילו תחומים נעשה שימוש בלמידה לא מונחית (unsupervised learning)?",
+  "options": [
+   "כל התשובות נכונות",
+   "עיבוד תמונה (image processing)",
+   "עיבוד שפה טבעית (natural language processing)",
+   "ביולוגיה חישובית (bioinformatics)"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "למידה לא מונחית משמשת בכל התחומים המצוינים — עיבוד תמונה, עיבוד שפה טבעית וביולוגיה חישובית.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
+  "id": "24B-A-Q3",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24B-A",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "איזו פקודה ב-pandas מציגה את מס' השורות והעמודות במסגרת נתונים?",
+  "options": [
+   "df.shape",
+   "df.size",
+   "df.len",
+   "df.dimensions"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "df.shape מחזיר tuple של (מספר שורות, מספר עמודות).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
+  "id": "24B-A-Q6",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24B-B",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "מה משמש מבנה הנתונים dictionary?",
+  "options": [
+   "מבנה key (מפתח) ו-value (ערך), בו נגשים לאיברים דרך ה-key (ערך)",
+   "מילון מונחים על פקודות ב-python",
+   "מבנה מערך דו מימדי ב-pandas",
+   "מבנה נתונים של מערך דו מימדי ב-numpy"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "מילון (dict) הוא מבנה של זוגות מפתח-ערך, שבו ניגשים לאיברים דרך המפתח.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
+  "id": "24B-B-Q1",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24B-B",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "מה ההבדל בין האופרטור ** לאופרטור //?",
+  "options": [
+   "הפלט של האופרטור // הוא מספר שלם, לעומת זאת הפלט של ** אינו בהכרח מספר שלם",
+   "האופרטור ** מיועד רק למספרים שלמים, לעומת האופרטור // אינו בהכרח למספרים שלמים",
+   "האופרטור ** מציין את פעולת הביטים (bit operator) של AND, לעומת זאת אופרטור // מציין את פעולת הביטים של NAND",
+   "האופרטור // מסמן תחילת הערה, לעומת ** שהינו חלק מהערת description"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "// הוא חלוקה שלמה (floor division) שמחזירה מספר שלם, ואילו ** הוא חזקה שתוצאתה אינה בהכרח שלמה.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
+  "id": "24B-B-Q13",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24B-B",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "מה השלב השלישי בעבודת מדען הנתונים?",
+  "options": [
+   "טיפול בנתונים",
+   "איסוף נתונים",
+   "ניתוח נתונים חקרני",
+   "הרכשת נתונים"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "סדר השלבים: שאלת מחקר (1) → הרכשת נתונים (2) → טיפול בנתונים (3), ולכן השלב השלישי הוא טיפול בנתונים.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
+  "id": "24B-B-Q18",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24B-B",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "כיצד מיוצגים מאפיינים (features) ומופעים (instances) ב-DataFrame של Pandas?",
+  "options": [
+   "מאפיינים בעמודות, מופעים בשורות",
+   "מאפיינים בשורות, מופעים בעמודות",
+   "שניהם מיוצגים בעמודות",
+   "שניהם מיוצגים בשורות"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "ב-DataFrame המאפיינים (features) הם העמודות והמופעים (instances) הם השורות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
+  "id": "24B-B-Q2",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24B-B",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "איזו בעיה מתאימה ללמידה לא מונחית (unsupervised learning)?",
+  "options": [
+   "אשכול לקוחות",
+   "זיהוי ספאם",
+   "חיזוי מחירי דירות",
+   "זיהוי סוג האובייקט בתמונה"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "אשכול לקוחות הוא בעיה ללא תוויות ולכן מתאים ללמידה לא מונחית; היתר הם סיווג/רגרסיה מונחים.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
+  "id": "24B-B-Q3",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24B-B",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "מה יהיה הפלט של הפקודות הבאות?",
+  "options": [
+   "הפלט שיודפס:",
+   "הפלט שיודפס:",
+   "הפלט שיודפס:",
+   "הפלט שיודפס:"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "שאלת פלט קוד; תוכן הקוד והאפשרויות לא נשמרו ב-OCR ולכן לא ניתן לקבוע את התשובה לפי משמעות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
+  "id": "24B-B-Q4",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "ml_python",
+  "question": "מה ההבדל בין למידה מונחית ולמידה בלתי מונחית?",
+  "options": [
+   "בלמידה מונחית יש משימה. בלמידה בלתי מונחית מה שיוצא יוצא",
+   "בלמידה מונחית יש תויות, בלמידה בלתי מונחית אין",
+   "בלמידה מונחית המתכנת בודק את התוצאות ומנחה את האלגוריתם איך להתאמן במהלך האימון. בלמידה בלתי מונחית אין.",
+   "בלמידה מונחית משתמשים באלגוריתם בקרה, בלמידה בלתי מונחית לא."
+  ],
+  "correctIndex": 1,
+  "official": true,
+  "explanation": "ההבחנה המרכזית היא קיום תוויות: בלמידה מונחית יש תוויות לאימון, בלמידה בלתי מונחית אין.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q1",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "ml_python",
+  "question": "איזו ספרייה בפייתון משמשת לביצוע ניתוח וטיפול במידע?",
+  "options": [
+   "Pandas",
+   "Matplotlib",
+   "SciPy",
+   "Huggingface"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "Pandas היא ספריית הניתוח והטיפול בנתונים הטבלאיים בפייתון.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q10",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "ml_python",
+  "question": "מה ההבדל בין DataFrame לבין Series?",
+  "options": [
+   "DataFrame משמש לנתונים מספריים בלבד בעוד Series יכול לשמש לכל סוג של נתונים",
+   "DataFrame הוא דו מימדי בעוד Series הוא חד מימדי",
+   "DataFrame משמש לאחסון וייצוג של נתוני עתק (big data) בעוד series משמש לנתנים רגילים",
+   "אין הבדל, אלו שני שמות לאותו מבנה נתונים"
+  ],
+  "correctIndex": 1,
+  "official": true,
+  "explanation": "DataFrame הוא מבנה דו-ממדי (טבלה) בעוד Series הוא מבנה חד-ממדי (עמודה).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q12",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "ml_python",
+  "question": "מה מבין הבאים אינו פעולה חוקית עבור DataFrame ב-Pandas?",
+  "options": [
+   "calculate_sum()",
+   "drop_duplicates()",
+   "merge()",
+   "pivot()"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "drop_duplicates, merge ו-pivot הן מתודות מובנות של DataFrame, אך calculate_sum() אינה קיימת ב-Pandas.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q1",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "ml_python",
+  "question": "מה עושה הפונקציה sort_values() ב-Pandas?",
+  "options": [
+   "ממיינת DataFrame על פי אחת העמודות או יותר",
+   "מסננת שורות בהתבסס על תנאים",
+   "מורידה ערכי null מעמודה",
+   "ממירה עמודה למשתנה קטגוריאלי"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "sort_values ממיינת את ה-DataFrame לפי ערכי עמודה אחת או יותר.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q15",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "ml_python",
+  "question": "יש לך דאטה-פריים df. איזו מהפקודות הבאות תציג את כל השורות בהן העמודה 'age' גדולה מ-30 וגם העמודה 'salary' גדולה מ-50000?",
+  "options": [
+   "df[(df['age'] > 30) & (df['salary'] > 50000)]",
+   "df[df['age'] > 30 & df['salary'] > 50000]",
+   "df[df['age'] > 30 and df['salary'] > 50000]",
+   "df[(df['age'] > 30) and (df['salary'] > 50000)]"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "בסינון בוליאני ב-Pandas משתמשים ב-& בין תנאים, כשכל תנאי עטוף בסוגריים; and אינו עובד על Series.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q20",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "ml_python",
+  "question": "מה ההבדל העיקרי בין למידה מונחית ללמידה לא מונחית?",
+  "options": [
+   "בלמידה מונחית יש תווית מטרה",
+   "בלמידה מונחית יש יותר נתונים",
+   "בלמידה לא מונחית התהליך מהיר יותר",
+   "אין הבדל משמעותי"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "ההבחנה המהותית היא קיומה של תווית מטרה (label) בלמידה מונחית, שאין בלמידה לא מונחית.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q5",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "ml_python",
+  "question": "מה המטרה העיקרית של DataFrame ב-Pandas?",
+  "options": [
+   "לאחסן ולעשות מניפולציות לנתונים דו מימדיים",
+   "לטפל במבני נתונים היררכיים",
+   "לבצע פעולות מתמטיות על מסדי נתונים גדולים",
+   "לעשות ויזואליזציה בצורה אינטראקטיבית"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "DataFrame הוא מבנה נתונים טבלאי דו-ממדי לאחסון ומניפולציה של נתונים ב-Pandas.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q1",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "ml_python",
+  "question": "באיזה פקודת פייתון משתמשים בד\"כ בתחילת תכנית כדי לאפשר שימוש בספריות פייתון חיצוניות?",
+  "options": [
+   "import",
+   "include",
+   "from",
+   "using"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "import היא הפקודה לייבוא ספריות חיצוניות בפייתון.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q25",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "ml_python",
+  "question": "ברצוני לבדוק אילו עמודות בדאטאפריים מכילות ערכים חסרים ומהו טיפוס הנתונים בכל עמודה. מה מבין הפקודות הבאות הינה הפקודה המתאימה ביותר?",
+  "options": [
+   "df.info()",
+   "df.describe()",
+   "df.value_counts()",
+   "df.head()"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "df.info() מציגה לכל עמודה את מספר הערכים הלא-חסרים ואת טיפוס הנתונים.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q8",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "ml_python",
+  "question": "מה מהבאים אינו נכון לגבי סביבת Jupyter Notebook?",
+  "options": [
+   "לא ניתן לשמור או לשתף את הסביבה עם משתמשים אחרים",
+   "מדובר בסביבת עבודה אינטראקטיבית להרצת קטעי קוד קצרים",
+   "Jupyter היא יישום מבוסס קוד פתוח",
+   "ניתן לבצע ניסויים באיטרציות קצרות ולקבל פידבק מיידי"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "ניתן בהחלט לשמור ולשתף Notebooks (קובצי .ipynb), ולכן הטענה שלא ניתן לשמור/לשתף שגויה.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q17",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "ml_python",
+  "question": "איזה מבנה נתונים משמש ב-Pandas לנתונים חד-מימדיים?",
+  "options": [
+   "Series",
+   "List",
+   "Array",
+   "DataFrame"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "Series הוא מבנה הנתונים החד-ממדי של Pandas; DataFrame הוא דו-ממדי.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q18",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "ml_python",
+  "question": "יש לך דאטה-פריים df. איזו מהפקודות הבאות תציג את כל השורות בהן העמודה 'age' גדולה מ-30, וגם העמודה 'salary' גדולה מ-50000?",
+  "options": [
+   "df[(df['age'] > 30) & (df['salary'] > 50000)]",
+   "df[df['age'] > 30 & df['salary'] > 50000]",
+   "df[df['age'] > 30 and df['salary'] > 50000]",
+   "df[(df['age'] > 30) and (df['salary'] > 50000)]"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "סינון בוליאני ב-Pandas דורש את האופרטור & וסוגריים סביב כל תנאי; and ו-or אינם עובדים על Series.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q24",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "ml_python",
+  "question": "איך נקרא מבנה נתונים בו יש מפתח (key) וערך (value) ב-python בסיסי?",
+  "options": [
+   "Dictionary",
+   "Series",
+   "Tuple",
+   "Pair"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "מבנה הנתונים מסוג מפתח-ערך בפייתון הבסיסי הוא Dictionary (מילון).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q1",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "ml_python",
+  "question": "נניח שהוגדר מערך ndarray של NumPy עם הערכים הבאים: [1 10 100] במשתנה arr. למה יהיה שווה arr2, אם ביצענו את ההשמה: arr2 = arr * 2. הערה: הרווחים הם המפרידים בין איברי המערך.",
+  "options": [
+   "[2 20 200]",
+   "[1 10 100 1 10 100]",
+   "[3 12 102]",
+   "הודעת שגיאה (TypeError) מכיוון שלא ניתן להכפיל מערך במספר שלם"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "כפל של מערך NumPy בסקלר מבצע פעולה איבר-איבר (vectorized), ולכן כל ערך מוכפל ב-2 ומתקבל [2 20 200].",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q10",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "ml_python",
+  "question": "אילו סוגי נתונים ניתן לאחסן ב-DataFrame?",
+  "options": [
+   "כל התשובות נכונות",
+   "List",
+   "String",
+   "Dictionary"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "DataFrame יכול לאחסן מגוון סוגי נתונים כולל רשימות, מחרוזות ומילונים, ולכן כל התשובות נכונות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q2",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "source": "practice",
+  "topic": "ml_python",
+  "question": "איזו מהאפשרויות הבאות תבחר את השורה השלישית מאובייקט בשם df מסוג dataframe:",
+  "options": [
+   "df.iloc[:,2]",
+   "df.iloc[2,:]",
+   "df.iloc[3,:]",
+   "df.iloc[:,3]"
+  ],
+  "correctIndex": 1,
+  "official": false,
+  "explanation": "ב-iloc האינדוקס מתחיל מ-0, ולכן השורה השלישית היא אינדקס 2 וכל העמודות: df.iloc[2,:].",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · תרגול ביניים",
+  "year": null,
+  "id": "P-33",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "source": "practice",
+  "topic": "ml_python",
+  "question": "איזו מהתשובות מתארת נכון מהו key במבנה נתונים מסוג dictionary?",
+  "options": [
+   "תו מסוג אות באנגלית",
+   "כתובת url, של שרת HTTP שמצפים לקבל ממנו תשובה",
+   "מפתח (key) לקריאת הערך (value) מתוך dictionary",
+   "שאר התשובות אינן נכונות"
+  ],
+  "correctIndex": 2,
+  "official": false,
+  "explanation": "ב-dictionary ה-key הוא המפתח המשמש לגישה ולקריאה של הערך (value) המשויך אליו.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · תרגול ביניים",
+  "year": null,
+  "id": "P-34",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "source": "practice",
+  "topic": "ml_python",
+  "question": "מה תחזיר הפקודה df[df['age']==30]?",
+  "options": [
+   "תחזיר את השורה/ות ב-df בה/בהן ערכה של העמודה age שווה 30.",
+   "תחזור את העמודה/ות ב- df בה/בהן ערכה של השורה age שווה 30.",
+   "תחזיר את העמודה age אם ערכה שווה ל- 30.",
+   "תקבע את ערכה של העמודה age כ- True/False אם ערכה של השורה שווה 30."
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "boolean indexing זה מחזיר את כל השורות שבהן ערך העמודה age שווה ל-30.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · תרגול ביניים",
+  "year": null,
+  "id": "P-49",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24A-A",
+  "year": 2024,
+  "topic": "nlp",
+  "question": "מה זה vectorizer?",
+  "options": [
+   "אוביקט המסייע בהפיכה של מסמך טקסט ליצוג וקטורי של המילים בשיטת bag of words",
+   "אוביקט המסייע בחישוב גודל הוקטור של כמות הנתונים של רשומה מסוימת לניתוח",
+   "אלגוריתם לזיהוי ומיון טקסטים לפי רמת הקושי",
+   "טכניקה להורדת מימדים מווקטור במרחב גבוה לווקטור במרחב נמוך"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "vectorizer ממיר מסמך טקסט לייצוג וקטורי-מספרי של המילים בשיטת bag-of-words.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד א׳",
+  "id": "24A-A-Q14",
+  "topicLabel": "ניתוח טקסט (NLP)"
+ },
+ {
+  "examCode": "24A-A",
+  "year": 2024,
+  "topic": "nlp",
+  "question": "אילו מחרוזות יחזיר הביטוי הרגולרי (regular expression) הבא: r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'?",
+  "options": [
+   "כתובות אימייל",
+   "מספרי טלפון",
+   "אתרי רשת חברתית",
+   "שמות ושמות משפחה, כולל שם אמצעי או אות אמצעית עם נקודה אחריה"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "התבנית תואמת מבנה של כתובת אימייל: שם משתמש, סימן @, דומיין ונקודה עם סיומת בת שתי אותיות לפחות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד א׳",
+  "id": "24A-A-Q4",
+  "topicLabel": "ניתוח טקסט (NLP)"
+ },
+ {
+  "examCode": "24A-B",
+  "year": 2024,
+  "topic": "nlp",
+  "question": "מה מטרת הביטוי הרגולרי re.findall(r\"\\b[A-Z][a-z]*\\b\", text)?",
+  "options": [
+   "למצוא כל המילים שמתחילות באות גדולה וממשיכות באותיות קטנות, בודדות משאר הטקסט.",
+   "לחפש אותיות גדולות בתחילת כל מילה במחרוזת ללא תלות בהמשך המלה",
+   "לאתר מחרוזות שמכילות אותיות גדולות בלבד.",
+   "למצוא כל מילה במחרוזת שאינה מכילה אותיות קטנות."
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "התבנית \\b[A-Z][a-z]*\\b מתאימה מילה שמתחילה באות גדולה ואחריה אפס או יותר אותיות קטנות, כמילה שלמה (גבולות \\b). מבוסס regex (course_summary §12).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
+  "id": "24A-B-Q4",
+  "topicLabel": "ניתוח טקסט (NLP)"
+ },
+ {
+  "examCode": "24A-B",
+  "year": 2024,
+  "topic": "nlp",
+  "question": "איזה מהביטויים הרגולריים הבאים משמש לזיהוי מחרוזת המכילה מספר שלם (ללא אפס בתחילתו) ואחריו מספר עשרוני (שהספרה הראשונה לפני הנקודה העשרונית יכולה להיות אפס), כאשר שני המספרים מופרדים על ידי פסיק או רווח? לדוגמה \"23,0.56\" או \"4 1.23\". שימו לב שהמספר השלם והעשרוני יכולים להופיע גם בלי פסיק או רווח ביניהם.",
+  "options": [
+   "r\"\\b[1-9]\\d*\\s*(?:,|\\s) \\s*(?:0|[1-9]\\d*)\\.\\d+\\b\"",
+   "r\"\\d+\\s*,\\s*\\d+\"",
+   "r\"\\b0*\\d+\\.?\\d*\\b\"",
+   "r\"[1-9]\\d*\\.\\d\""
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "רק האפשרות הראשונה אוכפת שלם ללא אפס מוביל ([1-9]\\d*), מפריד פסיק או רווח אופציונלי, ואז עשרוני שיכול להתחיל באפס ((?:0|[1-9]\\d*)\\.\\d+). מבוסס regex (course_summary §12).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
+  "id": "24A-B-Q5",
+  "topicLabel": "ניתוח טקסט (NLP)"
+ },
+ {
+  "examCode": "24B-B",
+  "year": 2024,
+  "topic": "nlp",
+  "question": "אילו מחרוזות יכול להחזיר הביטוי הרגולרי הבא?",
+  "options": [
+   "יכול להחזיר __, אבל לא יכול להחזיר __",
+   "יכול להחזיר __, אבל לא יכול להחזיר __",
+   "יכול להחזיר __, אבל לא יכול להחזיר __",
+   "יכול להחזיר __, אבל לא יכול להחזיר __"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "שאלת regex; הביטוי והמחרוזות באפשרויות לא נשמרו ב-OCR ולכן לא ניתן לקבוע את התשובה לפי משמעות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
+  "id": "24B-B-Q16",
+  "topicLabel": "ניתוח טקסט (NLP)"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "nlp",
+  "question": "אילו מחרוזות יחזיר הביטוי הרגולרי r'\\b[Aa]\\w+'",
+  "options": [
+   "מלים שמתחילות באות A גדולה או קטנה",
+   "מלים שמכילות את האות a",
+   "מחרוזות שמתחילות באות A ונגמרות ברווח",
+   "מחרוזות באנגלית שמתחילות בצירוף Aa כמו למשל Aardvark"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "‎\\b[Aa]\\w+ מתאים למילים שמתחילות באות A גדולה או קטנה ואחריה תווי-מילה.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q4",
+  "topicLabel": "ניתוח טקסט (NLP)"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "nlp",
+  "question": "איזה כלי ב-NLP יכול להמיר נתוני טקסט לדאטה נומרי בפורמט מתאים ללמידת מכונה?",
+  "options": [
+   "CountVectorizer",
+   "Tokenizer",
+   "RandomForest",
+   "StopWords"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "CountVectorizer ממיר אוסף מסמכי טקסט למטריצת ספירת מילים (bag-of-words) נומרית המתאימה למודלים.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q23",
+  "topicLabel": "ניתוח טקסט (NLP)"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "nlp",
+  "question": "מהם stop words (בהקשר של NLP)?",
+  "options": [
+   "מילים בעלות שכיחות גבוהה שעפ\"י רוב מסננים החוצה בתהליך הניתוח של הטקסט",
+   "מילים שהן לא נכונות מבחינה דקדוקית",
+   "מילים שמופיעות בסוף כל משפט בטקסט",
+   "מילים עם ציון td-idf גבוהים ביותר"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "Stop words הן מילים נפוצות מאוד (כמו \"the\", \"של\") הנושאות מעט משמעות ולרוב מסוננות בעיבוד טקסט.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q23",
+  "topicLabel": "ניתוח טקסט (NLP)"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "nlp",
+  "question": "מה מייצג הביטוי הרגולרי הבא: r'\\b[a-zA-Z]+\\b'?",
+  "options": [
+   "מילים שמכילות שילובים של אותיות גדולות או קטנות",
+   "מילים שמכילות זוגות של אות קטנה ואז אות גדולה",
+   "מילים שמתחילות ומסתיימות ב-b",
+   "מילים שמתחילות עם a יש באמצע צירוף zA ואז מסתיימות ב-Z"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "[a-zA-Z]+ בין גבולות מילה \\b מתאים לרצף של אות אחת או יותר (גדולות או קטנות), כלומר מילים אלפבתיות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q24",
+  "topicLabel": "ניתוח טקסט (NLP)"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "nlp",
+  "question": "מהם Stop words בהקשר של NLP?",
+  "options": [
+   "מילים בעלות שכיחות גבוהה שעפ\"י רוב מסננים החוצה בתהליך הניתוח של הטקסט",
+   "מילים שהן לא נכונות מבחינה דקדוקית",
+   "מילים שמופיעות בסוף כל משפט בטקסט",
+   "מילים עם ציון td-idf גבוהים ביותר"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "Stop words הן מילים נפוצות מאוד (כמו מילות קישור) שבדרך כלל מסוננות החוצה כיוון שאינן נושאות מידע מבחין.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q20",
+  "topicLabel": "ניתוח טקסט (NLP)"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "nlp",
+  "question": "מהו ההבדל המרכזי בין הפונקציה re.match לבין הפונקציה re.search?",
+  "options": [
+   "re.match מחפשת התאמה רק מתחילת המחרוזת, בעוד ש-re.search מחפשת בכל המחרוזת",
+   "re.search מחזירה את כל המופעים, בעוד ש-re.match מחזירה רק את הראשון",
+   "re.match מהירה יותר משמעותית בגלל שימוש בזיכרון מטמון מובנה",
+   "re.search דורשת קומפילציה מקדימה של הביטוי ו-re.match לא"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "re.match מחפשת התאמה רק בתחילת המחרוזת, ואילו re.search סורקת את כל המחרוזת לאיתור התאמה.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q4",
+  "topicLabel": "ניתוח טקסט (NLP)"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "nlp",
+  "question": "מה משנה סימן השאלה (?) לאחר הסימן כוכבית (*) או פלוס (+) בביטוי רגולרי (regular expression)?",
+  "options": [
+   "הוא מחפש את ההתאמה הקצרה ביותר האפשרית (shortest match)",
+   "הוא הופך את הביטוי הרגולרי כולו לאופציונלי (optional string)",
+   "הוא מאפשר לביטוי להתאים גם לתווים ריקים (empty strings)",
+   "הוא גורם להתאמה להיות ברמת מחרוזת הטקסט כולה (full match)"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "הוספת ? לאחר * או + הופכת אותם ל-non-greedy, כלומר חיפוש ההתאמה הקצרה ביותר האפשרית.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q9",
+  "topicLabel": "ניתוח טקסט (NLP)"
+ },
+ {
+  "source": "practice",
+  "topic": "nlp",
+  "question": "נתון הקוד הבא: pattern = \"[A-Z]\\w\\w\" txt=\" Dina and Dan came for a visit\" m=re.search(pattern,txt) print(m.group(0)) מה יהיה הפלט של השורה האחרונה?",
+  "options": [
+   "Dan",
+   "Dina",
+   "Din",
+   "הוא לא ימצא כלום"
+  ],
+  "correctIndex": 2,
+  "official": false,
+  "explanation": "re.search מחזירה את ההתאמה הראשונה: אות גדולה ואחריה שני תווי מילה, ולכן מ-Dina מתקבל Din.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · ניתוח טקסט",
+  "year": null,
+  "id": "P-61",
+  "topicLabel": "ניתוח טקסט (NLP)"
+ },
+ {
+  "source": "practice",
+  "topic": "nlp",
+  "question": "נתון הקוד הבא: pattern = \"[A-Z]\\w\\w\" txt=\"Dina and Dan came for a visit\" out=re.findall(pattern,txt) מה יהיה הפלט של השורה האחרונה?",
+  "options": [
+   "[\"Din\", \"and\", \"Dan\",\"cam\", \"for\", \"vis\"]",
+   "[\"Din\",\"Dan\"]",
+   "[\"Dan\"]",
+   "[\"Dina\",\"Dan\"]"
+  ],
+  "correctIndex": 1,
+  "official": false,
+  "explanation": "re.findall מוצאת את כל ההתאמות לתבנית (אות גדולה ושני תווי מילה), כלומר Din (מ-Dina) ו-Dan.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · ניתוח טקסט",
+  "year": null,
+  "id": "P-62",
+  "topicLabel": "ניתוח טקסט (NLP)"
+ },
+ {
+  "source": "practice",
+  "topic": "nlp",
+  "question": "מה הביטוי הרגולרי שיזהה את כל מספרי הטלפון במחרוזת. כך שיתאים לקוד הבא: pattern = ________ txt=\"Please call us on 03-6610304 or 02 3434884 we are in Jerusalem and Tel Aviv\" out=re.findall(pattern,txt) print(out) הפלט המבוקש: [\"03-6610304\", \"02-3434884\"]",
+  "options": [
+   "pattern = \"0\\d[ -]\\d\\d\\d\\d\\d\\d\\d\"",
+   "pattern = \"0\\d-\\d\\d\\d\\d\\d\\d4\"",
+   "pattern = \"0\\d -\\d\\d\\d\\d\\d\\d4\"",
+   "pattern = \"..[ -]........\""
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "התבנית 0\\d[ -]\\d\\d\\d\\d\\d\\d\\d מזהה קידומת בת שתי ספרות, מקף או רווח, ואז שבע ספרות, ולכן תופסת את שני מספרי הטלפון.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · ניתוח טקסט",
+  "year": null,
+  "id": "P-63",
+  "topicLabel": "ניתוח טקסט (NLP)"
+ },
+ {
+  "source": "practice",
+  "topic": "nlp",
+  "question": "התבוננו בקוד הבא, וענו האם הוא ימצא התאמה לטקסט הבא: import re txt = \"Mary has a little lamb\" re.search(\"mary\",txt)",
+  "options": [
+   "כן",
+   "לא"
+  ],
+  "correctIndex": 1,
+  "official": false,
+  "explanation": "החיפוש רגיש לאותיות גדולות/קטנות, והתבנית mary באותיות קטנות אינה תואמת ל-Mary, ולכן לא תימצא התאמה.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · ניתוח טקסט",
+  "year": null,
+  "id": "P-64",
+  "topicLabel": "ניתוח טקסט (NLP)"
+ },
+ {
+  "source": "practice",
+  "topic": "nlp",
+  "question": "מה יהיה הפלט של הפקודה הבאה: re.split('\\W+', 'Hello, hello, hello.')",
+  "options": [
+   "['Hello', 'hello', 'hello.']",
+   "['Hello, 'hello', 'hello']",
+   "['Hello', 'hello', 'hello', '.']",
+   "['Hello', 'hello', 'hello', '']"
+  ],
+  "correctIndex": 3,
+  "official": false,
+  "explanation": "\\W+ מפצל לפי תווים שאינם תווי מילה, והנקודה בסוף יוצרת מחרוזת ריקה אחרונה: ['Hello', 'hello', 'hello', ''].",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · ניתוח טקסט",
+  "year": null,
+  "id": "P-65",
+  "topicLabel": "ניתוח טקסט (NLP)"
+ },
+ {
+  "source": "practice",
+  "topic": "nlp",
+  "question": "מה הפלט של הקוד הבא: import re s = \"A new day\" m = re.search(r'(.*)(.*?)', s) print(m.group(2)) print(m.group(0))",
+  "options": [
+   "[empty output] A new day",
+   "[empty output] [empty output]",
+   "['A', 'new', 'day'] ('A', 'new', 'day')",
+   "Error ['A', 'new', 'day']"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "הקבוצה הראשונה (.*) הזללנית תופסת את כל המחרוזת, הקבוצה השנייה (.*?) תופסת מחרוזת ריקה, ולכן group(2) ריק ו-group(0) הוא כל המחרוזת.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · ניתוח טקסט",
+  "year": null,
+  "id": "P-66",
+  "topicLabel": "ניתוח טקסט (NLP)"
+ },
+ {
+  "examCode": "24B-A",
+  "year": 2024,
+  "topic": "supervised",
+  "question": "איזה מהאלגוריתמים הבאים הינו אלגוריתם למידה לא מונחית (unsupervised learning)?",
+  "options": [
+   "אלגוריתם ניתוח רכיבים ראשיים (PCA)",
+   "אלגוריתם רגרסיה לוגיסטית (logistic regression)",
+   "אלגוריתם רגרסיה לינארית (linear regression)",
+   "כל התשובות נכונות"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "PCA הוא אלגוריתם למידה לא-מונחית לצמצום ממדים; רגרסיה לוגיסטית ולינארית הן מונחות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
+  "id": "24B-A-Q5",
+  "topicLabel": "למידה מונחית"
+ },
+ {
+  "examCode": "24B-B",
+  "year": 2024,
+  "topic": "supervised",
+  "question": "בלמידת מכונה, מה ההבדל העיקרי בין למידה מפוקחת (supervised learning) ללמידה לא מפוקחת (unsupervised learning)?",
+  "options": [
+   "למידה מפוקחת כוללת נתונים שסומנו עם ערך מסוים ו/או סווגו, בעוד שנתוני למידה לא מפוקחת אינם מסווגים ולא סומנו",
+   "למידה מפוקחת מנוטרת מקרוב על ידי מדעני נתונים, בעוד שהם אינם ממלאים תפקיד בלמידה לא מפוקחת",
+   "למידה מפוקחת משמשת רק לזיהוי תמונות, בעוד שניתן להשתמש בלמידה לא מפוקחת עבור יישומי ניתוח שונים",
+   "בלמידה מפוקחת לומדים ערכים בתחום מסוים (מפוקח) בעוד שבלמידה לא מפוקחת לומדים ערכים בכל טווח (לא מפוקח)"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "ההבדל המהותי הוא הימצאות תוויות: למידה מפוקחת משתמשת בנתונים מתויגים/מסווגים ולא-מפוקחת בנתונים ללא תוויות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
+  "id": "24B-B-Q20",
+  "topicLabel": "למידה מונחית"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "supervised",
+  "question": "מה ההבדל בין סיווג ונסיגה (רגרסיה)?",
+  "options": [
+   "סיווג זה תהליך שבו מחליטים אילו נתונים בלתי מסווגים וניתן לאמן איתם את המודל ואילו מסווגים ולא ניתן למודל להיחשף אליהם. נסיגה זה תהליך שבו המודל חוזר לנתונים שהוא כבר נחשף אליהם.",
+   "בסיווג, התויות הינה שמית או סודרת. בנסיגה התויות היא מספר.",
+   "בסיווג, הנתונים הינם קטגוריאליים ובנסיגה הנתונים הינם מספריים",
+   "בסיווג יש תויות ובנסיגה אין."
+  ],
+  "correctIndex": 1,
+  "official": true,
+  "explanation": "ההבדל הוא בסוג התווית: בסיווג התווית שמית/סודרת ובנסיגה התווית היא ערך מספרי רציף.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q2",
+  "topicLabel": "למידה מונחית"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "supervised",
+  "question": "איזו מהספריות הבאות בפייתון משמשת לעיתים קרובות עבור למידה מונחית?",
+  "options": [
+   "NumPy",
+   "pandas",
+   "scikit-learn",
+   "matplotlib"
+  ],
+  "correctIndex": 2,
+  "official": true,
+  "explanation": "scikit-learn היא הספרייה הנפוצה ללמידה מונחית בפייתון.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q21",
+  "topicLabel": "למידה מונחית"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "supervised",
+  "question": "איזה מאלגוריתמי הלמידה הבאים שייך ללמידה מונחית?",
+  "options": [
+   "K-Means",
+   "SVM (Support Vector Machine)",
+   "PCA (Principal Component Analysis)",
+   "DBSCAN"
+  ],
+  "correctIndex": 1,
+  "official": true,
+  "explanation": "SVM הוא אלגוריתם סיווג השייך ללמידה מונחית.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q22",
+  "topicLabel": "למידה מונחית"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "supervised",
+  "question": "מה המטרה של K באלגוריתם KNN (K-Nearest Neighbors)?",
+  "options": [
+   "להגדיר את מספר השכנים הקרובים אשר נלקח בחשבון",
+   "לקבוע את מספר הקלסטרים",
+   "להחליט על עומק עץ ההחלטה",
+   "לשלוט בקצב הלמידה"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "ב-kNN פרמטר K קובע כמה שכנים קרובים נלקחים בחשבון בעת הסיווג/החיזוי.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q21",
+  "topicLabel": "למידה מונחית"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "supervised",
+  "question": "איזה מבין האלגוריתמים הבאים מתאים ביותר לבעיית סיווג?",
+  "options": [
+   "K-Nearest Neighbors",
+   "K-Means",
+   "PCA",
+   "Linear Regression"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "kNN הוא אלגוריתם סיווג מונחה; K-Means ו-PCA לא-מונחים, ורגרסיה לינארית היא לחיזוי ערך רציף.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q9",
+  "topicLabel": "למידה מונחית"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "supervised",
+  "question": "מה מבטא מדד R² בהקשר של רגרסיה?",
+  "options": [
+   "הפרופורציה של השונות בערך החזוי אשר מוסברת על ידי המאפיינים",
+   "סכום השגיאות בריבוע, בין הערכים האמיתיים לחזויים",
+   "ממוצע השגיאה בערך מוחלט, בין הערכים האמיתיים לחזויים",
+   "קבוע הקורלציה בריבוע"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "R² הוא שיעור השונות במשתנה המטרה המוסברת על ידי המודל/המאפיינים.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q17",
+  "topicLabel": "למידה מונחית"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "supervised",
+  "question": "איזה מאלגוריתמי הלמידה הבאים שייך ללמידה מונחית?",
+  "options": [
+   "אלגוריתם SVM (Support Vector Machine)",
+   "אלגוריתם K-Means",
+   "אלגוריתם PCA (Principal Component Analysis)",
+   "אלגוריתם DBSCAN"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "SVM הוא אלגוריתם למידה מונחית (סיווג); K-Means ו-DBSCAN הם אשכול ו-PCA הוא צמצום ממדים - כולם לא מונחים.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q12",
+  "topicLabel": "למידה מונחית"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "supervised",
+  "question": "איזה מההיפר-פרמטרים (hyperparameters) הבאים הינו היפר-פרמטר של אלגוריתם DecisionTreeClassifier?",
+  "options": [
+   "הפרמטר max_depth",
+   "הפרמטר max_leafs",
+   "הפרמטר priors",
+   "אף תשובה אינה נכונה (כל ההיפר-פרמטרים אינם קשורים לעצי החלטה)"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "max_depth הוא היפר-פרמטר של עץ החלטה (העומק המרבי); השם הנכון לעלים הוא max_leaf_nodes ולא max_leafs, ו-priors שייך לנאיב בייס.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q15",
+  "topicLabel": "למידה מונחית"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "supervised",
+  "question": "מהו מדד SSE?",
+  "options": [
+   "מדד SSE הינו מדד המשמש להערכת איכות מודל חיזוי רגרסיה",
+   "מדד SSE מודד את הקשר בין זוגות מאפיינים בעלי ערך של מספר רציף",
+   "מדד SSE הינו מדד המשמש לבדיקת הבאגים בתהליך הלמידה",
+   "כל התשובות נכונות"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "SSE (Sum of Squared Errors) הוא סכום ריבועי השגיאות, מדד להערכת איכות מודל רגרסיה.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q16",
+  "topicLabel": "למידה מונחית"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "supervised",
+  "question": "איזו מההצהרות הבאות אינה נכונה לגבי חלוקת הדאטה ל-Train ו-Test?",
+  "options": [
+   "החלוקה נועדה לשפר את הדיוק של המודל בזמן האימון",
+   "מטרת החלוקה היא לבדוק את ביצועי המודל על נתונים שלא השתתפו באימון",
+   "החלוקה עוזרת לזהות אם המודל עושה Overfitting",
+   "המודל מאומן על ה־Train ונבחן על ה-Test"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "החלוקה ל-train/test לא משפרת את הדיוק באימון אלא מאפשרת הערכה אובייקטיבית של ההכללה וזיהוי overfitting.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q5",
+  "topicLabel": "למידה מונחית"
+ },
+ {
+  "source": "practice",
+  "topic": "supervised",
+  "question": "ענה נכון או לא נכון: אלגוריתם KNN עושה יותר חישובים בזמן הסיוג מאשר בזמן האימון בניגוד להרבה מהאלגוריתמים האחרים:",
+  "options": [
+   "נכון",
+   "לא נכון"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "KNN הוא אלגוריתם עצלן (lazy) שכמעט ואינו מאמן מודל, וכל החישוב (מציאת השכנים) מתבצע בזמן הסיווג, ולכן הטענה נכונה.",
+  "hasImage": false,
+  "examCode": null,
+  "sourceLabel": "תרגול הקורס · למידה מונחית ב'",
+  "year": null,
+  "id": "P-56",
+  "topicLabel": "למידה מונחית"
+ }
+]

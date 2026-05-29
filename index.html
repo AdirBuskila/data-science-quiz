@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>משחק תרגול — מבוא למדעי הנתונים</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">📊</span>
+    <div>
+      <h1>תרגול למדעי הנתונים</h1>
+      <p class="sub">בנק שאלות ממבחני הקורס + תרגול, מעורבב ומסודר לפי נושא</p>
+    </div>
+  </div>
+  <div class="topstats" id="topStats"></div>
+</header>
+
+<main id="app">
+  <!-- START -->
+  <section id="screen-start" class="screen">
+    <div class="card">
+      <h2>בחירת אופן תרגול</h2>
+
+      <div class="modes">
+        <label class="mode-card">
+          <input type="radio" name="mode" value="practice" checked>
+          <div class="mode-body">
+            <span class="mode-title">תרגול חופשי</span>
+            <span class="mode-desc">שאלה־שאלה, משוב מיידי והסבר אחרי כל תשובה. ללא הגבלת זמן.</span>
+          </div>
+        </label>
+        <label class="mode-card">
+          <input type="radio" name="mode" value="exam">
+          <div class="mode-body">
+            <span class="mode-title">מצב מבחן</span>
+            <span class="mode-desc">סימולציה בזמן קצוב (25 שאלות, שעתיים) — ציון ופירוט בסוף.</span>
+          </div>
+        </label>
+      </div>
+
+      <h3>נושא</h3>
+      <div id="topicGrid" class="topic-grid"></div>
+
+      <div class="options-row">
+        <label class="chk"><input type="checkbox" id="officialOnly"> שאלות עם מחוון רשמי בלבד</label>
+        <label class="chk"><input type="checkbox" id="mistakesOnly"> רק שאלות שטעיתי בהן</label>
+      </div>
+
+      <div id="examOpts" class="exam-opts hidden">
+        <label>מספר שאלות
+          <select id="examCount"><option>10</option><option selected>25</option><option>40</option></select>
+        </label>
+        <label>זמן (דקות)
+          <select id="examMinutes"><option>15</option><option>30</option><option>60</option><option selected>120</option></select>
+        </label>
+      </div>
+
+      <button id="startBtn" class="btn primary big">התחל ▶</button>
+      <p id="poolInfo" class="poolinfo"></p>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="screen-quiz" class="screen hidden">
+    <div class="quizbar">
+      <button id="quitBtn" class="btn ghost">⟵ יציאה</button>
+      <div class="progress"><div id="progressFill" class="progress-fill"></div></div>
+      <div id="quizMeta" class="quiz-meta"></div>
+    </div>
+
+    <div class="card question-card">
+      <div class="q-head">
+        <span id="qTopic" class="chip"></span>
+        <span id="qSource" class="chip soft"></span>
+        <span id="qBadge" class="chip"></span>
+      </div>
+      <div id="questionText" class="question-text"></div>
+      <div id="optionsList" class="options-list"></div>
+      <div id="feedback" class="feedback hidden"></div>
+    </div>
+
+    <div class="quizfoot">
+      <div id="streakBox" class="streak"></div>
+      <button id="prevBtn" class="btn ghost hidden">⟶ הקודמת</button>
+      <button id="nextBtn" class="btn primary">הבאה ⟵</button>
+      <button id="submitExamBtn" class="btn primary hidden">סיום והגשה</button>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="screen-results" class="screen hidden">
+    <div class="card">
+      <h2>תוצאות המבחן</h2>
+      <div id="resultsSummary" class="results-summary"></div>
+      <h3>פירוט לפי נושא</h3>
+      <div id="resultsByTopic" class="bytopic"></div>
+      <h3>סקירת תשובות</h3>
+      <div id="resultsReview" class="review"></div>
+      <div class="quizfoot">
+        <button id="backHomeBtn" class="btn primary">חזרה למסך הראשי</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="appfoot">
+  <span id="datasetInfo"></span> ·
+  <button id="resetProgress" class="linkbtn">איפוס התקדמות</button>
+  <span class="disclaimer">תשובות המסומנות "לא רשמי" נגזרו מחומר הקורס — מומלץ לאמת מול המקור.</span>
+</footer>
+
+<script src="questions.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+[
+  {
+    "num": 1,
+    "examCode": "24A-B",
+    "year": 2024,
+    "topic": "clustering",
+    "question": "אתם מנסים לבצע אשכול (clustering) של מבנה נתונים שנראה כך. איזה אלגוריתם יאפשר לאשכל את הנתונים בצורה הטובה ביותר?",
+    "options": [
+      "אלגוריתם KMeans עם K=4",
+      "אלגוריתם DBSCAN עם eps=4",
+      "אלגוריתם DBSCAN עם eps=5",
+      "אלגוריתם KMeans עם K=5"
+    ],
+    "correctIndex": 1,
+    "official": false,
+    "explanation": "לצורות שרירותיות/לא-עגולות DBSCAN עדיף על KMeans, ובחירת eps תלויה בצורת הנתונים; ללא איור קשה לקבוע את הערך המדויק, אך לפי הצ'יטשיט DBSCAN מתאים לצורות לא-מובנות.",
+    "hasImage": true
+  },
+  {
+    "num": 2,
+    "examCode": "24A-B",
+    "year": 2024,
+    "topic": "eda",
+    "question": "מה ניתן לומר על המתאם בין המאפיינים X,Y בכל אחד מהתרשימים הבאים?",
+    "options": [
+      "בגרף הימני יש מתאם לינארי אפס, באמצעי ובשמאלי חיוביים",
+      "בגרף הימני יש מתאם לינארי שלילי, בגרף האמצעי חיובי ובגרף השמאלי אפס",
+      "בגרף הימני יש מתאם כללי, באמצעי פרבולי ובשמאלי מדורג",
+      "רק בגרף השמאלי יש מתאם חיובי"
+    ],
+    "correctIndex": 1,
+    "official": false,
+    "explanation": "פירוש סימן מתאם פירסון בשלושה תרשימי פיזור (מתאם ליניארי בלבד); התשובה דורשת קריאת האיור, וההיגיון התקני הוא תיאור מדויק של שלילי/חיובי/אפס. מבוסס מתאם פירסון (course_summary §EDA).",
+    "hasImage": true
+  },
+  {
+    "num": 3,
+    "examCode": "24A-B",
+    "year": 2024,
+    "topic": "ml_python",
+    "question": "מה השלב הראשון בשלבי עבודתו של מדען הנתונים?",
+    "options": [
+      "ניסוח שאלת מחקר",
+      "ניתוח נתונים חקרני",
+      "איסוף נתונים",
+      "בניית מודל"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "סדר התהליך: שאלת מחקר → הרכשת נתונים → ניקוי → EDA → מידול. השלב הראשון הוא ניסוח שאלת המחקר (course_summary §8, תהליך מדעי הנתונים).",
+    "hasImage": false
+  },
+  {
+    "num": 4,
+    "examCode": "24A-B",
+    "year": 2024,
+    "topic": "nlp",
+    "question": "מה מטרת הביטוי הרגולרי re.findall(r\"\\b[A-Z][a-z]*\\b\", text)?",
+    "options": [
+      "למצוא כל המילים שמתחילות באות גדולה וממשיכות באותיות קטנות, בודדות משאר הטקסט.",
+      "לחפש אותיות גדולות בתחילת כל מילה במחרוזת ללא תלות בהמשך המלה",
+      "לאתר מחרוזות שמכילות אותיות גדולות בלבד.",
+      "למצוא כל מילה במחרוזת שאינה מכילה אותיות קטנות."
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "התבנית \\b[A-Z][a-z]*\\b מתאימה מילה שמתחילה באות גדולה ואחריה אפס או יותר אותיות קטנות, כמילה שלמה (גבולות \\b). מבוסס regex (course_summary §12).",
+    "hasImage": false
+  },
+  {
+    "num": 5,
+    "examCode": "24A-B",
+    "year": 2024,
+    "topic": "nlp",
+    "question": "איזה מהביטויים הרגולריים הבאים משמש לזיהוי מחרוזת המכילה מספר שלם (ללא אפס בתחילתו) ואחריו מספר עשרוני (שהספרה הראשונה לפני הנקודה העשרונית יכולה להיות אפס), כאשר שני המספרים מופרדים על ידי פסיק או רווח? לדוגמה \"23,0.56\" או \"4 1.23\". שימו לב שהמספר השלם והעשרוני יכולים להופיע גם בלי פסיק או רווח ביניהם.",
+    "options": [
+      "r\"\\b[1-9]\\d*\\s*(?:,|\\s) \\s*(?:0|[1-9]\\d*)\\.\\d+\\b\"",
+      "r\"\\d+\\s*,\\s*\\d+\"",
+      "r\"\\b0*\\d+\\.?\\d*\\b\"",
+      "r\"[1-9]\\d*\\.\\d\""
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "רק האפשרות הראשונה אוכפת שלם ללא אפס מוביל ([1-9]\\d*), מפריד פסיק או רווח אופציונלי, ואז עשרוני שיכול להתחיל באפס ((?:0|[1-9]\\d*)\\.\\d+). מבוסס regex (course_summary §12).",
+    "hasImage": false
+  },
+  {
+    "num": 6,
+    "examCode": "24A-B",
+    "year": 2024,
+    "topic": "eda",
+    "question": "מה מהטענות הבאות נכון לגבי תרשים עוגה (Pie Chart)?",
+    "options": [
+      "יש להשתמש בתרשימי עוגה כדי להציג את הרכב השלם עבור מספר קטגוריות מועטות.",
+      "תרשימי עוגה הם דרך יעילה להמחיש ולהשוות ערכים במספר רב (10<) של קטגוריות",
+      "תרשימי עוגה הם הכי טובים לוויזואליזציה של נתונים כרונולוגיים לאורך מספר רב של תקופות זמן",
+      "תרשימי עוגה מומלצים להצגה והשוואה של נתונים רציפים."
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "תרשים עוגה מתאים להצגת הרכב חלקים-מתוך-שלם עבור מספר קטן של קטגוריות בלבד. מבוסס ויזואליזציה (course_summary §EDA, עוגה למעט חלקים-משלם).",
+    "hasImage": false
+  },
+  {
+    "num": 7,
+    "examCode": "24A-B",
+    "year": 2024,
+    "topic": "acquisition",
+    "question": "באיזו פונקציה ב-Beautiful Soup ניתן לאחזר את תוכן הטקסט של אלמנט HTML?",
+    "options": [
+      "get_text()",
+      "find_text()",
+      "extract_text()",
+      "parse_text()"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "get_text() מחזירה את תוכן הטקסט של אלמנט ב-BeautifulSoup. רמז: (get_text); course_summary §2-3 (Crawling).",
+    "hasImage": false
+  },
+  {
+    "num": 8,
+    "examCode": "24A-B",
+    "year": 2024,
+    "topic": "acquisition",
+    "question": "איזה מאפיין של אלמנט HTML מייצג את המחלקה שלו?",
+    "options": [
+      "Class",
+      "Id",
+      "Name",
+      "Tag"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "מאפיין class ב-HTML מייצג את המחלקה של האלמנט. רמז: (class); course_summary §Crawling.",
+    "hasImage": false
+  },
+  {
+    "num": 9,
+    "examCode": "24A-B",
+    "year": 2024,
+    "topic": "eda",
+    "question": "איזו מההשערות הבאות היא הסבירה ביותר על סמך התרשים הפזור שנתון לפניך?",
+    "options": [
+      "ישנם חמישה ערכים ייחודיים של X1, שעבורם יש טווח רחב של ערכי X2, ואין קשר ברור בין המשתנים.",
+      "המשתנה X1 מוצג כמשתנה רציף, והתפלגות הנקודות מצביעה על קשר חזק וברור בין X1 ל-X2.",
+      "המשתנה X1 מוצג כמשתנה רציף, אך למעשה התפלגות הנקודות מראה כי הוא נטען כקטגורי.",
+      "ניתן לראות כי קיים קשר ליניארי בין X1 ל-X2."
+    ],
+    "correctIndex": 2,
+    "official": false,
+    "explanation": "כאשר נקודות מצטופפות בערכי X1 בדידים, סביר ש-X1 הוצג כרציף אך למעשה הוא משתנה קטגורי. דורש קריאת התרשים הפזור (course_summary §EDA).",
+    "hasImage": true
+  },
+  {
+    "num": 10,
+    "examCode": "24A-B",
+    "year": 2024,
+    "topic": "ml_python",
+    "question": "איזה מאפיין של DataFrame ב-Pandas מייצג את מספר העמודות?",
+    "options": [
+      "shape[1]",
+      "count()",
+      "length()",
+      "cols()"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "df.shape מחזיר (שורות, עמודות); לכן shape[1] הוא מספר העמודות. רמז: (shape[1]); course_summary §1 (pandas).",
+    "hasImage": false
+  },
+  {
+    "num": 11,
+    "examCode": "24A-B",
+    "year": 2024,
+    "topic": "cleaning",
+    "question": "מהי הדרך המועדפת מבין האפשרויות הבאות כדי למלא את הערכים החסרים בקוד הבא (במקום הפקודה הרשומה כ-XXXX)?",
+    "options": [
+      "mode",
+      "median",
+      "max",
+      "dropna"
+    ],
+    "correctIndex": 1,
+    "official": false,
+    "explanation": "למילוי ערכים חסרים מספריים מעדיפים חציון (median), שעמיד לחריגים. רמז: (median); course_summary §4-5 (טיפול בחסרים).",
+    "hasImage": false
+  },
+  {
+    "num": 12,
+    "examCode": "24A-B",
+    "year": 2024,
+    "topic": "ml_python",
+    "question": "לאחר הלימודים, התקבלתם לעבודה בחברת נטפליקס. קיבלתם משימה ממחלקת השיווק. הלקוחות מאופיינים לפי 50 תכונות שונות שנתונות לנו. הנהלת החברה רוצה להציג את הלקוחות באופן ויזואלי בצורה נוחה למצגת שתוקרן בחדר הישיבות. באיזה סוג של בעיה מדובר?",
+    "options": [
+      "הבעיה שייכת ללמידה לא מונחית (unsupervised learning) והיא מוגדרת כבעיית הורדת מימדים (dimension reduction)",
+      "הבעיה שייכת ללמידה לא מונחית (unsupervised learning) והיא מוגדרת כבעיית אישכול (clustering)",
+      "הבעיה שייכת ללמידה מונחית (supervised learning) והיא מוגדרת כבעיית סיווג (classification)",
+      "הבעיה שייכת ללמידה מונחית (supervised learning) והיא מוגדרת כבעיית נסיגה (regression)"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "הצגה ויזואלית של 50 תכונות = צמצום ממדים (PCA), שהיא למידה לא מונחית. רמז: (dimension reduction); course_summary §6 (PCA).",
+    "hasImage": false
+  },
+  {
+    "num": 13,
+    "examCode": "24A-B",
+    "year": 2024,
+    "topic": "cleaning",
+    "question": "איזה סולם מייצג בצורה הטובה ביותר את מדידת ציוני הסטודנטים בקורס (בטווח של 0-100)?",
+    "options": [
+      "סולם מנה",
+      "סולם סדר",
+      "סולם שמי",
+      "סולם הפרש"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "ציון 0-100 הוא סולם מנה (יש אפס מוחלט ויחסים בעלי משמעות). רמז: (מנה); course_summary §4-5 (סולמות מדידה).",
+    "hasImage": false
+  },
+  {
+    "num": 14,
+    "examCode": "24A-B",
+    "year": 2024,
+    "topic": "eda",
+    "question": "מה ההשפעה של הקוד המודגש בדוגמה הבאה (ההדגשה היא על whis=5)?",
+    "options": [
+      "נראה פחות נתונים חריגים בתרשים",
+      "נראה יותר נתונים חריגים בתרשים",
+      "התיבה תראה חמישונים במקום רבעונים",
+      "רוחב התיבה ימלא חצי מרוחב התרשים"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "הגדלת whis ל-5 מאריכה את השפמים ל-5·IQR, כך שפחות נקודות נחשבות חריגות. רמז: (פחות חריגים); cheatsheet boxplot/whis.",
+    "hasImage": false
+  },
+  {
+    "num": 15,
+    "examCode": "24A-B",
+    "year": 2024,
+    "topic": "eda",
+    "question": "מהו המדד שמשתמשים בו כדי למדוד את מרכוז הנתונים בהתפלגות עם צידוד (skew) גבוה, כמו למשל שכר חודשי?",
+    "options": [
+      "median",
+      "mean",
+      "mode",
+      "quartile"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "בהתפלגות מצודדת מעדיפים חציון (median) כמדד מרכוז כי הוא עמיד לערכים קיצוניים. רמז: (חציון/median); course_summary §EDA (צידוד → חציון).",
+    "hasImage": false
+  },
+  {
+    "num": 16,
+    "examCode": "24A-B",
+    "year": 2024,
+    "topic": "ml_python",
+    "question": "איזה מבנה נתונים בפייתון מייצג זוגות מפתח-ערך (key-value pairs)?",
+    "options": [
+      "מילון (Dictionary)",
+      "רשימה (List)",
+      "טאפל (Tuple)",
+      "קבוצה (Set)"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "מילון (dict) הוא מבנה הנתונים בפייתון לזוגות מפתח-ערך. רמז: (dict); course_summary §1.",
+    "hasImage": false
+  },
+  {
+    "num": 17,
+    "examCode": "24A-B",
+    "year": 2024,
+    "topic": "ml_python",
+    "question": "איזו שפת תכנות הנפוצה והמועדפת במדעי הנתונים?",
+    "options": [
+      "פייתון",
+      "C#",
+      "ג'אווה",
+      "ג'אווהסקריפט"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "פייתון היא השפה הנפוצה והמועדפת במדעי הנתונים. רמז: (Python); course_summary §1.",
+    "hasImage": false
+  },
+  {
+    "num": 18,
+    "examCode": "24A-B",
+    "year": 2024,
+    "topic": "ml_python",
+    "question": "באיזו שיטה ב-Pandas ניתן למיין DataFrame לפי עמודה מסוימת?",
+    "options": [
+      "sort_values()",
+      "arrange()",
+      "order_by()",
+      "sortBy()"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "sort_values() ממיינת DataFrame לפי עמודה ב-pandas. רמז: (sort_values); course_summary §1.",
+    "hasImage": false
+  },
+  {
+    "num": 19,
+    "examCode": "24A-B",
+    "year": 2024,
+    "topic": "eda",
+    "question": "קיבלתם מערך בן 49 נתונים. כיצד תחשבו את האחוזון ה-20?",
+    "options": [
+      "המדידה העשירית בסדר העולה לאחר שהנתונים ממוינים בסדר עולה",
+      "המדידה העשרים בסדר העולה לאחר שהנתונים ממוינים בסדר עולה",
+      "המדידה החמישית בסדר העולה לאחר שהנתונים ממוינים בסדר עולה",
+      "המדידה הארבעים בסדר העולה לאחר שהנתונים ממוינים בסדר עולה"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "אחוזון 20 מתוך 49 ערכים: 0.20·49 ≈ 9.8 ⇒ המדידה ה-10 בסדר עולה. מבוסס חישוב אחוזונים (course_summary §EDA).",
+    "hasImage": false
+  },
+  {
+    "num": 20,
+    "examCode": "24A-B",
+    "year": 2024,
+    "topic": "acquisition",
+    "question": "איך נכון לייצג בקובץ JSON את הקורס שלנו?",
+    "options": [
+      "אפשרות א (מבנה JSON המוצג כתמונה)",
+      "אפשרות ב (מבנה JSON המוצג כתמונה)",
+      "אפשרות ג (מבנה JSON המוצג כתמונה)",
+      "אפשרות ד (מבנה JSON המוצג כתמונה)"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "השאלה דורשת בחירת מבנה JSON תקין; אפשרויות התשובה מופיעות כתמונות/קטעי קוד שאינם בטקסט, ולכן לא ניתן לקבוע בוודאות מהטקסט בלבד. מבוסס JSON (course_summary §2-3).",
+    "hasImage": true
+  }
+]
