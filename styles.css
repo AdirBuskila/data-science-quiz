@@ -379,20 +379,19 @@ main{max-width:840px;margin:1.6rem auto;padding:0 1rem}
   .learn-backdrop{display:none !important}
 }
 @media(max-width:560px){
-  /* single compact row: [logo+title] ... [stats] [📖] [🌙] */
-  .topbar{flex-wrap:nowrap;gap:.4rem;padding:.85rem .7rem;align-items:center}
-  .brand{gap:.4rem;min-width:0;flex:0 1 auto}
+  /* two rows: title on top, [stats + 📖 + 🌙] beneath */
+  .topbar{flex-direction:column;align-items:stretch;gap:.55rem;padding:.7rem .9rem}
+  .brand{gap:.55rem;min-width:0}
   .brand>div{min-width:0}
   .brand .sub{display:none}
-  .brand h1{font-size:.86rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .logo{width:1.8rem;height:1.8rem;font-size:.95rem;border-radius:10px;flex:none}
-  .topbar-right{flex-wrap:nowrap;justify-content:flex-end;align-items:center;gap:.3rem;flex:1 1 auto;min-width:0}
-  .topstats{order:0;flex-basis:auto;flex-wrap:nowrap;gap:.25rem}
-  .stat{padding:.1rem .35rem;font-size:.56rem;line-height:1.15;border-radius:8px;text-align:center}
-  .stat b{font-size:.72rem}
-  .learn-entry{font-size:0;padding:.32rem .42rem;flex:none}
-  .learn-entry::before{content:"📖 לימוד";font-size:.74rem;white-space:nowrap}
-  .theme-toggle{width:1.8rem;height:1.8rem;font-size:.9rem;flex:none}
+  .brand h1{font-size:1.08rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .logo{width:2.1rem;height:2.1rem;font-size:1.05rem;border-radius:11px;flex:none}
+  .topbar-right{flex-wrap:nowrap;justify-content:space-between;align-items:center;gap:.4rem}
+  .topstats{flex-wrap:nowrap;gap:.35rem}
+  .stat{padding:.2rem .5rem;font-size:.66rem;border-radius:10px}
+  .stat b{font-size:.8rem}
+  .learn-entry{padding:.42rem .7rem;font-size:.82rem;flex:none}
+  .theme-toggle{width:2.1rem;height:2.1rem;font-size:1rem;flex:none}
   main{margin:1rem auto}
   .card{padding:1.2rem 1.1rem}
   .modes{grid-template-columns:1fr}
