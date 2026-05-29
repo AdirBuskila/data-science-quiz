@@ -66,6 +66,7 @@
 }
 
 *{box-sizing:border-box}
+html,body{overflow-x:hidden;max-width:100%}
 *:focus-visible{outline:none;box-shadow:var(--ring);border-radius:var(--radius-xs)}
 
 body{
@@ -365,16 +366,16 @@ main{max-width:840px;margin:1.6rem auto;padding:0 1rem}
   .learn-entry{padding:.45rem .7rem}
   .learn-layout{grid-template-columns:1fr}
   .learn-toc-toggle{display:inline-block}
-  /* chapter rail becomes a right-side slide-in drawer (RTL) */
+  /* Chapter list collapses to an in-flow dropdown.
+     display:none when closed => it can never peek or cause overflow. */
   .learn-toc{
-    position:fixed;top:0;bottom:0;right:0;left:auto;z-index:45;
-    width:min(82vw,300px);max-height:100vh;border-radius:0;
-    box-shadow:var(--shadow);transform:translateX(100%);transition:transform .25s ease
+    display:none;position:static;width:auto;max-height:none;
+    margin-bottom:.9rem;top:auto
   }
-  .learn-toc.open{transform:translateX(0)}
-  /* dim backdrop behind the open drawer */
-  .learn-backdrop{position:fixed;inset:0;z-index:44;background:rgba(4,6,16,.5);
-    backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
+  .learn-toc.open{display:flex}
+  .learn-toc button{font-size:.92rem;padding:.6rem .8rem}
+  /* no overlay drawer on mobile */
+  .learn-backdrop{display:none !important}
 }
 @media(max-width:560px){
   .topbar{padding:.7rem 1rem}
