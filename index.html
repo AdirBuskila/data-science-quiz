@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>משחק תרגול — מבוא למדעי הנתונים</title>
-<link rel="stylesheet" href="styles.css?v=2">
+<link rel="stylesheet" href="styles.css?v=3">
 <script>
   // Apply saved theme before first paint to avoid a flash of the wrong theme.
   (function(){ try{ var t=localStorage.getItem("dsq_theme"); if(t==="light"||t==="dark") document.documentElement.dataset.theme=t; }catch(e){} })();
@@ -22,6 +22,7 @@
   <div class="topbar-right">
     <div class="topstats" id="topStats"></div>
     <button id="learnEntry" class="btn ghost learn-entry" type="button">📖 מצב לימוד</button>
+    <!-- label kept on all breakpoints for clarity -->
     <button id="themeToggle" class="theme-toggle" type="button" aria-label="החלפת מצב תצוגה (בהיר/כהה)" title="מצב בהיר/כהה"></button>
   </div>
 </header>
@@ -109,6 +110,7 @@
       <nav id="learnToc" class="learn-toc" aria-label="ניווט פרקים"></nav>
       <article id="learnContent" class="card learn-content" tabindex="-1"></article>
     </div>
+    <div id="learnBackdrop" class="learn-backdrop hidden"></div>
     <div class="learn-foot">
       <button id="learnPrev" class="btn ghost">⟶ הקודם</button>
       <span id="learnPos" class="learn-pos"></span>
@@ -143,8 +145,8 @@
   <span class="disclaimer">תשובות המסומנות "לא רשמי" נגזרו מחומר הקורס — מומלץ לאמת מול המקור.</span>
 </footer>
 
-<script src="questions.js?v=2"></script>
-<script src="learn.js?v=2"></script>
-<script src="app.js?v=2"></script>
+<script src="questions.js?v=3"></script>
+<script src="learn.js?v=3"></script>
+<script src="app.js?v=3"></script>
 </body>
 </html>

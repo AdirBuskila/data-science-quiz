@@ -334,6 +334,7 @@ function bindGlobal(){
   const prevB   = $("#learnPrev");
   const nextB   = $("#learnNext");
   const toggle  = $("#learnTocToggle");
+  const backdrop= $("#learnBackdrop");
   const backB   = $("#learnBackBtn");
   const lb      = $("#lightbox");
   const lbImg   = $("#lightboxImg");
@@ -360,13 +361,19 @@ function bindGlobal(){
     content.focus({preventScroll:true});
   }
   function openLearn(){ if(!built) buildToc(); show("screen-learn"); go(idx); }
-  function closeDrawer(){ toc.classList.remove("open"); toggle.setAttribute("aria-expanded","false"); }
+  function setDrawer(open){
+    toc.classList.toggle("open", open);
+    backdrop.classList.toggle("hidden", !open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+  function closeDrawer(){ setDrawer(false); }
 
   entry.onclick  = openLearn;
   backB.onclick  = ()=>{ closeDrawer(); show("screen-start"); };
   prevB.onclick  = ()=> go(idx-1);
   nextB.onclick  = ()=> go(idx+1);
-  toggle.onclick = ()=>{ const o=toc.classList.toggle("open"); toggle.setAttribute("aria-expanded", o?"true":"false"); };
+  toggle.onclick = ()=> setDrawer(!toc.classList.contains("open"));
+  backdrop.onclick = closeDrawer;
 
   // lightbox: click a figure image to zoom
   content.addEventListener("click", e=>{

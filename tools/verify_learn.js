@@ -85,6 +85,45 @@ function assert(cond, msg){ if(!cond){ console.error("ASSERT FAILED:", msg); pro
   await pg.waitForFunction(() => [...document.querySelectorAll(".learn-content img")].every(im => im.complete));
   await pg.screenshot({ path: SHOT("learn-light-ch6.png") });
 
+  // ---- mobile: drawer must be hidden by default, slide in on toggle ----
+  await pg.evaluate(() => { document.documentElement.dataset.theme = "dark"; });
+  await pg.setViewport({ width: 390, height: 780, deviceScaleFactor: 2 });
+  await pg.reload({ waitUntil: "networkidle0" });
+  await pg.click("#learnEntry");
+  await pg.waitForSelector("#screen-learn:not(.hidden)");
+
+  const vw = 390;
+  const offRight = await pg.$eval("#learnToc", el => el.getBoundingClientRect().left);
+  assert(offRight >= vw - 2, "TOC drawer is off-screen by default (left=" + Math.round(offRight) + ", vw=" + vw + ")");
+  const backdropHidden = await pg.$eval("#learnBackdrop", el => el.classList.contains("hidden"));
+  assert(backdropHidden, "backdrop hidden by default");
+  await pg.screenshot({ path: SHOT("learn-mobile-closed.png") });
+
+  // open the drawer
+  await pg.click("#learnTocToggle");
+  await new Promise(r => setTimeout(r, 350)); // allow slide transition
+  const openLeft = await pg.$eval("#learnToc", el => el.getBoundingClientRect().left);
+  assert(openLeft < vw - 100, "TOC drawer slides into view on toggle (left=" + Math.round(openLeft) + ")");
+  const backdropShown = await pg.$eval("#learnBackdrop", el => !el.classList.contains("hidden"));
+  assert(backdropShown, "backdrop shown when drawer open");
+  await pg.screenshot({ path: SHOT("learn-mobile-open.png") });
+
+  // tap backdrop closes
+  await pg.click("#learnBackdrop");
+  await new Promise(r => setTimeout(r, 350));
+  const closedAgain = await pg.$eval("#learnToc", el => el.getBoundingClientRect().left);
+  assert(closedAgain >= vw - 2, "backdrop tap closes drawer");
+
+  // selecting a chapter from the drawer closes it too
+  await pg.click("#learnTocToggle");
+  await new Promise(r => setTimeout(r, 350));
+  await pg.evaluate(() => document.querySelector("#learnToc button").click());
+  await new Promise(r => setTimeout(r, 350));
+  const afterPick = await pg.$eval("#learnToc", el => el.getBoundingClientRect().left);
+  assert(afterPick >= vw - 2, "picking a chapter closes the drawer");
+  await pg.screenshot({ path: SHOT("learn-mobile-content.png") });
+
+  console.log("mobile drawer    : off-screen by default, slides in, closes on backdrop/pick");
   console.log("TOC chapters     :", tocCount);
   console.log("ch10 images      :", imgStats.length, "all loaded:", imgStats.every(s => s.w > 0));
   console.log("nav pos          :", posBefore, "->", posAfter);
