@@ -296,6 +296,29 @@ function bindGlobal(){
   });
 }
 
+/* ---------- theme toggle ---------- */
+(function initTheme(){
+  const THEME_KEY = "dsq_theme";
+  const btn = document.getElementById("themeToggle");
+  if(!btn) return;
+  const root = document.documentElement;
+  const systemDark = () => !window.matchMedia || !window.matchMedia("(prefers-color-scheme: light)").matches;
+  // effective theme = explicit override, else follow system
+  const effective = () => root.dataset.theme || (systemDark() ? "dark" : "light");
+  const paint = () => { btn.textContent = effective()==="dark" ? "🌙" : "☀️"; };
+  paint();
+  btn.addEventListener("click", () => {
+    const next = effective()==="dark" ? "light" : "dark";
+    root.dataset.theme = next;
+    try{ localStorage.setItem(THEME_KEY, next); }catch(e){}
+    paint();
+  });
+  // keep icon in sync with the OS when no manual override is set
+  if(window.matchMedia){
+    window.matchMedia("(prefers-color-scheme: light)").addEventListener?.("change", () => { if(!root.dataset.theme) paint(); });
+  }
+})();
+
 /* ---------- boot ---------- */
 if(!QS.length){
   document.getElementById("app").innerHTML="<div class='card'><h2>לא נטענו שאלות</h2><p>ודאו ש-<code>questions.js</code> נמצא לצד הדף.</p></div>";
