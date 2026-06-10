@@ -42,9 +42,9 @@
     "topic": "ml_python",
     "question": "הוגדרה המחרוזת הבאה בפייתון, וכעת הריצו את הפקודה הבאה. מהו הפלט שיודפס?",
     "options": ["הפלט שיודפס: 2 False True", "הפלט שיודפס: 7 1 0", "הפלט שיודפס: 4 True False", "הפלט שיודפס: 2 True True"],
-    "correctIndex": 3,
+    "correctIndex": 0,
     "official": false,
-    "explanation": "פעולת מחרוזת בפייתון; לפי דפוס השאלה הפלט הצפוי הוא 2 True True. (קוד המקור הוצג כתמונה ולא חולץ במלואו.)",
+    "explanation": "txt = \"one two One one two two ONE\". count(\"one\")=2 (רגיש לאותיות גדולות/קטנות — רק 'one' באותיות קטנות נספר), startswith(\"one\")=True, endswith(\"one\")=False (המחרוזת מסתיימת ב-'ONE'). הפלט: 2 True False — תשובה א.",
     "hasImage": true
   },
   {
@@ -101,10 +101,10 @@
     "year": 2024,
     "topic": "ml_python",
     "question": "השלימו את הפונקציה הבאה:",
-    "options": ["אפשרות א", "אפשרות ב", "אפשרות ג", "אפשרות ד"],
+    "options": ["img:images/exams/24B-A-Q9-OP-A.png", "img:images/exams/24B-A-Q9-OP-B.png", "img:images/exams/24B-A-Q9-OP-C.png", "img:images/exams/24B-A-Q9-OP-D.png"],
     "correctIndex": 0,
     "official": false,
-    "explanation": "השלמת קוד פייתון; גוף הפונקציה והאפשרויות הוצגו כתמונות שלא חולצו, לכן לא ניתן לקבוע את התשובה הנכונה במהימנות.",
+    "explanation": "להשגת הפיצ'רים מורידים את עמודת התווית: X = df.drop(columns=[label_column]); y = df[label_column]; ואז train_test_split(X, y, test_size=test_ratio, random_state=rand_state). השילוב הנכון הוא אפשרות א.",
     "hasImage": true
   },
   {
@@ -186,9 +186,9 @@
     "topic": "nlp",
     "question": "אילו מחרוזות יכול להחזיר הביטוי הרגולרי הבא:",
     "options": ["שם של בן אדם באנגלית עם תחילית השם האמצעי", "כתובת URL פשוטה", "כתובת דוא\"ל (email)", "כל התשובות נכונות"],
-    "correctIndex": 2,
+    "correctIndex": 0,
     "official": false,
-    "explanation": "לפי דפוס השאלות בקורס, ביטוי רגולרי מסוג זה מתאים לכתובת דוא\"ל. (הביטוי עצמו הוצג כתמונה ולא חולץ; התשובה מבוססת על קונספט שאלת ה-email.)",
+    "explanation": "הביטוי r'^[A-Z][a-z]+ [A-Z]\\. [A-Z][a-z]+$' מתאים לתבנית: מילה באות גדולה ואחריה אותיות קטנות, רווח, אות גדולה יחידה ונקודה, רווח, ומילה נוספת באות גדולה — כלומר שם באנגלית עם תחילית לשם האמצעי (למשל \"John F. Kennedy\"). זו תשובה א.",
     "hasImage": true
   },
   {

@@ -177,7 +177,7 @@ function renderQuestion(){
   $("#optionsList").innerHTML = v.order.map((origIdx,disp)=>
     `<button class="opt" data-disp="${disp}">
        <span class="key">${HE_KEYS[disp]||disp+1}</span>
-       <span class="txt">${escapeHtml(q.options[origIdx])}</span>
+       <span class="txt">${optionHtml(q.options[origIdx])}</span>
      </button>`).join("");
   document.querySelectorAll(".opt").forEach(b=> b.onclick=()=>choose(parseInt(b.dataset.disp,10)));
 
@@ -215,6 +215,13 @@ function extrasHtml(q){
   if(q.code)  h+=`<pre class="q-code" dir="ltr"><code>${escapeHtml(q.code)}</code></pre>`;
   if(q.image) h+=`<figure class="q-fig"><img class="q-img" src="${q.image}" alt="" loading="lazy"></figure>`;
   return h;
+}
+
+/* an option may be plain text or an image marker ("img:<path>") */
+function optionHtml(opt){
+  const s=String(opt);
+  if(s.startsWith("img:")) return `<img class="opt-img" src="${s.slice(4)}" alt="" loading="lazy">`;
+  return escapeHtml(opt);
 }
 
 /* ---------- answering ---------- */
@@ -317,12 +324,12 @@ function renderResults(correct, byTopic, review){
       <span class="tbar"><i style="width:${p}%"></i></span><span>${o.c}/${o.n}</span></div>`;
   }).join("");
   $("#resultsReview").innerHTML = review.map(r=>{
-    const v=r.q; const chosenTxt = r.chosen!=null ? v.options[r.chosen] : "— לא נענתה —";
+    const v=r.q; const chosenTxt = r.chosen!=null ? optionHtml(v.options[r.chosen]) : "— לא נענתה —";
     return `<div class="rev ${r.ok?"ok":"bad"}">
       <div class="rq">${escapeHtml(v.question)}</div>
       ${extrasHtml(v)}
-      <div class="ra"><span class="${r.ok?"good":"miss"}">תשובתך: ${escapeHtml(chosenTxt)}</span>`+
-      (r.ok?"":` · <span class="good">הנכונה: ${escapeHtml(v.options[v.correctIndex])}</span>`)+
+      <div class="ra"><span class="${r.ok?"good":"miss"}">תשובתך: ${chosenTxt}</span>`+
+      (r.ok?"":` · <span class="good">הנכונה: ${optionHtml(v.options[v.correctIndex])}</span>`)+
       `<br>${escapeHtml(v.explanation||"")}${v.official?"":" (לא רשמי)"}</div></div>`;
   }).join("");
 }

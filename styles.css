@@ -208,6 +208,9 @@ main{max-width:840px;margin:1.6rem auto;padding:0 1rem}
 }
 .rev .q-code{font-size:.78rem}
 .rev .q-img{max-width:280px}
+/* image-based answer options (e.g. code-snippet choices) */
+.opt .opt-img{max-width:100%;height:auto;display:block;border-radius:6px;background:#fff}
+.rev .opt-img{max-width:240px;vertical-align:middle;border-radius:6px}
 
 /* ---------------- buttons ---------------- */
 .btn{

@@ -3746,6 +3746,27 @@
   "examCode": "24B-A",
   "year": 2024,
   "topic": "ml_python",
+  "question": "הוגדרה המחרוזת הבאה בפייתון, וכעת הריצו את הפקודה הבאה. מהו הפלט שיודפס?",
+  "options": [
+   "הפלט שיודפס: 2 False True",
+   "הפלט שיודפס: 7 1 0",
+   "הפלט שיודפס: 4 True False",
+   "הפלט שיודפס: 2 True True"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "txt = \"one two One one two two ONE\". count(\"one\")=2 (רגיש לאותיות גדולות/קטנות — רק 'one' באותיות קטנות נספר), startswith(\"one\")=True, endswith(\"one\")=False (המחרוזת מסתיימת ב-'ONE'). הפלט: 2 True False — תשובה א.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
+  "id": "24B-A-Q4",
+  "image": "images/exams/24B-A-Q4.png",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24B-A",
+  "year": 2024,
+  "topic": "ml_python",
   "question": "איזו פקודה ב-pandas מציגה את מס' השורות והעמודות במסגרת נתונים?",
   "options": [
    "df.shape",
@@ -3760,6 +3781,27 @@
   "source": "exam",
   "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
   "id": "24B-A-Q6",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "24B-A",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "השלימו את הפונקציה הבאה:",
+  "options": [
+   "img:images/exams/24B-A-Q9-OP-A.png",
+   "img:images/exams/24B-A-Q9-OP-B.png",
+   "img:images/exams/24B-A-Q9-OP-C.png",
+   "img:images/exams/24B-A-Q9-OP-D.png"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "להשגת הפיצ'רים מורידים את עמודת התווית: X = df.drop(columns=[label_column]); y = df[label_column]; ואז train_test_split(X, y, test_size=test_ratio, random_state=rand_state). השילוב הנכון הוא אפשרות א.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
+  "id": "24B-A-Q9",
+  "image": "images/exams/24B-A-Q9.png",
   "topicLabel": "מושגי ML ופייתון"
  },
  {
@@ -4360,6 +4402,27 @@
   "source": "exam",
   "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
   "id": "24A-B-Q5",
+  "topicLabel": "ניתוח טקסט (NLP)"
+ },
+ {
+  "examCode": "24B-A",
+  "year": 2024,
+  "topic": "nlp",
+  "question": "אילו מחרוזות יכול להחזיר הביטוי הרגולרי הבא:",
+  "options": [
+   "שם של בן אדם באנגלית עם תחילית השם האמצעי",
+   "כתובת URL פשוטה",
+   "כתובת דוא\"ל (email)",
+   "כל התשובות נכונות"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "הביטוי r'^[A-Z][a-z]+ [A-Z]\\. [A-Z][a-z]+$' מתאים לתבנית: מילה באות גדולה ואחריה אותיות קטנות, רווח, אות גדולה יחידה ונקודה, רווח, ומילה נוספת באות גדולה — כלומר שם באנגלית עם תחילית לשם האמצעי (למשל \"John F. Kennedy\"). זו תשובה א.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
+  "id": "24B-A-Q16",
+  "image": "images/exams/24B-A-Q16.png",
   "topicLabel": "ניתוח טקסט (NLP)"
  },
  {
