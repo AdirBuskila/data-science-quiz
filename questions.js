@@ -423,6 +423,26 @@ window.QUESTIONS = [
   "examCode": "26A-A",
   "year": 2026,
   "topic": "acquisition",
+  "question": "מה ההבדל העיקרי בין שימוש ב-API לבין Web Scraping?",
+  "options": [
+   "API מספק ממשק מובנה ומתועד לגישה לנתונים",
+   "API תמיד מהיר יותר",
+   "Scraping תמיד מדויק יותר",
+   "API פועל רק על נתונים מספריים"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "ההבדל העיקרי הוא ש-API מספק ממשק מובנה, מתועד ומוסכם לגישה לנתונים, בעוד scraping מחלץ נתונים מ-HTML ללא ממשק רשמי.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q25",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "acquisition",
   "question": "מה מספקת ספריית urllib?",
   "options": [
    "כלים לביצוע בקשות HTTP כולל קידוד כתובות",
@@ -517,6 +537,26 @@ window.QUESTIONS = [
   "source": "exam",
   "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
   "id": "26A-B-Q5",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "26A-B",
+  "year": 2026,
+  "topic": "acquisition",
+  "question": "כיצד ניתן לשלוף את הערך של התכונה href מתוך אובייקט (של Beautiful Soup) של תגית <a> בשם link_tag?",
+  "options": [
+   "link_tag['href']",
+   "link_tag.href",
+   "link_tag.get_href()",
+   "link_tag.value('href')"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "ב-Beautiful Soup ניגשים לערך של תכונה (attribute) דרך גישת מילון, למשל link_tag['href'].",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד ב׳",
+  "id": "26A-B-Q6",
   "topicLabel": "הרכשת נתונים"
  },
  {
@@ -1517,6 +1557,48 @@ window.QUESTIONS = [
   "topicLabel": "ניקוי נתונים"
  },
  {
+  "examCode": "24A-A",
+  "year": 2024,
+  "topic": "clustering",
+  "question": "אתם מנסים לבצע אשכול (clustering) של מבנה נתונים שנראה כצורה לא-קמורה. איזה אלגוריתם יאפשר לאשכל את הנתונים ל-4 קבוצות, כך שיתקבלו 2 קבוצות עבור העיניים, קבוצה עבור הפה וקבוצה עבור העיגול החיצוני?",
+  "options": [
+   "DBSCAN",
+   "KMeans עם K=4",
+   "Anomaly detection",
+   "PCA"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "DBSCAN מבוסס צפיפות ומזהה אשכולות בצורות שרירותיות (לא עגולות), בניגוד ל-KMeans שמניח אשכולות כדוריים.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד א׳",
+  "id": "24A-A-Q2",
+  "image": "images/exams/24A-A-Q2.png",
+  "topicLabel": "אשכול"
+ },
+ {
+  "examCode": "24A-B",
+  "year": 2024,
+  "topic": "clustering",
+  "question": "אתם מנסים לבצע אשכול (clustering) של מבנה נתונים שנראה כך. איזה אלגוריתם יאפשר לאשכל את הנתונים בצורה הטובה ביותר?",
+  "options": [
+   "אלגוריתם KMeans עם K=4",
+   "אלגוריתם DBSCAN עם eps=4",
+   "אלגוריתם DBSCAN עם eps=5",
+   "אלגוריתם KMeans עם K=5"
+  ],
+  "correctIndex": 1,
+  "official": false,
+  "explanation": "לצורות שרירותיות/לא-עגולות DBSCAN עדיף על KMeans, ובחירת eps תלויה בצורת הנתונים; ללא איור קשה לקבוע את הערך המדויק, אך לפי הצ'יטשיט DBSCAN מתאים לצורות לא-מובנות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
+  "id": "24A-B-Q1",
+  "image": "images/exams/24A-B-Q1.png",
+  "topicLabel": "אשכול"
+ },
+ {
   "examCode": "24B-A",
   "year": 2024,
   "topic": "clustering",
@@ -1857,6 +1939,27 @@ window.QUESTIONS = [
   "topicLabel": "ויזואליזציה ו-EDA"
  },
  {
+  "examCode": "24A-A",
+  "year": 2024,
+  "topic": "eda",
+  "question": "מה ניתן לומר על המתאם בין המאפיינים X1, X2 בכל אחד מהתרשימים הבאים?",
+  "options": [
+   "בכל הגרפים יש מתאם לינארי קרוב לאפס",
+   "בגרף הימני יש מתאם לינארי חיובי, בגרף האמצעי שלילי ובגרף השמאלי אפס",
+   "בגרף הימני יש מתאם לינארי שלילי, בגרף האמצעי חיובי ובגרף השמאלי אפס",
+   "בגרפים הימני והאמצעי יש מתאמים פרבוליים ובגרף השמאלי מתאם רדיאלי"
+  ],
+  "correctIndex": 3,
+  "official": true,
+  "explanation": "הגרפים מציגים קשרים לא-ליניאריים: פרבולי בימני ובאמצעי ורדיאלי בשמאלי, ולכן מתאם פירסון הליניארי אינו מתאר אותם.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד א׳",
+  "id": "24A-A-Q9",
+  "image": "images/exams/24A-A-Q9.png",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
   "examCode": "24A-B",
   "year": 2024,
   "topic": "eda",
@@ -1920,6 +2023,27 @@ window.QUESTIONS = [
   "examCode": "24A-B",
   "year": 2024,
   "topic": "eda",
+  "question": "מה ניתן לומר על המתאם בין המאפיינים X,Y בכל אחד מהתרשימים הבאים?",
+  "options": [
+   "בגרף הימני יש מתאם לינארי אפס, באמצעי ובשמאלי חיוביים",
+   "בגרף הימני יש מתאם לינארי שלילי, בגרף האמצעי חיובי ובגרף השמאלי אפס",
+   "בגרף הימני יש מתאם כללי, באמצעי פרבולי ובשמאלי מדורג",
+   "רק בגרף השמאלי יש מתאם חיובי"
+  ],
+  "correctIndex": 1,
+  "official": false,
+  "explanation": "פירוש סימן מתאם פירסון בשלושה תרשימי פיזור (מתאם ליניארי בלבד); התשובה דורשת קריאת האיור, וההיגיון התקני הוא תיאור מדויק של שלילי/חיובי/אפס. מבוסס מתאם פירסון (course_summary §EDA).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
+  "id": "24A-B-Q2",
+  "image": "images/exams/24A-B-Q2.png",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24A-B",
+  "year": 2024,
+  "topic": "eda",
   "question": "מה מהטענות הבאות נכון לגבי תרשים עוגה (Pie Chart)?",
   "options": [
    "יש להשתמש בתרשימי עוגה כדי להציג את הרכב השלם עבור מספר קטגוריות מועטות.",
@@ -1934,6 +2058,27 @@ window.QUESTIONS = [
   "source": "exam",
   "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
   "id": "24A-B-Q6",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24A-B",
+  "year": 2024,
+  "topic": "eda",
+  "question": "איזו מההשערות הבאות היא הסבירה ביותר על סמך התרשים הפזור שנתון לפניך?",
+  "options": [
+   "ישנם חמישה ערכים ייחודיים של X1, שעבורם יש טווח רחב של ערכי X2, ואין קשר ברור בין המשתנים.",
+   "המשתנה X1 מוצג כמשתנה רציף, והתפלגות הנקודות מצביעה על קשר חזק וברור בין X1 ל-X2.",
+   "המשתנה X1 מוצג כמשתנה רציף, אך למעשה התפלגות הנקודות מראה כי הוא נטען כקטגורי.",
+   "ניתן לראות כי קיים קשר ליניארי בין X1 ל-X2."
+  ],
+  "correctIndex": 2,
+  "official": false,
+  "explanation": "כאשר נקודות מצטופפות בערכי X1 בדידים, סביר ש-X1 הוצג כרציף אך למעשה הוא משתנה קטגורי. דורש קריאת התרשים הפזור (course_summary §EDA).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
+  "id": "24A-B-Q9",
+  "image": "images/exams/24A-B-Q9.png",
   "topicLabel": "ויזואליזציה ו-EDA"
  },
  {
@@ -1954,6 +2099,27 @@ window.QUESTIONS = [
   "source": "exam",
   "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
   "id": "24B-A-Q13",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24B-A",
+  "year": 2024,
+  "topic": "eda",
+  "question": "מה ניתן לומר על המתאם בין המאפיינים X1, X2 בגרף הבא:",
+  "options": [
+   "ישנו מתאם (קורלציה) לינארית שלילית בין המאפיינים X1 ו-X2",
+   "ישנו מתאם (קורלציה) לינארית חיובית בין המאפיינים X1 ו-X2",
+   "ישנו מתאם (קורלציה) לינארית חיובית חזקה בין המאפיינים X1 ו-X2",
+   "אין כל מתאם (קורלציה) בין המאפיינים X1 ו-X2"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "השאלה דורשת קריאת גרף פיזור; התשובה תלויה בכיוון הענן. ללא הגרף לא ניתן לאמת בוודאות, אך ניסוח דומה במבחנים נוטה למתאם שלילי.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
+  "id": "24B-A-Q15",
+  "image": "images/exams/24B-A-Q15.png",
   "topicLabel": "ויזואליזציה ו-EDA"
  },
  {
@@ -2074,6 +2240,27 @@ window.QUESTIONS = [
   "source": "exam",
   "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
   "id": "24B-B-Q15",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "24B-B",
+  "year": 2024,
+  "topic": "eda",
+  "question": "מה ניתן לומר על המתאם בין המאפיינים X1, X2 בגרף הבא?",
+  "options": [
+   "ישנו מתאם (קורלציה) לינארית חיובית חלשה בין המאפיינים X1 ו-X2",
+   "לא ניתן לדעת אם יש מתאם (קורלציה) בין המאפיינים X1 ו-X2",
+   "ישנו מתאם (קורלציה) גלית בין המאפיינים X1 ו-X2",
+   "ישנו מתאם (קורלציה) לינארית שלילית חלשה בין המאפיינים X1 ו-X2"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "שאלת קריאת גרף פיזור; ללא התרשים לא ניתן לקבוע את כיוון/חוזק המתאם בוודאות.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
+  "id": "24B-B-Q17",
+  "image": "images/exams/24B-B-Q17.png",
   "topicLabel": "ויזואליזציה ו-EDA"
  },
  {
@@ -2440,6 +2627,27 @@ window.QUESTIONS = [
   "examCode": "25A-B",
   "year": 2025,
   "topic": "eda",
+  "question": "עבור הנתונים המוצגים בטבלה להלן, מה השילוב של אמצעי הויזואליזציה המתאים ביותר, על מנת להציג את שלושת ה-features (מאפיינים) בייצוג גרפי בודד?",
+  "options": [
+   "להציג scatterplot עם Feature A ו-Feature B בצירים, ועם צבעים עבור Feature C",
+   "להציג scatterplot עם Feature A ו-Feature B בצירים, ועם גודל הסימן עבור Feature C",
+   "לעשות bar plot עם Feature A בציר ה-X ו-Feature B בציר ה-Y, כאשר Feature C ישמש כצבע של העמודה",
+   "זו משימה בלתי אפשרית עקב סוגי הנתונים השונים"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "שני מאפיינים בצירי ה-scatter ומאפיין שלישי מקודד בצבע (hue) הוא שילוב מתאים להצגת שלושה מאפיינים בגרף יחיד.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד ב׳",
+  "id": "25A-B-Q14",
+  "image": "images/exams/25A-B-Q14.png",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "25A-B",
+  "year": 2025,
+  "topic": "eda",
   "question": "איזה סוג של הצגה גרפית (ויזואליזציה) הכי מתאים להצגת שלושה משתנים נומריים ומשתנה קטגוריאלי?",
   "options": [
    "Scatterplot עם הבדלי צבעים והבדלים בגודל מרקר",
@@ -2480,6 +2688,26 @@ window.QUESTIONS = [
   "examCode": "26A-A",
   "year": 2026,
   "topic": "eda",
+  "question": "איך ניתן להציג באמצעות ויזואליזציה Feature A שהינו נומרי, Feature B שהינו נומרי, ו-Feature C שהינו קטגוריאלי, ב-Matplotlib?",
+  "options": [
+   "להשתמש ב-scatterplot עם Feature A ו-Feature B כצירים, ולקודד את הקטגוריות באמצעות מרקרים עם צורות שונות.",
+   "להשתמש ב-pie chart עם פרוסה אחת לכל קטגוריה, ו-Feature A ו-Feature B משולבים ומיוצגים כזווית/רוחב פרוסה.",
+   "לעשות box plot לכל Feature בנפרד.",
+   "לשלב היסטוגרמה של Feature A עם Feature B בתור ציר משני."
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "scatter עם שני המשתנים הנומריים כצירים, וקידוד הקטגוריה במרקרים/צבעים, מציג את שלושת המאפיינים בגרף אחד.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q10",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "eda",
   "question": "אם מקדם המתאם של פירסון בין המשתנים X ו-Y הוא 0.8-, מה המשמעות של זה?",
   "options": [
    "קשר ליניארי שלילי חזק",
@@ -2494,6 +2722,26 @@ window.QUESTIONS = [
   "source": "exam",
   "sourceLabel": "2026 סמסטר א׳ מועד א׳",
   "id": "26A-A-Q6",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "eda",
+  "question": "בהיסטוגרמה, מה לרוב מסמל ציר ה-y?",
+  "options": [
+   "שכיחות של נקודות נתונים בתוך כל bin.",
+   "המספר הכולל של נקודות נתונים.",
+   "הסכום המצטבר של נקודות נתונים.",
+   "הטווח (range) של נקודות הנתונים."
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "בהיסטוגרמה ציר ה-y מציג את השכיחות (מספר התצפיות) בכל תא (bin).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q7",
   "topicLabel": "ויזואליזציה ו-EDA"
  },
  {
@@ -2993,6 +3241,27 @@ window.QUESTIONS = [
   "topicLabel": "ויזואליזציה ו-EDA"
  },
  {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "evaluation",
+  "question": "בהינתן המטריצת בלבול (confusion matrix) הבאה, מהו ערך ה-RECALL (במידת הצורך יש לבצע עיגול מתמטי 2 ספרות אחרי הנקודה)?",
+  "options": [
+   "0.85",
+   "0.88",
+   "0.89",
+   "0.9"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "לפי מטריצת הבלבול שבתמונה: Actual Positive עם TP=85 ו-FN=15. Recall = TP/(TP+FN) = 85/(85+15) = 0.85.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q14",
+  "image": "images/exams/25A-A-Q14.png",
+  "topicLabel": "הערכת מודל"
+ },
+ {
   "examCode": "25A-B",
   "year": 2025,
   "topic": "evaluation",
@@ -3110,6 +3379,27 @@ window.QUESTIONS = [
   "source": "exam",
   "sourceLabel": "2026 סמסטר א׳ מועד א׳",
   "id": "26A-A-Q14",
+  "topicLabel": "הערכת מודל"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "evaluation",
+  "question": "בהינתן המטריצת בלבול confusion matrix הבאה, מהו ערך ה-RECALL? במידת הצורך יש לבצע עיגול מתמטי של 2 ספרות אחרי הנקודה",
+  "options": [
+   "0.85",
+   "0.88",
+   "0.89",
+   "0.9"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "לפי מטריצת הבלבול שבתמונה: Actual Positive עם TP=85 ו-FN=15. Recall = TP/(TP+FN) = 85/(85+15) = 0.85.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q22",
+  "image": "images/exams/26A-A-Q22.png",
   "topicLabel": "הערכת מודל"
  },
  {
@@ -3830,6 +4120,26 @@ window.QUESTIONS = [
   "source": "exam",
   "sourceLabel": "2026 סמסטר א׳ מועד א׳",
   "id": "26A-A-Q18",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "ml_python",
+  "question": "מה עושה הפונקציה sort_values() ב-Pandas?",
+  "options": [
+   "ממיינת DataFrame על פי אחת העמודות או יותר",
+   "מסננת שורות בהתבסס על תנאים",
+   "מורידה ערכי null מעמודה",
+   "ממירה עמודה למשתנה קטגוריאלי"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "sort_values() ממיינת את ה-DataFrame לפי ערכי עמודה אחת או יותר.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q23",
   "topicLabel": "מושגי ML ופייתון"
  },
  {

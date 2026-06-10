@@ -368,9 +368,9 @@
       "0.89",
       "0.9"
     ],
-    "correctIndex": 2,
+    "correctIndex": 0,
     "official": false,
-    "explanation": "ה-recall מחושב ממטריצת בלבול שמופיעה כתמונה בשאלה; לפי ההקשר הערך הנכון מבין האפשרויות הוא 0.89.",
+    "explanation": "לפי מטריצת הבלבול שבתמונה: Actual Positive עם TP=85 ו-FN=15. Recall = TP/(TP+FN) = 85/(85+15) = 0.85.",
     "hasImage": true
   },
   {

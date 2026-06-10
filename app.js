@@ -172,6 +172,7 @@ function renderQuestion(){
   badge.className = "chip " + (q.official?"official":"unofficial");
 
   $("#questionText").textContent = q.question;
+  $("#qExtras").innerHTML = extrasHtml(q);
 
   $("#optionsList").innerHTML = v.order.map((origIdx,disp)=>
     `<button class="opt" data-disp="${disp}">
@@ -207,6 +208,14 @@ function renderQuestion(){
 }
 
 function escapeHtml(s){ return String(s).replace(/[&<>]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[m])); }
+
+/* code snippet (LTR monospace) and/or figure image attached to a question */
+function extrasHtml(q){
+  let h="";
+  if(q.code)  h+=`<pre class="q-code" dir="ltr"><code>${escapeHtml(q.code)}</code></pre>`;
+  if(q.image) h+=`<figure class="q-fig"><img class="q-img" src="${q.image}" alt="" loading="lazy"></figure>`;
+  return h;
+}
 
 /* ---------- answering ---------- */
 function choose(disp){
@@ -311,6 +320,7 @@ function renderResults(correct, byTopic, review){
     const v=r.q; const chosenTxt = r.chosen!=null ? v.options[r.chosen] : "— לא נענתה —";
     return `<div class="rev ${r.ok?"ok":"bad"}">
       <div class="rq">${escapeHtml(v.question)}</div>
+      ${extrasHtml(v)}
       <div class="ra"><span class="${r.ok?"good":"miss"}">תשובתך: ${escapeHtml(chosenTxt)}</span>`+
       (r.ok?"":` · <span class="good">הנכונה: ${escapeHtml(v.options[v.correctIndex])}</span>`)+
       `<br>${escapeHtml(v.explanation||"")}${v.official?"":" (לא רשמי)"}</div></div>`;
@@ -338,6 +348,13 @@ function bindGlobal(){
     brand.onkeydown=e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); goHome(); } };
   }
   $("#resetProgress").onclick=()=>{ if(confirm("לאפס את כל ההתקדמות וההיסטוריה?")){ P={stats:{answered:0,correct:0},perQ:{}}; saveProgress(); renderTopStats(); renderTopicGrid(); updatePoolInfo(); } };
+  // click a question figure to zoom (reuses the learn-section lightbox)
+  document.addEventListener("click", e=>{
+    const img=e.target.closest(".q-img"); if(!img) return;
+    const lb=$("#lightbox"), lbImg=$("#lightboxImg");
+    if(!lb||!lbImg) return;
+    lbImg.src=img.src; lbImg.alt=img.alt||""; lb.classList.remove("hidden");
+  });
   document.addEventListener("keydown",e=>{
     if($("#screen-quiz").classList.contains("hidden")) return;
     if(/^[1-8]$/.test(e.key)){ const b=document.querySelector(`.opt[data-disp="${+e.key-1}"]`); if(b && !b.disabled) b.click(); }

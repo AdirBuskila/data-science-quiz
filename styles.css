@@ -192,6 +192,23 @@ main{max-width:840px;margin:1.6rem auto;padding:0 1rem}
 .exam-opts #examPick{width:100%}
 .poolinfo{color:var(--muted);font-size:.82rem;text-align:center;margin:.7rem 0 0}
 
+/* ---- question figure / code snippet ---- */
+.q-extras:empty{display:none}
+.q-extras{margin:.1rem 0 .3rem}
+.q-code{
+  direction:ltr;text-align:left;background:var(--card2);color:var(--ink);
+  border:1px solid var(--line);border-radius:10px;padding:.7rem .9rem;margin:.4rem 0;
+  overflow-x:auto;white-space:pre;font-size:.85rem;line-height:1.5;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace
+}
+.q-fig{margin:.4rem 0;text-align:center}
+.q-img{
+  max-width:100%;height:auto;display:block;margin:.4rem auto;
+  border:1px solid var(--line);border-radius:10px;cursor:zoom-in;background:#fff
+}
+.rev .q-code{font-size:.78rem}
+.rev .q-img{max-width:280px}
+
 /* ---------------- buttons ---------------- */
 .btn{
   border:none;border-radius:12px;padding:.62rem 1.15rem;font-size:.92rem;font-weight:700;

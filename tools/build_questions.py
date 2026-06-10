@@ -40,9 +40,21 @@ EXAM_LABEL = {
 def norm(s):
     return re.sub(r"\s+", " ", str(s)).strip().lower()
 
+def find_image(q):
+    """Return a web path to a question's figure if a file has been added, else None.
+    Convention: images/exams/<examCode>-Q<num>.<ext>  (e.g. images/exams/24A-A-Q9.png)."""
+    code, num = q.get("examCode"), q.get("num")
+    if not code or num is None: return None
+    for ext in ("png","jpg","jpeg","PNG","JPG","JPEG"):
+        if (OUT/"images"/"exams"/f"{code}-Q{num}.{ext}").exists():
+            return f"images/exams/{code}-Q{num}.{ext}"
+    return None
+
+def has_code(q):
+    return bool(str(q.get("code","")).strip())
+
 def valid(q):
     opts = q.get("options", [])
-    if q.get("hasImage"): return False, "image"
     if len(opts) < 2: return False, "few-options"
     if any(not str(o).strip() for o in opts): return False, "blank-option"
     ci = q.get("correctIndex")
@@ -79,24 +91,27 @@ def main():
         ok, why = valid(q)
         if not ok:
             excl[why]+=1; continue
+        # A question flagged hasImage is only answerable once its figure (image file)
+        # or transcribed code (code field) has been supplied; otherwise keep excluding it.
+        if q.get("hasImage"):
+            img = find_image(q)
+            if not img and not has_code(q):
+                excl["image-missing"]+=1; continue
+            if img: q["image"]=img
+            q["hasImage"]=False   # resolved: a figure/code is now attached, so it's answerable
         kept.append(q)
 
-    # dedup
-    def score(q):
-        return (1 if q.get("official") else 0,
-                1 if q["source"]=="exam" else 0,
-                -(q["year"] or 9999))
-    best = {}
-    dup=0
+    # NOTE: we intentionally do NOT de-duplicate across exams. Each exam must keep its
+    # full question set so "whole test" mode always shows all 20/25 questions, even when
+    # a question also appears in another exam. We still count cross-exam duplicates for
+    # the build report (the random/topic practice pool may show a repeat — accepted).
+    seen = set()
+    dup = 0
     for q in kept:
         key = norm(q["question"]) + " || " + "|".join(sorted(norm(o) for o in q["options"]))
-        if key in best:
-            dup+=1
-            if score(q) > score(best[key]):
-                best[key]=q
-        else:
-            best[key]=q
-    final = list(best.values())
+        if key in seen: dup += 1
+        else: seen.add(key)
+    final = kept
 
     # finalize fields
     for q in final:
@@ -118,7 +133,7 @@ def main():
     lines=["# Build report — questions dataset","",
         f"- Raw items read: **{len(raw_items)}**",
         f"- Excluded: **{sum(excl.values())}**  ({dict(excl)})",
-        f"- Duplicates merged: **{dup}**",
+        f"- Cross-exam duplicates (kept, not merged): **{dup}**",
         f"- **Final questions: {len(final)}**","",
         "## By topic",""]
     for t,n in by_topic.most_common():
@@ -128,7 +143,7 @@ def main():
         f"- official answer key: {by_src['official']}  ·  derived (unofficial): {by_src['derived']}",""]
     (TOOLS/"build_report.md").write_text("\n".join(lines)+"\n", encoding="utf-8")
 
-    print(f"final={len(final)} excluded={sum(excl.values())} {dict(excl)} dup_merged={dup}")
+    print(f"final={len(final)} excluded={sum(excl.values())} {dict(excl)} dup_kept={dup}")
     print("by_topic:", dict(by_topic))
     print("by_origin:", dict(by_origin), "by_key:", dict(by_src))
 
