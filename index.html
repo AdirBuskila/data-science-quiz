@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>משחק תרגול — מבוא למדעי הנתונים</title>
-<link rel="stylesheet" href="styles.css?v=8">
+<link rel="stylesheet" href="styles.css?v=9">
 <script>
   // Apply saved theme before first paint to avoid a flash of the wrong theme.
   (function(){ try{ var t=localStorage.getItem("dsq_theme"); if(t==="light"||t==="dark") document.documentElement.dataset.theme=t; }catch(e){} })();
@@ -45,7 +45,7 @@
           <input type="radio" name="mode" value="exam">
           <div class="mode-body">
             <span class="mode-title">מצב מבחן</span>
-            <span class="mode-desc">סימולציה בזמן קצוב (25 שאלות, שעתיים) — ציון ופירוט בסוף.</span>
+            <span class="mode-desc">סימולציה בזמן קצוב — אקראי או מבחן ספציפי מלא. ציון ופירוט בסוף.</span>
           </div>
         </label>
       </div>
@@ -59,7 +59,10 @@
       </div>
 
       <div id="examOpts" class="exam-opts hidden">
-        <label>מספר שאלות
+        <label>מבחן
+          <select id="examPick"><option value="">אקראי (כל המאגר)</option></select>
+        </label>
+        <label id="examCountWrap">מספר שאלות
           <select id="examCount"><option>10</option><option selected>25</option><option>40</option></select>
         </label>
         <label>זמן (דקות)
@@ -147,6 +150,6 @@
 
 <script src="questions.js?v=8"></script>
 <script src="learn.js?v=8"></script>
-<script src="app.js?v=8"></script>
+<script src="app.js?v=9"></script>
 </body>
 </html>

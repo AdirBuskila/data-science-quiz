@@ -68,7 +68,31 @@ function renderTopicGrid(){
     b.onclick=()=>{ S.topic=b.dataset.topic; renderTopicGrid(); updatePoolInfo(); };
   });
 }
+function selectedExam(){ const el=$("#examPick"); return (S.mode==="exam" && el) ? el.value : ""; }
+function examQuestions(code){ return QS.filter(q=>q.examCode===code); }
+function qNum(q){ const m=String(q.id).match(/-Q(\d+)$/); return m?parseInt(m[1],10):0; }
+function populateExamPick(){
+  const sel=$("#examPick"); if(!sel) return;
+  const seen=new Map();                       // examCode -> sourceLabel
+  QS.forEach(q=>{ if(q.examCode && !seen.has(q.examCode)) seen.set(q.examCode, q.sourceLabel||q.examCode); });
+  sel.innerHTML = `<option value="">אקראי (כל המאגר)</option>` +
+    [...seen.entries()].sort((a,b)=>a[0].localeCompare(b[0]))
+      .map(([code,label])=>`<option value="${code}">${escapeHtml(label)} (${examQuestions(code).length})</option>`).join("");
+  sel.onchange=()=>{ syncExamOpts(); updatePoolInfo(); };
+}
+function syncExamOpts(){
+  // a specific exam = the whole test, so the question-count selector is irrelevant
+  const wrap=$("#examCountWrap"); if(wrap) wrap.style.display = selectedExam() ? "none" : "";
+}
 function updatePoolInfo(){
+  const code=selectedExam();
+  if(code){
+    const n=examQuestions(code).length;
+    const label=(QS.find(q=>q.examCode===code)||{}).sourceLabel || code;
+    $("#poolInfo").textContent = `מבחן ${label} — ${n} שאלות (מבחן מלא).`;
+    $("#startBtn").disabled = n===0;
+    return;
+  }
   const opts=selectedOpts();
   const n=countFor(S.topic,opts);
   const off=QS.filter(q=>filterMatch(q,S.topic,opts)&&q.official).length;
@@ -77,12 +101,16 @@ function updatePoolInfo(){
 }
 function initStart(){
   renderTopStats();
+  populateExamPick();
   renderTopicGrid();
+  syncExamOpts();
   updatePoolInfo();
   document.querySelectorAll('input[name=mode]').forEach(r=>{
     r.onchange=()=>{ S.mode=document.querySelector('input[name=mode]:checked').value;
       $("#examOpts").classList.toggle("hidden", S.mode!=="exam");
       $("#mistakesOnly").parentElement.style.display = S.mode==="exam"?"none":"";
+      syncExamOpts();
+      updatePoolInfo();
     };
   });
   $("#officialOnly").onchange = ()=>{ renderTopicGrid(); updatePoolInfo(); };
@@ -93,13 +121,24 @@ function initStart(){
 
 /* ---------- session ---------- */
 function startSession(){
+  S._views=null;
   const opts=selectedOpts();
-  let pool = QS.filter(q=>filterMatch(q,S.topic,opts));
-  pool = shuffle(pool);
+  const pickedExam = selectedExam();
+  let pool;
+  if(pickedExam){
+    // whole-test mode: all questions of one exam, original order (options still shuffled per-question)
+    pool = examQuestions(pickedExam).slice().sort((a,b)=>qNum(a)-qNum(b));
+  } else {
+    pool = shuffle(QS.filter(q=>filterMatch(q,S.topic,opts)));
+  }
   if(S.mode==="exam"){
-    S.exam.count = Math.min(parseInt($("#examCount").value,10), pool.length);
+    if(pickedExam){
+      S.exam.count = pool.length;
+    } else {
+      S.exam.count = Math.min(parseInt($("#examCount").value,10), pool.length);
+      pool = pool.slice(0, S.exam.count);
+    }
     S.exam.minutes = parseInt($("#examMinutes").value,10);
-    pool = pool.slice(0, S.exam.count);
     S.exam.answers = {};
     S.exam.endAt = Date.now() + S.exam.minutes*60000;
     startTimer();
