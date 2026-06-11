@@ -211,6 +211,8 @@ main{max-width:840px;margin:1.6rem auto;padding:0 1rem}
 /* image-based answer options (e.g. code-snippet choices) */
 .opt .opt-img{max-width:100%;height:auto;display:block;border-radius:6px;background:#fff}
 .rev .opt-img{max-width:240px;vertical-align:middle;border-radius:6px}
+/* Hebrew-free options (code / program output) — isolate as LTR so the RTL page can't reorder them */
+.opt-ltr{direction:ltr;unicode-bidi:isolate;display:inline-block;text-align:left}
 
 /* ---------------- buttons ---------------- */
 .btn{

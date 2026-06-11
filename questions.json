@@ -3747,20 +3747,20 @@
   "year": 2024,
   "topic": "ml_python",
   "question": "הוגדרה המחרוזת הבאה בפייתון, וכעת הריצו את הפקודה הבאה. מהו הפלט שיודפס?",
+  "code": "txt = \"one two One one two two ONE\"\nprint(txt.count(\"one\"), txt.startswith(\"one\"), txt.endswith(\"one\"))",
   "options": [
-   "הפלט שיודפס: 2 False True",
-   "הפלט שיודפס: 7 1 0",
-   "הפלט שיודפס: 4 True False",
-   "הפלט שיודפס: 2 True True"
+   "2 True False",
+   "7 1 0",
+   "4 True False",
+   "2 True True"
   ],
   "correctIndex": 0,
   "official": false,
-  "explanation": "txt = \"one two One one two two ONE\". count(\"one\")=2 (רגיש לאותיות גדולות/קטנות — רק 'one' באותיות קטנות נספר), startswith(\"one\")=True, endswith(\"one\")=False (המחרוזת מסתיימת ב-'ONE'). הפלט: 2 True False — תשובה א.",
+  "explanation": "הספירה ב-count רגישה לאותיות גדולות/קטנות: רק שתי ההופעות של one באותיות קטנות נספרות (One ו-ONE לא), ולכן count(\"one\")=2. המחרוזת מתחילה ב-one ולכן startswith(\"one\")=True, אבל מסתיימת ב-ONE ולכן endswith(\"one\")=False. הפלט: ‎2 True False — תשובה א. (בטופס המבחן המקורי סדר המילים בתשובה א הוצג הפוך — ‎2 False True — עקב כיווניות RTL של המסמך.)",
   "hasImage": false,
   "source": "exam",
   "sourceLabel": "2024 סמסטר ב׳ מועד א׳",
   "id": "24B-A-Q4",
-  "image": "images/exams/24B-A-Q4.png",
   "topicLabel": "מושגי ML ופייתון"
  },
  {
@@ -3909,15 +3909,16 @@
   "year": 2024,
   "topic": "ml_python",
   "question": "מה יהיה הפלט של הפקודות הבאות?",
+  "code": "txt = '123456789'\nprint(txt.isalpha(), txt.isalnum(), txt.isdecimal(), txt.isnumeric())",
   "options": [
-   "הפלט שיודפס:",
-   "הפלט שיודפס:",
-   "הפלט שיודפס:",
-   "הפלט שיודפס:"
+   "False True True True",
+   "True True False False",
+   "False False True True",
+   "True False False False"
   ],
   "correctIndex": 0,
   "official": false,
-  "explanation": "שאלת פלט קוד; תוכן הקוד והאפשרויות לא נשמרו ב-OCR ולכן לא ניתן לקבוע את התשובה לפי משמעות.",
+  "explanation": "המחרוזת מכילה ספרות בלבד: isalpha()=False (אין אותיות), isalnum()=True (ספרות הן תווים אלפאנומריים), isdecimal()=True ו-isnumeric()=True (כל התווים הם ספרות עשרוניות). הפלט: False True True True — תשובה א.",
   "hasImage": false,
   "source": "exam",
   "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
@@ -4430,15 +4431,16 @@
   "year": 2024,
   "topic": "nlp",
   "question": "אילו מחרוזות יכול להחזיר הביטוי הרגולרי הבא?",
+  "code": "r'^\\d+(\\.[0-9]{2})? [^aeiou]([aeiou][^aeiou])+$'",
   "options": [
-   "יכול להחזיר __, אבל לא יכול להחזיר __",
-   "יכול להחזיר __, אבל לא יכול להחזיר __",
-   "יכול להחזיר __, אבל לא יכול להחזיר __",
-   "יכול להחזיר __, אבל לא יכול להחזיר __"
+   "יכול להחזיר 20 kilos, אבל לא יכול להחזיר 20.35 dolars",
+   "יכול להחזיר 1 dolar, אבל לא יכול להחזיר 1.35 kilos",
+   "יכול להחזיר 3 meters, אבל לא יכול להחזיר 3.53 shekels",
+   "יכול להחזיר 5 shekels, אבל לא יכול להחזיר 5.12 banana"
   ],
   "correctIndex": 0,
   "official": false,
-  "explanation": "שאלת regex; הביטוי והמחרוזות באפשרויות לא נשמרו ב-OCR ולכן לא ניתן לקבוע את התשובה לפי משמעות.",
+  "explanation": "הביטוי דורש: מספר שלם, אופציונלית נקודה ושתי ספרות, רווח, ואז מילה שמתחילה בתו שאינו תנועה (aeiou) ואחריה זוג אחד או יותר של תנועה+עיצור. ‎kilos = k(il)(os) מתאים ולכן ‎20 kilos מוחזר; ‎dolars = d(ol)(ar)s נשאר עם s עודפת ולכן לא מוחזר — תשובה א. באפשרויות האחרות: ‎1.35 kilos דווקא כן מתאים (החלק העשרוני אופציונלי וקיים), ‎meters לא מתאים (s עודפת) ו-shekels לא מתאים (h אחרי s אינה תנועה).",
   "hasImage": false,
   "source": "exam",
   "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",

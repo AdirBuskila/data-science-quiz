@@ -41,11 +41,12 @@
     "year": 2024,
     "topic": "ml_python",
     "question": "הוגדרה המחרוזת הבאה בפייתון, וכעת הריצו את הפקודה הבאה. מהו הפלט שיודפס?",
-    "options": ["הפלט שיודפס: 2 False True", "הפלט שיודפס: 7 1 0", "הפלט שיודפס: 4 True False", "הפלט שיודפס: 2 True True"],
+    "code": "txt = \"one two One one two two ONE\"\nprint(txt.count(\"one\"), txt.startswith(\"one\"), txt.endswith(\"one\"))",
+    "options": ["2 True False", "7 1 0", "4 True False", "2 True True"],
     "correctIndex": 0,
     "official": false,
-    "explanation": "txt = \"one two One one two two ONE\". count(\"one\")=2 (רגיש לאותיות גדולות/קטנות — רק 'one' באותיות קטנות נספר), startswith(\"one\")=True, endswith(\"one\")=False (המחרוזת מסתיימת ב-'ONE'). הפלט: 2 True False — תשובה א.",
-    "hasImage": true
+    "explanation": "הספירה ב-count רגישה לאותיות גדולות/קטנות: רק שתי ההופעות של one באותיות קטנות נספרות (One ו-ONE לא), ולכן count(\"one\")=2. המחרוזת מתחילה ב-one ולכן startswith(\"one\")=True, אבל מסתיימת ב-ONE ולכן endswith(\"one\")=False. הפלט: ‎2 True False — תשובה א. (בטופס המבחן המקורי סדר המילים בתשובה א הוצג הפוך — ‎2 False True — עקב כיווניות RTL של המסמך.)",
+    "hasImage": false
   },
   {
     "num": 5,

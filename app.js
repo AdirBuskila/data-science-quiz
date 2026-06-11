@@ -221,6 +221,8 @@ function extrasHtml(q){
 function optionHtml(opt){
   const s=String(opt);
   if(s.startsWith("img:")) return `<img class="opt-img" src="${s.slice(4)}" alt="" loading="lazy">`;
+  // options with no Hebrew (code/output answers) must render LTR, or the RTL page reorders them
+  if(!/[֐-׿]/.test(s)) return `<span class="opt-ltr" dir="ltr">${escapeHtml(s)}</span>`;
   return escapeHtml(opt);
 }
 
