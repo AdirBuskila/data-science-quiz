@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scales Master — מדריך לסולמות מדידה במבחן</title>
+<style>
+  :root{ --bg:#0f1220; --card:#1a1f33; --card2:#222842; --ink:#eef1f8; --mut:#9aa3c0;
+         --accent:#6ea8fe; --good:#3ddc84; --bad:#ff6b6b; --code:#ffd479; --line:#2c3350; }
+  *{box-sizing:border-box}
+  body{font-family:"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--ink);margin:0;padding:0;line-height:1.6}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  h1{font-size:30px;margin:0 0 6px}
+  h2{font-size:23px;margin:36px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--line);color:var(--accent)}
+  h3{font-size:18px;margin:22px 0 8px;color:#cdd6ff}
+  p,li{font-size:15.5px}
+  .sub{color:var(--mut);margin-top:0}
+  .toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 22px;margin:18px 0}
+  .toc a{color:var(--accent);text-decoration:none;display:inline-block;margin:3px 0}
+  .toc a:hover{text-decoration:underline}
+  code,.mono{font-family:"Consolas","Courier New",monospace;direction:ltr;unicode-bidi:embed}
+  code{background:#0b0e1a;color:var(--code);padding:2px 6px;border-radius:5px;font-size:14px}
+  table{width:100%;border-collapse:collapse;margin:12px 0;background:var(--card);border-radius:10px;overflow:hidden}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:right;font-size:14.5px;vertical-align:top}
+  th{background:var(--card2);color:#cdd6ff}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:16px 0}
+  .q{border-right:4px solid var(--accent)}
+  .badge{display:inline-block;background:var(--card2);color:var(--mut);border-radius:6px;padding:1px 8px;font-size:12px;margin-inline-start:8px}
+  .ans{color:var(--good);font-weight:700}
+  .no{color:var(--bad);font-weight:700}
+  .tip{background:#13261c;border:1px solid #244b34;border-radius:10px;padding:12px 16px;margin:12px 0}
+  .warn{background:#2a1620;border:1px solid #4b2430;border-radius:10px;padding:12px 16px;margin:12px 0}
+  ul.tight{margin:6px 0}
+  .key{color:var(--accent);font-weight:700}
+  hr{border:none;border-top:1px solid var(--line);margin:30px 0}
+  .gold{background:linear-gradient(180deg,#1e2747,#171c30);border:1px solid #34406e;border-radius:12px;padding:16px 20px;margin:18px 0;font-size:16px}
+  .scale-row td:first-child{font-weight:700;color:#cdd6ff}
+  .flow{counter-reset:step;list-style:none;padding:0}
+  .flow li{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px 12px 52px;margin:10px 0;position:relative}
+  .flow li::before{counter-increment:step;content:counter(step);position:absolute;left:14px;top:50%;transform:translateY(-50%);
+    background:var(--accent);color:#0b0e1a;font-weight:800;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>📏 Scales Master</h1>
+<p class="sub">מדריך ממוקד לשאלות סולמות המדידה (שמי / סדר / רווח / מנה) — בדיוק בסגנון שמופיע במבחני הקורס. כולל טבלה, שיטת זיהוי ב-3 שאלות, וכל סוגי השאלות מהמאגר.</p>
+
+<div class="warn">
+⚠️ <b>שמות כפולים — המבחן משתמש בשניהם:</b><br>
+<b>סולם הפרש = סולם רווח = Interval</b> (אותו דבר!)<br>
+<b>סולם סדר = סולם סודר = Ordinal</b> (אותו דבר!)
+</div>
+
+<div class="toc">
+  <strong>תוכן עניינים</strong><br>
+  <a href="#table">1. ארבעת הסולמות — טבלה אחת</a><br>
+  <a href="#identify">2. איך מזהים? שיטת 3 השאלות</a><br>
+  <a href="#celsius">3. הדוגמה הקלאסית: צלזיוס (רווח, לא מנה)</a><br>
+  <a href="#types">4. איך זה מופיע במבחן — 3 סוגי שאלות</a><br>
+  <a href="#indirect">5. שאלות עקיפות (הסולם מסתתר)</a><br>
+  <a href="#golden">6. שורת הזהב לשינון</a><br>
+  <a href="#drill">7. תרגול מהיר (עם תשובות)</a>
+</div>
+
+<h2 id="table">1. ארבעת הסולמות — מהחלש לחזק</h2>
+<table>
+<tr><th>סולם</th><th>באנגלית</th><th>מה יש בו</th><th>דוגמה</th><th>מה מותר לחשב</th></tr>
+<tr class="scale-row"><td>שמי</td><td class="mono">Nominal</td><td>רק קטגוריות, בלי שום סדר</td><td>צבע עיניים, מין, עיר מגורים</td><td>שכיח (mode) בלבד</td></tr>
+<tr class="scale-row"><td>סדר</td><td class="mono">Ordinal</td><td>קטגוריות <b>עם דירוג</b>, אבל המרווחים לא שווים</td><td>רמת ידע (נמוך/בינוני/גבוה), יחידות בגרות (3/4/5), דירוג כוכבים</td><td>שכיח + חציון. <span class="no">אסור ממוצע!</span></td></tr>
+<tr class="scale-row"><td>רווח / הפרש</td><td class="mono">Interval</td><td>מרווחים שווים ומשמעותיים, אבל <b>אין אפס מוחלט</b></td><td>טמפרטורה בצלזיוס/פרנהייט, שנה לועזית</td><td>שכיח + חציון + <b>ממוצע</b>, חיבור וחיסור</td></tr>
+<tr class="scale-row"><td>מנה</td><td class="mono">Ratio</td><td>הכל כמו רווח + <b>יש אפס מוחלט</b> ← יחסים משמעותיים</td><td>גובה בס"מ, משקל, גיל, ציון 0-100, הכנסה</td><td>הכל: גם כפל וחילוק ("פי 2"), גם ממוצע הנדסי</td></tr>
+</table>
+
+<h2 id="identify">2. איך מזהים? שאלו 3 שאלות בסדר הזה</h2>
+<ol class="flow">
+<li><span class="key">יש סדר בין הערכים?</span> &nbsp;לא ← <b>שמי</b>. כן ← המשך.</li>
+<li><span class="key">המרווחים בין הערכים שווים ומשמעותיים?</span> &nbsp;לא ← <b>סדר</b>. כן ← המשך.</li>
+<li><span class="key">יש אפס מוחלט</span> (אפס = "אין כלום", ו-"פי 2" הגיוני)? &nbsp;לא ← <b>רווח/הפרש</b>. כן ← <b>מנה</b>.</li>
+</ol>
+
+<h2 id="celsius">3. הדוגמה הקלאסית: למה צלזיוס זה רווח ולא מנה?</h2>
+<div class="card">
+<ul class="tight">
+<li>אפס מעלות (0°C) <b>לא</b> אומר "אין טמפרטורה" — זו רק נקודת קיפאון של מים (אפס שרירותי).</li>
+<li>עשרים מעלות (20°C) זה <b>לא</b> "חם פי 2" מעשר מעלות (10°C). אין יחסים ← <b>רווח</b>, לא מנה.</li>
+<li>לעומת זאת גובה: 0 ס"מ = אין גובה, ו-180 ס"מ באמת גבוה פי 2 מ-90 ← <b>מנה</b>.</li>
+</ul>
+<div class="tip"><b>רמז זהב:</b> אם רואים <b>צלזיוס / פרנהייט / שנה לועזית</b> — התשובה כמעט תמיד <b>רווח</b>. גובה/משקל/ציון לידם = מסיח שמושך ל"מנה".</div>
+</div>
+
+<h2 id="types">4. איך זה מופיע במבחן</h2>
+
+<div class="card q">
+<h3>סוג 1: "איזה סולם מתאים למשתנה X?" <span class="badge">זיהוי ישיר</span></h3>
+<table>
+<tr><th>משתנה</th><th>סולם</th><th>למה</th></tr>
+<tr><td>ציוני סטודנטים 0–100 <span class="badge">24A-B</span></td><td class="ans">מנה</td><td>יש אפס מוחלט, 90 הוא פי 2 מ-45</td></tr>
+<tr><td>טמפרטורה בצלזיוס <span class="badge">25A-B</span></td><td class="ans">רווח</td><td>הדוגמה הקלאסית — אין אפס מוחלט</td></tr>
+<tr><td>גובה בס"מ</td><td class="ans">מנה</td><td>מסיח נפוץ ליד צלזיוס!</td></tr>
+<tr><td>יחידות בגרות במתמטיקה (3/4/5) <span class="badge">תרגול</span></td><td class="ans">סדר</td><td>קטגוריות מדורגות, לא כמות רציפה</td></tr>
+<tr><td>ידע קודם בסטטיסטיקה (נמוך/בינוני/גבוה) <span class="badge">תרגול</span></td><td class="ans">סדר</td><td>דירוג בלי מרווחים שווים</td></tr>
+<tr><td>חודש בשנה (1..12) <span class="badge">תרגול</span></td><td class="ans">בדיד + סדר</td><td>יש סדר, אין אפס מוחלט אמיתי</td></tr>
+</table>
+</div>
+
+<div class="card q">
+<h3>סוג 2: "מה ההבדל בין סולם X לסולם Y?" <span class="badge">השוואה</span></h3>
+<ul class="tight">
+<li><b>סדר מול רווח:</b> "בסולם סדר ובסולם רווח אפשר לחשב שכיח, ובסולם רווח אפשר לחשב <b>גם ממוצע</b>" ✅ <span class="badge">24A-A</span></li>
+<li><b>סדר מול רווח (ניסוח אחר):</b> "בסולם רווח המרווחים בין הערכים שווים, בסולם סדר לא בהכרח" ✅ <span class="badge">24B-B</span></li>
+<li><b>רווח מול מנה:</b> "בסולם רווח אפשר ממוצע אלגברי, ובסולם מנה אפשר <b>גם ממוצע הנדסי</b>" ✅ <span class="badge">25-S</span></li>
+</ul>
+<div class="warn">מסיח חוזר ושגוי: <span class="no">"סולם סדר = מספרים שלמים, סולם רווח = ממשיים"</span> — שטות. הסולם לא קשור לשלם/ממשי.</div>
+</div>
+
+<h2 id="indirect">5. שאלות עקיפות (הסולם מסתתר בשאלה אחרת) <span class="badge">סוג 3</span></h2>
+<div class="card">
+<ul class="tight">
+<li><b>מתאם פירסון</b> עובד רק על סולם <b>רווח או מנה</b> (משתנים רציפים). <span class="badge">EDA</span></li>
+<li><b>get_dummies על Pclass (1/2/3):</b> המספרים הם רק תווית קטגוריאלית — לא רוצים שהמודל יחשוב שמחלקה 3 "גדולה פי 3" ממחלקה 1. מתייחסים אליו כשמי/סדר, לא מנה. <span class="badge">26A-B</span></li>
+<li><b>למה לפעמים מעדיפים משתנה סדר על רציף?</b> כי אלגוריתמי סיווג/אשכול מסוימים עובדים טוב יותר עם משתנים בדידים/בינאריים. <span class="badge">26A-A</span></li>
+<li><b>השלמת ערכים חסרים:</b> למשתנה קטגורי (שמי/סדר) משלימים ב-<b>שכיח</b>; למשתנה עם חריגים משלימים ב-<b>חציון</b> ולא בממוצע.</li>
+</ul>
+</div>
+
+<h2 id="golden">6. שורת הזהב לשינון</h2>
+<div class="gold">
+<b>שמי</b> = שמות. &nbsp;<b>סדר</b> = דירוג בלי מרחקים. &nbsp;<b>רווח/הפרש</b> = מרחקים בלי אפס אמיתי (צלזיוס!). &nbsp;<b>מנה</b> = הכל, כולל אפס אמיתי ו-"פי כמה" (גובה, משקל, ציון).
+</div>
+
+<h2 id="drill">7. תרגול מהיר (כסה את התשובות)</h2>
+<ol>
+<li>דירוג מלון בכוכבים (1–5)? → <span class="ans">סדר</span></li>
+<li>משקל בק"ג? → <span class="ans">מנה</span> (0 = אין משקל, "פי 2" הגיוני)</li>
+<li>טמפרטורה בפרנהייט? → <span class="ans">רווח</span> (כמו צלזיוס — אין אפס מוחלט)</li>
+<li>מספר מזהה ת"ז? → <span class="ans">שמי</span> (מספר אבל בלי סדר/כמות)</li>
+<li>שנה לועזית (2024)? → <span class="ans">רווח</span> (אין שנה "אפס" אמיתית)</li>
+<li>אפשר לחשב ממוצע על סולם סדר? → <span class="no">לא</span> (רק שכיח וחציון)</li>
+<li>הכנסה חודשית בש"ח? → <span class="ans">מנה</span></li>
+<li>מתאם פירסון על משתנה שמי? → <span class="no">לא</span> (צריך רווח/מנה)</li>
+</ol>
+
+<hr>
+<p class="sub">המסמך מכסה את כל סוגי שאלות הסולמות במאגר. שלוט בטבלה (סעיף 1), בשיטת 3 השאלות (סעיף 2) ובשורת הזהב (סעיף 6) — ותענה נכון על כל וריאציה. בהצלחה! 🍀</p>
+
+</div>
+</body>
+</html>
