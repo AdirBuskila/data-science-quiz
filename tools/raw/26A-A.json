@@ -317,9 +317,9 @@
       "2",
       "0"
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "official": false,
-    "explanation": "השאלה דורשת קטע קוד שלא חולץ מהמקור; לפי האפשרויות סביר שמדובר ב-shape של מערך/DataFrame בגודל 2x3, ולכן הפלט (2,3).",
+    "explanation": "ה-DataFrame הוא בגודל 3 שורות × 2 עמודות, כלומר shape=(3,2). df.shape[0] מחזיר את מספר השורות = 3. רמז: (shape[0]=3); course_summary §1 (pandas).",
     "hasImage": true
   },
   {

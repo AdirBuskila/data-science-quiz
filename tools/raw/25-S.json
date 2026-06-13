@@ -102,23 +102,6 @@
     "hasImage": false
   },
   {
-    "num": 7,
-    "examCode": "25-S",
-    "year": 2025,
-    "topic": "eda",
-    "question": "איזה מושג מתואר בדיאגרמה הבאה?",
-    "options": [
-      "הטיית אישור",
-      "הטיית השורד",
-      "קטיף דובדבנים",
-      "הטיית הבדיעבד"
-    ],
-    "correctIndex": 0,
-    "official": true,
-    "explanation": "הדיאגרמה מתארת הטיית אישור — נטייה לחפש ולפרש מידע שמאשר אמונה קיימת.",
-    "hasImage": true
-  },
-  {
     "num": 8,
     "examCode": "25-S",
     "year": 2025,

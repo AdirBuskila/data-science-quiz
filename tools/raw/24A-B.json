@@ -329,14 +329,14 @@
     "topic": "acquisition",
     "question": "איך נכון לייצג בקובץ JSON את הקורס שלנו?",
     "options": [
-      "אפשרות א (מבנה JSON המוצג כתמונה)",
-      "אפשרות ב (מבנה JSON המוצג כתמונה)",
-      "אפשרות ג (מבנה JSON המוצג כתמונה)",
-      "אפשרות ד (מבנה JSON המוצג כתמונה)"
+      "img:images/exams/24A-B-Q20-A.png",
+      "img:images/exams/24A-B-Q20-B.png",
+      "img:images/exams/24A-B-Q20-C.png",
+      "img:images/exams/24A-B-Q20-D.png"
     ],
     "correctIndex": 0,
     "official": false,
-    "explanation": "השאלה דורשת בחירת מבנה JSON תקין; אפשרויות התשובה מופיעות כתמונות/קטעי קוד שאינם בטקסט, ולכן לא ניתן לקבוע בוודאות מהטקסט בלבד. מבוסס JSON (course_summary §2-3).",
-    "hasImage": true
+    "explanation": "הייצוג הנכון ב-JSON הוא אובייקט עם זוגות מפתח-ערך (אפשרות א): {\"course_name\":\"intro2DS\",\"year\":2024,\"semester\":\"winter\"}. אפשרות ב היא XML, ג היא מערך ללא שמות שדות, ד אינה JSON תקין. רמז: (אובייקט key-value); course_summary §2-3 (JSON).",
+    "hasImage": false
   }
 ]

@@ -63,6 +63,26 @@
   "examCode": "24A-B",
   "year": 2024,
   "topic": "acquisition",
+  "question": "איך נכון לייצג בקובץ JSON את הקורס שלנו?",
+  "options": [
+   "img:images/exams/24A-B-Q20-A.png",
+   "img:images/exams/24A-B-Q20-B.png",
+   "img:images/exams/24A-B-Q20-C.png",
+   "img:images/exams/24A-B-Q20-D.png"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "הייצוג הנכון ב-JSON הוא אובייקט עם זוגות מפתח-ערך (אפשרות א): {\"course_name\":\"intro2DS\",\"year\":2024,\"semester\":\"winter\"}. אפשרות ב היא XML, ג היא מערך ללא שמות שדות, ד אינה JSON תקין. רמז: (אובייקט key-value); course_summary §2-3 (JSON).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר א׳ מועד ב׳",
+  "id": "24A-B-Q20",
+  "topicLabel": "הרכשת נתונים"
+ },
+ {
+  "examCode": "24A-B",
+  "year": 2024,
+  "topic": "acquisition",
   "question": "באיזו פונקציה ב-Beautiful Soup ניתן לאחזר את תוכן הטקסט של אלמנט HTML?",
   "options": [
    "get_text()",
@@ -1683,6 +1703,27 @@
   "examCode": "25A-A",
   "year": 2025,
   "topic": "clustering",
+  "question": "איזו שורה חסרה בקוד הבא לביצוע DBSCAN?",
+  "options": [
+   "eps=0.5, min_samples=5",
+   "n_clusters=5",
+   "max_depth=5",
+   "n_neighbors=5"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "DBSCAN מוגדר באמצעות הפרמטרים eps (רדיוס) ו-min_samples; n_clusters שייך ל-KMeans ו-max_depth לעצי החלטה.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q13",
+  "image": "images/exams/25A-A-Q13.png",
+  "topicLabel": "אשכול"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "clustering",
   "question": "מה ההבדל בין שיטות של קלסטרינג היררכי לעומת קלסטרינג לא היררכי?",
   "options": [
    "בקלסטרינג היררכי קודם נבנה מבנה דמוי עץ, בעוד שבקלסטרינג לא היררכי משייכים באופן ישיר נקודות (רשומות) לקלסטרים.",
@@ -2402,6 +2443,27 @@
   "source": "exam",
   "sourceLabel": "2025 מבחן לדוגמה",
   "id": "25-S-Q8",
+  "topicLabel": "ויזואליזציה ו-EDA"
+ },
+ {
+  "examCode": "25-S",
+  "year": 2025,
+  "topic": "eda",
+  "question": "מה ניתן לומר על המתאם בין המאפיינים X1, X2 בכל אחד מהתרשימים הבאים?",
+  "options": [
+   "בגרף הימני יש מתאם קרוב לאפס, בגרף האמצעי שלילי ובגרף השמאלי חיובי",
+   "בגרף הימני יש מתאם שלילי, בגרף האמצעי חיובי ובגרף השמאלי קרוב לאפס",
+   "בגרף הימני יש מתאם חיובי, בגרף האמצעי שלילי ובגרף השמאלי קרוב לאפס",
+   "רק בגרף השמאלי יש מתאם"
+  ],
+  "correctIndex": 0,
+  "official": true,
+  "explanation": "קריאת סימן המתאם מהתרשימים: ימני קרוב לאפס, אמצעי שלילי, שמאלי חיובי.",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 מבחן לדוגמה",
+  "id": "25-S-Q9",
+  "image": "images/exams/25-S-Q9.png",
   "topicLabel": "ויזואליזציה ו-EDA"
  },
  {
@@ -4088,6 +4150,27 @@
   "topicLabel": "מושגי ML ופייתון"
  },
  {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "ml_python",
+  "question": "מה יהיה הפלט של הקוד הבא?",
+  "options": [
+   "2",
+   "3",
+   "(2,3)",
+   "[1,2,3]"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "ה-DataFrame הוא בגודל 3 שורות × 2 עמודות, כלומר shape=(3,2). df.shape[1] מחזיר את מספר העמודות = 2. רמז: (shape[1]=2); course_summary §1 (pandas).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q7",
+  "image": "images/exams/25A-A-Q7.png",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
   "examCode": "25A-B",
   "year": 2025,
   "topic": "ml_python",
@@ -4185,6 +4268,27 @@
   "source": "exam",
   "sourceLabel": "2026 סמסטר א׳ מועד א׳",
   "id": "26A-A-Q18",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
+  "examCode": "26A-A",
+  "year": 2026,
+  "topic": "ml_python",
+  "question": "מה יהיה הפלט של הקוד הבא?",
+  "options": [
+   "3",
+   "(2,3)",
+   "2",
+   "0"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "ה-DataFrame הוא בגודל 3 שורות × 2 עמודות, כלומר shape=(3,2). df.shape[0] מחזיר את מספר השורות = 3. רמז: (shape[0]=3); course_summary §1 (pandas).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2026 סמסטר א׳ מועד א׳",
+  "id": "26A-A-Q19",
+  "image": "images/exams/26A-A-Q19.png",
   "topicLabel": "מושגי ML ופייתון"
  },
  {
@@ -4487,6 +4591,27 @@
   "source": "exam",
   "sourceLabel": "2025 מבחן לדוגמה",
   "id": "25-S-Q4",
+  "topicLabel": "ניתוח טקסט (NLP)"
+ },
+ {
+  "examCode": "25A-A",
+  "year": 2025,
+  "topic": "nlp",
+  "question": "מה יהיה הפלט של הקוד הבא?",
+  "options": [
+   "['$15.99', '€20.50']",
+   "['15.99', '20.50']",
+   "['The price is $15.99']",
+   "None"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "התבנית r\"[$€]\\d+\\.\\d{2}\" כוללת את תו המטבע ([$€]) בתחילת ההתאמה, ולכן re.findall מחזיר את הסכומים יחד עם הסימן: ['$15.99', '€20.50']. רמז: (regex עם תו מטבע); course_summary §12 (regex).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2025 סמסטר א׳ מועד א׳",
+  "id": "25A-A-Q12",
+  "image": "images/exams/25A-A-Q12.png",
   "topicLabel": "ניתוח טקסט (NLP)"
  },
  {
