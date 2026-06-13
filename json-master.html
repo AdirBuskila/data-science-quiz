@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON Master — מדריך ל-JSON במבחן</title>
+<style>
+  :root{ --bg:#0f1220; --card:#1a1f33; --card2:#222842; --ink:#eef1f8; --mut:#9aa3c0;
+         --accent:#6ea8fe; --good:#3ddc84; --bad:#ff6b6b; --code:#ffd479; --line:#2c3350; }
+  *{box-sizing:border-box}
+  body{font-family:"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--ink);margin:0;padding:0;line-height:1.6}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  h1{font-size:30px;margin:0 0 6px}
+  h2{font-size:23px;margin:36px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--line);color:var(--accent)}
+  h3{font-size:18px;margin:22px 0 8px;color:#cdd6ff}
+  p,li{font-size:15.5px}
+  .sub{color:var(--mut);margin-top:0}
+  .toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 22px;margin:18px 0}
+  .toc a{color:var(--accent);text-decoration:none;display:inline-block;margin:3px 0}
+  .toc a:hover{text-decoration:underline}
+  code,.mono{font-family:"Consolas","Courier New",monospace;direction:ltr;unicode-bidi:embed}
+  code{background:#0b0e1a;color:var(--code);padding:2px 6px;border-radius:5px;font-size:14px}
+  pre{background:#0b0e1a;border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow:auto;direction:ltr;text-align:left}
+  pre code{background:none;padding:0;color:#e6ebff}
+  table{width:100%;border-collapse:collapse;margin:12px 0;background:var(--card);border-radius:10px;overflow:hidden}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:right;font-size:14.5px;vertical-align:top}
+  th{background:var(--card2);color:#cdd6ff}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:16px 0}
+  .q{border-right:4px solid var(--accent)}
+  .badge{display:inline-block;background:var(--card2);color:var(--mut);border-radius:6px;padding:1px 8px;font-size:12px;margin-inline-start:8px}
+  .ans{color:var(--good);font-weight:700}
+  .no{color:var(--bad);font-weight:700}
+  .tip{background:#13261c;border:1px solid #244b34;border-radius:10px;padding:12px 16px;margin:12px 0}
+  .warn{background:#2a1620;border:1px solid #4b2430;border-radius:10px;padding:12px 16px;margin:12px 0}
+  ul.tight{margin:6px 0}
+  .key{color:var(--accent);font-weight:700}
+  hr{border:none;border-top:1px solid var(--line);margin:30px 0}
+  .gold{background:linear-gradient(180deg,#1e2747,#171c30);border:1px solid #34406e;border-radius:12px;padding:16px 20px;margin:18px 0;font-size:16px}
+  .matrix td:first-child{font-weight:700;color:#cdd6ff;background:var(--card2)}
+  .matrix .yes{color:var(--good);font-weight:700}
+  .topnav{position:sticky;top:0;z-index:10;background:rgba(15,18,32,.92);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;
+    gap:12px;padding:11px 20px}
+  .topnav .home{display:inline-flex;align-items:center;gap:7px;color:var(--ink);text-decoration:none;
+    background:var(--card);border:1px solid var(--line);border-radius:10px;padding:7px 14px;font-weight:700;font-size:14.5px}
+  .topnav .home:hover{border-color:var(--accent);color:var(--accent)}
+  .topnav .brand{color:var(--mut);font-size:14px;font-weight:600}
+  @media(max-width:520px){.topnav .brand{display:none}}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a class="home" href="index.html">⟵ חזרה לדף הבית</a>
+  <span class="brand">🗂️ JSON Master</span>
+</nav>
+<div class="wrap">
+
+<h1>🗂️ JSON Master</h1>
+<p class="sub">מדריך ממוקד לכל שאלות ה-JSON במבחני הקורס — מה זה JSON, איך נכון לייצג נתונים, וההבדל הקריטי בין <code>load</code> / <code>loads</code> / <code>dump</code> / <code>dumps</code>. כולל את כל סוגי השאלות מהמאגר.</p>
+
+<div class="warn">
+⚠️ <b>הבלבול הכי נפוץ במבחן:</b> ה-<b>"s"</b> בסוף הפקודה = <b>String</b> (מחרוזת).<br>
+<code>loads</code>/<code>dumps</code> עובדים על <b>מחרוזת</b> &nbsp;·&nbsp; <code>load</code>/<code>dump</code> עובדים על <b>קובץ</b>.
+</div>
+
+<div class="toc">
+  <strong>תוכן עניינים</strong><br>
+  <a href="#what">1. מה זה JSON בכלל?</a><br>
+  <a href="#repr">2. איך נכון לייצג נתונים ב-JSON</a><br>
+  <a href="#matrix">3. ארבע הפקודות — טבלה אחת שפותרת הכל</a><br>
+  <a href="#direction">4. הכיוון: load = קריאה, dump = כתיבה</a><br>
+  <a href="#api">5. JSON, API ו-Scraping (שאלות עקיפות)</a><br>
+  <a href="#golden">6. שורת הזהב לשינון</a><br>
+  <a href="#drill">7. תרגול מהיר (עם תשובות)</a>
+</div>
+
+<h2 id="what">1. מה זה JSON בכלל?</h2>
+<div class="card">
+<p><b>JSON</b> (JavaScript Object Notation) הוא <b>פורמט טקסט קל-משקל להעברה ולשמירה של נתונים מובנים</b> בין מערכות — הוא <span class="no">לא</span> שפת תכנות, לא סוג גרף ולא שיטת מיון.</p>
+<ul class="tight">
+<li>הפורמט הנפוץ ביותר לקבלת תשובה מ-<b>web-API</b>. <span class="badge">24B-A · 25A-A · 25A-B</span></li>
+<li>הנתונים מגיעים במבנה <b>מוגדר מראש</b> — בדיוק היתרון של API על פני scraping של HTML גולמי. <span class="badge">26A-B</span></li>
+<li>נראה כמעט כמו <code>dict</code> בפייתון: זוגות <b>מפתח-ערך</b> בתוך סוגריים מסולסלים.</li>
+</ul>
+</div>
+
+<h2 id="repr">2. איך נכון לייצג נתונים ב-JSON <span class="badge">24A-B שאלה 20</span></h2>
+<div class="card q">
+<p>הייצוג הנכון הוא <b>אובייקט עם זוגות מפתח-ערך</b> — לכל שדה יש שם:</p>
+<pre><code>{
+  "course_name": "intro2DS",
+  "year": 2024,
+  "semester": "winter"
+}</code></pre>
+<table>
+<tr><th>אפשרות</th><th>תקין?</th><th>למה</th></tr>
+<tr><td>אובייקט עם מפתחות (למעלה)</td><td class="ans">✔ נכון</td><td>זה JSON תקין עם שמות שדות משמעותיים</td></tr>
+<tr><td class="mono">&lt;course&gt;...&lt;/course&gt;</td><td class="no">✘</td><td>זה <b>XML</b>, לא JSON</td></tr>
+<tr><td class="mono">["intro2DS", 2024, "winter"]</td><td class="no">✘</td><td>מערך תקין תחבירית, אבל <b>איבד את שמות השדות</b></td></tr>
+<tr><td class="mono">{"intro2DS", 2024, "winter"}</td><td class="no">✘</td><td><b>לא JSON תקין</b> — סוגריים מסולסלים חייבים זוגות מפתח:ערך</td></tr>
+</table>
+<div class="tip"><b>כלל:</b> מפתחות וערכי טקסט תמיד ב<b>מרכאות כפולות</b> <code>"</code>; מספרים בלי מרכאות; סוגריים מסולסלים <code>{}</code> = אובייקט (מפתח-ערך), סוגריים מרובעים <code>[]</code> = מערך/רשימה.</div>
+</div>
+
+<h2 id="matrix">3. ארבע הפקודות — טבלה אחת שפותרת הכל</h2>
+<p>כל פקודות ה-JSON הן צירוף של שתי שאלות: <b>(א)</b> לאיזה כיוון? ו-<b>(ב)</b> מחרוזת או קובץ?</p>
+<table class="matrix">
+<tr><th></th><th>מחרוזת (String) ← יש <b>"s"</b></th><th>קובץ (File) ← אין "s"</th></tr>
+<tr><td>קריאה / פענוח<br>JSON ⟵ Python<br><span class="mut">(parse)</span></td>
+    <td class="mono"><span class="yes">json.loads(s)</span><br>מחרוזת JSON → dict</td>
+    <td class="mono"><span class="yes">json.load(f)</span><br>קובץ JSON → dict</td></tr>
+<tr><td>כתיבה / סריאליזציה<br>Python ⟶ JSON<br><span class="mut">(serialize)</span></td>
+    <td class="mono"><span class="yes">json.dumps(obj)</span><br>dict → מחרוזת JSON</td>
+    <td class="mono"><span class="yes">json.dump(obj, f)</span><br>dict → קובץ JSON</td></tr>
+</table>
+<div class="warn">
+<b>הכלל היחיד שצריך לזכור:</b><br>
+🔤 ה-<b>"s"</b> בסוף = <b>String</b> (מחרוזת). יש s → מחרוזת. אין s → קובץ.<br>
+📥 <b>load</b> = לטעון פנימה (JSON → אובייקט פייתון). &nbsp; 📤 <b>dump</b> = להשליך החוצה (אובייקט פייתון → JSON).
+</div>
+
+<h2 id="direction">4. איך זה מופיע במבחן</h2>
+
+<div class="card q">
+<h3><code>loads</code> — ממיר מחרוזת JSON ל-dictionary <span class="badge">24B-B שאלה 8</span></h3>
+<p>"איזו פקודה תמיר json למבנה נתונים של dictionary?" ← <span class="ans">loads</span><br>
+<span class="no">לא</span> <code>load</code> (קורא מקובץ), <span class="no">לא</span> <code>dumps</code>/<code>dump</code> (הכיוון ההפוך).</p>
+</div>
+
+<div class="card q">
+<h3><code>dumps</code> — ממיר אובייקט פייתון למחרוזת JSON <span class="badge">26A-A שאלה 1</span></h3>
+<p>"מה תפקידה של הפקודה <code>json.dumps()</code>?" ← <span class="ans">להמיר אובייקט פייתון (כמו dict) למחרוזת בפורמט JSON</span> (serialization).</p>
+</div>
+
+<div class="card q">
+<h3><code>dump</code> — כותב dictionary לקובץ/מסמך טקסט <span class="badge">26A-B שאלה 3</span></h3>
+<p>"איזו פקודת JSON אחראית על העברה של Dictionary למסמך טקסט?" ← <span class="ans">dump</span><br>
+(<code>dump</code> כותב לקובץ; <code>loads</code> קורא ממחרוזת — לכן הוא מסיח שגוי כאן.)</p>
+</div>
+
+<div class="tip"><b>טריק בחירה מהיר:</b> השאלה מדברת על <b>מחרוזת/טקסט בזיכרון</b>? → הפקודה עם <b>s</b>. מדברת על <b>קובץ</b>? → בלי s. ממירים <b>מ-</b>JSON? → <b>load*</b>. ממירים <b>ל-</b>JSON? → <b>dump*</b>.</div>
+
+<h2 id="api">5. JSON, API ו-Scraping (שאלות עקיפות)</h2>
+<div class="card">
+<ul class="tight">
+<li><b>API מול Scraping:</b> היתרון של API הוא שהנתונים מגיעים במבנה מוגדר מראש (לרוב <b>JSON נקי</b>), בעוד scraping מחלץ מתוך HTML גולמי. <span class="badge">25A-A · 26A-B</span></li>
+<li><b>איך מרכישים נתונים מאתר?</b> קודם בודקים אם יש <b>API</b> (הדלת הראשית) ומשתמשים בו; אם אין — עוברים ל-<b>crawling/scraping</b>. <span class="badge">24A-A</span></li>
+<li><b>שים לב:</b> את תגובת ה-JSON מה-API מפענחים בפייתון עם <code>json.loads(...)</code> (מחרוזת → dict), <span class="no">לא</span> עם BeautifulSoup (זה ל-HTML).</li>
+</ul>
+</div>
+
+<h2 id="golden">6. שורת הזהב לשינון</h2>
+<div class="gold">
+<b>"s" = String.</b> &nbsp; <code>loads</code>/<code>dumps</code> = מחרוזת, <code>load</code>/<code>dump</code> = קובץ. &nbsp;|&nbsp; <b>load</b> = JSON ← פייתון (קריאה), <b>dump</b> = פייתון → JSON (כתיבה). &nbsp;|&nbsp; JSON = פורמט טקסט של זוגות <b>מפתח-ערך</b> ב-<code>{ }</code>.
+</div>
+
+<h2 id="drill">7. תרגול מהיר (כסה את התשובות)</h2>
+<ol>
+<li>קיבלת מחרוזת JSON מ-API ורוצה dict? → <span class="ans">json.loads(s)</span></li>
+<li>רוצה לשמור dict לקובץ <code>data.json</code>? → <span class="ans">json.dump(obj, f)</span></li>
+<li>רוצה להפוך dict למחרוזת JSON (בלי קובץ)? → <span class="ans">json.dumps(obj)</span></li>
+<li>קוראים אובייקט מתוך קובץ <code>config.json</code> פתוח? → <span class="ans">json.load(f)</span></li>
+<li>מה זה JSON? → <span class="ans">פורמט טקסט להעברת/שמירת נתונים מובנים</span> (לא שפת תכנות)</li>
+<li>הייצוג הנכון של רשומה ב-JSON? → <span class="ans">אובייקט עם זוגות מפתח-ערך</span> ב-<code>{ }</code></li>
+<li><code>{"a", "b", "c"}</code> זה JSON תקין? → <span class="no">לא</span> (חסרים מפתחות; זו לא רשימה ולא אובייקט)</li>
+<li>יתרון API על scraping? → <span class="ans">נתונים במבנה מוגדר מראש (JSON)</span></li>
+</ol>
+
+<hr>
+<p class="sub">המסמך מכסה את כל שאלות ה-JSON במאגר. שלוט בטבלת ארבע הפקודות (סעיף 3) ובשורת הזהב (סעיף 6) — ותענה נכון על כל וריאציה. בהצלחה! 🍀</p>
+
+</div>
+</body>
+</html>
