@@ -141,17 +141,17 @@
     "examCode": "24B-B",
     "year": 2024,
     "topic": "ml_python",
-    "question": "מה ידפיס הקוד הבא?",
+    "question": "מה יהיה הפלט (output) של הקוד הבא?",
     "options": [
-      "",
-      "",
-      "",
-      ""
+      "[3 4 5]",
+      "[1 2]",
+      "[False False True True True]",
+      "Value Error"
     ],
     "correctIndex": 0,
     "official": false,
-    "explanation": "שאלת פלט קוד; הקוד והאפשרויות לא נשמרו ב-OCR ולכן לא ניתן לקבוע את התשובה לפי משמעות.",
-    "hasImage": false
+    "explanation": "הביטוי arr > 2 יוצר מסכה בוליאנית [False False True True True], ו-arr[mask] מחזיר רק את האיברים שבהם הערך True — כלומר [3 4 5]. אינדוקס בוליאני ב-NumPy (course_summary §numpy).",
+    "hasImage": true
   },
   {
     "num": 10,

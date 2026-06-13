@@ -3927,6 +3927,27 @@ window.QUESTIONS = [
   "topicLabel": "מושגי ML ופייתון"
  },
  {
+  "examCode": "24B-B",
+  "year": 2024,
+  "topic": "ml_python",
+  "question": "מה יהיה הפלט (output) של הקוד הבא?",
+  "options": [
+   "[3 4 5]",
+   "[1 2]",
+   "[False False True True True]",
+   "Value Error"
+  ],
+  "correctIndex": 0,
+  "official": false,
+  "explanation": "הביטוי arr > 2 יוצר מסכה בוליאנית [False False True True True], ו-arr[mask] מחזיר רק את האיברים שבהם הערך True — כלומר [3 4 5]. אינדוקס בוליאני ב-NumPy (course_summary §numpy).",
+  "hasImage": false,
+  "source": "exam",
+  "sourceLabel": "2024 סמסטר ב׳ מועד ב׳",
+  "id": "24B-B-Q9",
+  "image": "images/exams/24B-B-Q9.png",
+  "topicLabel": "מושגי ML ופייתון"
+ },
+ {
   "examCode": "25-S",
   "year": 2025,
   "topic": "ml_python",
