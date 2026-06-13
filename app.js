@@ -472,9 +472,22 @@ function bindGlobal(){
   });
 })();
 
+/* ---------- deep link ---------- */
+/* A guide page can link to index.html?practice=<topicKey> to jump straight
+   into a free-practice session of that whole topic (e.g. nlp / cleaning / acquisition). */
+function autoStartFromURL(){
+  let t;
+  try{ t = new URLSearchParams(location.search).get("practice"); }catch(e){ return; }
+  if(!t || !TOPICS.some(([k])=>k===t)) return;
+  if(countFor(t, {officialOnly:false, mistakesOnly:false})===0) return;
+  S.mode="practice"; S.topic=t;
+  const r=document.querySelector('input[name=mode][value="practice"]'); if(r) r.checked=true;
+  startSession();
+}
+
 /* ---------- boot ---------- */
 if(!QS.length){
   document.getElementById("app").innerHTML="<div class='card'><h2>לא נטענו שאלות</h2><p>ודאו ש-<code>questions.js</code> נמצא לצד הדף.</p></div>";
 }else{
-  initStart(); bindGlobal();
+  initStart(); bindGlobal(); autoStartFromURL();
 }
