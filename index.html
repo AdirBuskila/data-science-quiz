@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>משחק תרגול — מבוא למדעי הנתונים</title>
-<link rel="stylesheet" href="styles.css?v=16">
+<link rel="stylesheet" href="styles.css?v=17">
 <script>
   // Apply saved theme before first paint to avoid a flash of the wrong theme.
   (function(){ try{ var t=localStorage.getItem("dsq_theme"); if(t==="light"||t==="dark") document.documentElement.dataset.theme=t; }catch(e){} })();
@@ -30,6 +30,7 @@
 <main id="app">
   <!-- START -->
   <section id="screen-start" class="screen">
+    <a href="regex-master.html" class="btn ghost regex-help" target="_blank" rel="noopener">🧙 מתקשה עם ביטויים רגולריים?</a>
     <div class="card">
       <h2>בחירת אופן תרגול</h2>
 
@@ -72,8 +73,6 @@
 
       <button id="startBtn" class="btn primary big">התחל ▶</button>
       <p id="poolInfo" class="poolinfo"></p>
-
-      <a href="regex-master.html" class="btn ghost regex-help" target="_blank" rel="noopener">🧙 מתקשה עם ביטויים רגולריים?</a>
     </div>
   </section>
 
