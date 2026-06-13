@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regex Master — מדריך לשאלות הרגקס במבחן</title>
+<style>
+  :root{ --bg:#0f1220; --card:#1a1f33; --card2:#222842; --ink:#eef1f8; --mut:#9aa3c0;
+         --accent:#6ea8fe; --good:#3ddc84; --bad:#ff6b6b; --code:#ffd479; --line:#2c3350; }
+  *{box-sizing:border-box}
+  body{font-family:"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--ink);margin:0;padding:0;line-height:1.6}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  h1{font-size:30px;margin:0 0 6px}
+  h2{font-size:23px;margin:36px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--line);color:var(--accent)}
+  h3{font-size:18px;margin:22px 0 8px;color:#cdd6ff}
+  p,li{font-size:15.5px}
+  .sub{color:var(--mut);margin-top:0}
+  .toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 22px;margin:18px 0}
+  .toc a{color:var(--accent);text-decoration:none;display:inline-block;margin:3px 0}
+  .toc a:hover{text-decoration:underline}
+  code,.mono{font-family:"Consolas","Courier New",monospace;direction:ltr;unicode-bidi:embed}
+  code{background:#0b0e1a;color:var(--code);padding:2px 6px;border-radius:5px;font-size:14px}
+  pre{background:#0b0e1a;border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow-x:auto;direction:ltr;text-align:left}
+  pre code{background:none;padding:0;color:#e7ecff}
+  table{width:100%;border-collapse:collapse;margin:12px 0;background:var(--card);border-radius:10px;overflow:hidden}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:right;font-size:14.5px;vertical-align:top}
+  th{background:var(--card2);color:#cdd6ff}
+  td .mono{color:var(--code)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:16px 0}
+  .q{border-right:4px solid var(--accent)}
+  .badge{display:inline-block;background:var(--card2);color:var(--mut);border-radius:6px;padding:1px 8px;font-size:12px;margin-inline-start:8px}
+  .ans{color:var(--good);font-weight:700}
+  .no{color:var(--bad)}
+  .tip{background:#13261c;border:1px solid #244b34;border-radius:10px;padding:12px 16px;margin:12px 0}
+  .warn{background:#2a1620;border:1px solid #4b2430;border-radius:10px;padding:12px 16px;margin:12px 0}
+  .decode{background:#0b0e1a;border:1px solid var(--line);border-radius:10px;padding:6px 0;margin:10px 0}
+  .decode div{display:flex;gap:12px;padding:6px 14px;border-bottom:1px dashed var(--line)}
+  .decode div:last-child{border-bottom:none}
+  .decode .tok{flex:0 0 150px;color:var(--code);font-family:Consolas,monospace;direction:ltr;text-align:left}
+  .decode .exp{flex:1}
+  ul.tight{margin:6px 0}
+  .key{color:var(--accent);font-weight:700}
+  hr{border:none;border-top:1px solid var(--line);margin:30px 0}
+  .pill{font-size:12px;background:var(--card2);padding:2px 9px;border-radius:20px;color:var(--mut)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>🧙 Regex Master</h1>
+<p class="sub">מדריך ממוקד לשאלות הביטויים הרגולריים (regex) — בדיוק בסגנון שמופיע במבחני הקורס. כולל את כל סוגי השאלות, צ׳יטשיט, ופירוק תו-אחר-תו של כל שאלה אמיתית מהמבחנים.</p>
+
+<div class="toc">
+  <strong>תוכן עניינים</strong><br>
+  <a href="#types">1. שלושת סוגי השאלות במבחן</a><br>
+  <a href="#cheat">2. צ׳יטשיט — כל הסימנים שמופיעים במבחנים</a><br>
+  <a href="#funcs">3. הפונקציות: match / search / findall / sub + group</a><br>
+  <a href="#greedy">4. חמדני מול עצלן (greedy vs non-greedy)</a><br>
+  <a href="#method">5. שיטת הפענוח ב-4 צעדים</a><br>
+  <a href="#worked">6. כל שאלות הרגקס מהמבחנים — מפורקות</a><br>
+  <a href="#traps">7. מלכודות נפוצות + טיפים לבחינה</a><br>
+  <a href="#drill">8. תרגול מהיר (עם תשובות)</a>
+</div>
+
+<h2 id="types">1. שלושת סוגי השאלות במבחן</h2>
+<p>כל שאלות הרגקס בקורס נופלות לאחת משלוש תבניות. אם תזהה את הסוג — חצי מהעבודה נעשתה:</p>
+<table>
+<tr><th>סוג</th><th>איך נראה</th><th>מה צריך לעשות</th></tr>
+<tr><td><span class="key">א. "מה מזהה הביטוי?"</span></td><td>נותנים pattern ושואלים איזה <em>סוג מחרוזת</em> הוא תופס (אימייל / שם / מספר…)</td><td>לקרוא את התבנית משמאל לימין ולתרגם לעברית</td></tr>
+<tr><td><span class="key">ב. "מה הפלט?"</span></td><td>נותנים קוד עם <code>re.search</code>/<code>findall</code> ומחרוזת, שואלים מה יודפס</td><td>להריץ בראש את ההתאמה הראשונה / כל ההתאמות, לשים לב ל-<code>group()</code></td></tr>
+<tr><td><span class="key">ג. "איזה pattern נכון?"</span></td><td>מתארים דרישה (טלפון/מספר עשרוני) ונותנים 4 patterns לבחירה</td><td>לפסול תבניות לפי דרישה אחת קטנה בכל פעם</td></tr>
+</table>
+
+<h2 id="cheat">2. צ׳יטשיט — כל הסימנים שמופיעים במבחנים</h2>
+<p>זו רשימת הסימנים שבאמת הופיעו בשאלות. אם תכיר את כולם בעל-פה, אתה מכוסה.</p>
+<table>
+<tr><th>סימן</th><th>משמעות</th><th>דוגמה מהמבחן</th></tr>
+<tr><td class="mono">.</td><td>תו <b>אחד</b> כלשהו (חוץ מירידת שורה)</td><td class="mono">[A-Z]\w\w → "Din"</td></tr>
+<tr><td class="mono">\d</td><td>ספרה אחת (0–9)</td><td class="mono">\d+\.\d+ → "15.99"</td></tr>
+<tr><td class="mono">\w</td><td>תו-מילה: אות/ספרה/קו-תחתון</td><td class="mono">[Aa]\w+</td></tr>
+<tr><td class="mono">\s</td><td>תו רווח (space/tab/newline)</td><td class="mono">\s* בין מספרים</td></tr>
+<tr><td class="mono">\b</td><td><b>גבול מילה</b> — תופר; לא צורך תו</td><td class="mono">\b[A-Z][a-z]*\b</td></tr>
+<tr><td class="mono">[abc]</td><td>אחד מהתווים שבסוגריים</td><td class="mono">[Aa] = A או a</td></tr>
+<tr><td class="mono">[a-z]</td><td>טווח: אות קטנה כלשהי</td><td class="mono">[a-zA-Z]+</td></tr>
+<tr><td class="mono">[^…]</td><td><b>שלילה</b>: כל תו שאינו בסוגריים</td><td class="mono">[^aeiou] = לא תנועה</td></tr>
+<tr><td class="mono">+</td><td>פעם <b>אחת או יותר</b> מהקודם</td><td class="mono">[a-z]+</td></tr>
+<tr><td class="mono">*</td><td><b>אפס</b> או יותר מהקודם</td><td class="mono">[a-z]* (גם מילה בלי המשך)</td></tr>
+<tr><td class="mono">?</td><td>הקודם <b>אופציונלי</b> (0 או 1)</td><td class="mono">(\.\d\d)? = עשרוני לא חובה</td></tr>
+<tr><td class="mono">{2,}</td><td>לפחות 2 פעמים</td><td class="mono">[a-zA-Z]{2,} (סיומת דומיין)</td></tr>
+<tr><td class="mono">{2}</td><td>בדיוק 2 פעמים</td><td class="mono">[0-9]{2}</td></tr>
+<tr><td class="mono">^</td><td>תחילת המחרוזת</td><td class="mono">^[A-Z]…</td></tr>
+<tr><td class="mono">$</td><td>סוף המחרוזת</td><td class="mono">…[a-z]+$</td></tr>
+<tr><td class="mono">(…)</td><td>קבוצת לכידה (group) — נשמרת</td><td class="mono">group(1), group(2)</td></tr>
+<tr><td class="mono">(?:…)</td><td>קבוצה <b>ללא</b> לכידה (רק לקיבוץ)</td><td class="mono">(?:0|[1-9]\d*)</td></tr>
+<tr><td class="mono">|</td><td>או (alternation)</td><td class="mono">(?:,|\s) = פסיק או רווח</td></tr>
+<tr><td class="mono">\.</td><td>נקודה <b>ממשית</b> (escaped)</td><td class="mono">\.[a-z]{2,} בדומיין</td></tr>
+</table>
+<div class="warn"><b>שים לב:</b> בתוך <code>[...]</code> רוב הסימנים מאבדים את כוחם המיוחד. <code>[.+*]</code> מתאים לנקודה/פלוס/כוכבית <b>כתווים רגילים</b>, לא כמפעילים.</div>
+
+<h2 id="funcs">3. הפונקציות: match / search / findall / sub</h2>
+<table>
+<tr><th>פונקציה</th><th>מה עושה</th><th>מחזירה</th></tr>
+<tr><td class="mono">re.match(p, s)</td><td>מנסה להתאים <b>רק מתחילת</b> המחרוזת</td><td>אובייקט Match או None</td></tr>
+<tr><td class="mono">re.search(p, s)</td><td>סורקת את <b>כל</b> המחרוזת ומחזירה את ההתאמה <b>הראשונה</b></td><td>אובייקט Match או None</td></tr>
+<tr><td class="mono">re.findall(p, s)</td><td>מחזירה את <b>כל</b> ההתאמות</td><td>רשימה של מחרוזות (או tuples אם יש קבוצות)</td></tr>
+<tr><td class="mono">re.sub(p, r, s)</td><td>מחליפה כל התאמה ב-<code>r</code></td><td>מחרוזת חדשה</td></tr>
+</table>
+<div class="tip"><b>match מול search</b> (שאלה 26A-B Q4): <code>match</code> = רק מההתחלה. <code>search</code> = בכל מקום. זה ההבדל היחיד שבודקים.</div>
+<h3>group() — קריטי לשאלות "מה הפלט"</h3>
+<ul class="tight">
+<li><code>m.group(0)</code> = <b>כל</b> ההתאמה המלאה.</li>
+<li><code>m.group(1)</code> = מה שנתפס בזוג הסוגריים <b>הראשון</b>, <code>group(2)</code> השני, וכן הלאה.</li>
+<li>אם הקבוצה לא תפסה כלום → מחרוזת ריקה <code>''</code>.</li>
+</ul>
+
+<h2 id="greedy">4. חמדני מול עצלן (greedy vs non-greedy)</h2>
+<p>זו שאלה חוזרת (26A-B Q9, ו-practice).</p>
+<ul class="tight">
+<li><code>*</code> ו-<code>+</code> הם <span class="key">חמדניים (greedy)</span>: תופסים כמה שיותר.</li>
+<li>הוספת <code>?</code> אחריהם — <code>*?</code> או <code>+?</code> — הופכת אותם ל-<span class="key">עצלנים (non-greedy)</span>: תופסים כמה שפחות (ההתאמה הקצרה ביותר).</li>
+</ul>
+<pre><code>s = "A new day"
+m = re.search(r'(.*)(.*?)', s)
+m.group(1)  # "A new day"  ← (.*) החמדן בלע הכול
+m.group(2)  # ""           ← (.*?) העצלן הסתפק בריק
+m.group(0)  # "A new day"</code></pre>
+
+<h2 id="method">5. שיטת הפענוח ב-4 צעדים</h2>
+<ol>
+<li><span class="key">עוגנים?</span> יש <code>^</code> בהתחלה / <code>$</code> בסוף? אם כן — ההתאמה חייבת לכסות את <b>כל</b> המחרוזת. זה הכלי החזק ביותר לפסילה.</li>
+<li><span class="key">פרק לבלוקים</span> לפי רווחים ומפרידים. כל בלוק = "מילה/מספר" עם הכמת שלו (<code>+ * ? {n}</code>).</li>
+<li><span class="key">תרגם כל בלוק</span> לעברית: "אות גדולה ואז אותיות קטנות", "ספרה אחת או יותר"…</li>
+<li><span class="key">בדוק קצוות</span> — האם תו עודף (כמו <code>s</code> בסוף) הורס את ההתאמה? בשאלות הקשות זה ההבדל בין תשובות.</li>
+</ol>
+
+<h2 id="worked">6. כל שאלות הרגקס מהמבחנים — מפורקות</h2>
+
+<div class="card q">
+<h3>24A-A Q4 — מה מזהה הביטוי? <span class="badge">סוג א · אימייל</span></h3>
+<pre><code>r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'</code></pre>
+<div class="decode">
+<div><span class="tok">^…+</span><span class="exp">שם משתמש: אות/ספרה/<code>. _ % + -</code>, אחד או יותר</span></div>
+<div><span class="tok">@</span><span class="exp">הסימן @ ממש</span></div>
+<div><span class="tok">[a-zA-Z0-9.-]+</span><span class="exp">דומיין</span></div>
+<div><span class="tok">\.[a-zA-Z]{2,}$</span><span class="exp">נקודה + סיומת בת 2 אותיות לפחות, עד הסוף</span></div>
+</div>
+<p>✅ <span class="ans">כתובות אימייל</span>. הסימן <code>@</code> + מבנה הדומיין הם הרמז המיידי.</p>
+</div>
+
+<div class="card q">
+<h3>24A-B Q4 — מה מטרת הביטוי? <span class="badge">סוג א · מילים באות גדולה</span></h3>
+<pre><code>re.findall(r"\b[A-Z][a-z]*\b", text)</code></pre>
+<div class="decode">
+<div><span class="tok">\b</span><span class="exp">גבול מילה (שתהיה מילה שלמה)</span></div>
+<div><span class="tok">[A-Z]</span><span class="exp">אות גדולה אחת בהתחלה</span></div>
+<div><span class="tok">[a-z]*</span><span class="exp">אפס או יותר אותיות קטנות אחריה</span></div>
+<div><span class="tok">\b</span><span class="exp">גבול מילה בסוף</span></div>
+</div>
+<p>✅ <span class="ans">מילים שמתחילות באות גדולה וממשיכות באותיות קטנות</span>. שים לב: <code>*</code> ולא <code>+</code>, אז גם מילה של אות גדולה בודדת תיתפס.</p>
+</div>
+
+<div class="card q">
+<h3>24A-B Q5 — איזה pattern נכון? <span class="badge">סוג ג · מספר שלם + עשרוני</span></h3>
+<p>דרישה: שלם <b>ללא</b> אפס מוביל, אחריו מספר עשרוני (שיכול להתחיל באפס), מופרדים בפסיק/רווח (אופציונלי).</p>
+<pre><code>✅ r"\b[1-9]\d*\s*(?:,|\s)\s*(?:0|[1-9]\d*)\.\d+\b"</code></pre>
+<div class="decode">
+<div><span class="tok">[1-9]\d*</span><span class="exp">שלם שמתחיל ב-1–9 (אוסר אפס מוביל)</span></div>
+<div><span class="tok">(?:,|\s)</span><span class="exp">מפריד: פסיק או רווח</span></div>
+<div><span class="tok">(?:0|[1-9]\d*)</span><span class="exp">חלק שלם של העשרוני — מותר שיתחיל ב-0</span></div>
+<div><span class="tok">\.\d+</span><span class="exp">נקודה ואז ספרה אחת לפחות</span></div>
+</div>
+<p>פסילה מהירה: <code>\d+,\d+</code> מתיר אפס מוביל ואין עשרוני → פסול. <code>0*\d+\.?\d*</code> — הנקודה אופציונלית → פסול. <code>[1-9]\d*\.\d</code> — אין מפריד → פסול.</p>
+</div>
+
+<div class="card q">
+<h3>24B-A Q16 — מה מזהה? <span class="badge">סוג א · שם באנגלית</span></h3>
+<pre><code>r'^[A-Z][a-z]+ [A-Z]\. [A-Z][a-z]+$'</code></pre>
+<div class="decode">
+<div><span class="tok">[A-Z][a-z]+</span><span class="exp">מילה: גדולה + קטנות (שם פרטי)</span></div>
+<div><span class="tok">[A-Z]\.</span><span class="exp">אות גדולה יחידה ונקודה (תחילית אמצעית)</span></div>
+<div><span class="tok">[A-Z][a-z]+</span><span class="exp">מילה נוספת (שם משפחה)</span></div>
+</div>
+<p>✅ <span class="ans">שם של בן אדם באנגלית עם תחילית השם האמצעי</span> — כמו <span class="mono">"John F. Kennedy"</span>.</p>
+</div>
+
+<div class="card q">
+<h3>24B-B Q16 — מה יכול לחזור? <span class="badge">סוג א · הקשה!</span></h3>
+<pre><code>r'^\d+(\.[0-9]{2})? [^aeiou]([aeiou][^aeiou])+$'</code></pre>
+<div class="decode">
+<div><span class="tok">\d+</span><span class="exp">מספר שלם</span></div>
+<div><span class="tok">(\.[0-9]{2})?</span><span class="exp">אופציונלי: נקודה + בדיוק 2 ספרות</span></div>
+<div><span class="tok">[^aeiou]</span><span class="exp">תו פותח שאינו תנועה</span></div>
+<div><span class="tok">([aeiou][^aeiou])+</span><span class="exp">זוגות של תנועה+לא-תנועה, חוזר עד הסוף</span></div>
+</div>
+<p>✅ <span class="ans">יכול להחזיר "20 kilos" אבל לא "20.35 dolars"</span>. למה? <span class="mono">kilos = k·(il)·(os)</span> מתפרק בדיוק לזוגות. <span class="mono">dolars = d·(ol)·(ar)·s</span> — נשארת <code>s</code> עודפת ו-<code>$</code> נכשל.</p>
+<div class="tip"><b>הלקח:</b> כשיש <code>$</code> בסוף + תבנית זוגות חוזרת — ספור אם האותיות מתחלקות בדיוק. תו אחד עודף = פסילה.</div>
+</div>
+
+<div class="card q">
+<h3>25-S Q4 — מה יחזיר? <span class="badge">סוג א</span></h3>
+<pre><code>r'\b[Aa]\w+'</code></pre>
+<p>גבול מילה, ואז <code>A</code> או <code>a</code>, ואז תו-מילה אחד או יותר.<br>
+✅ <span class="ans">מילים שמתחילות באות A גדולה או קטנה</span>.</p>
+</div>
+
+<div class="card q">
+<h3>25A-A Q12 — מה הפלט? <span class="badge">סוג ב · חילוץ מחירים</span></h3>
+<p>תבנית טיפוסית <code>\d+\.\d+</code> על טקסט עם <span class="mono">$15.99 / €20.50</span>: התבנית תופסת רק את <b>הספרות</b>, בלי סמלי המטבע.<br>
+✅ <span class="ans">['15.99', '20.50']</span>.</p>
+<div class="tip"><b>כלל:</b> findall מחזיר רק את מה ש<b>נכלל בתבנית</b>. אם <code>$</code> לא בתבנית — הוא לא יופיע בפלט.</div>
+</div>
+
+<div class="card q">
+<h3>25A-B Q24 — מה מייצג? <span class="badge">סוג א</span></h3>
+<pre><code>r'\b[a-zA-Z]+\b'</code></pre>
+<p>רצף של אות אחת או יותר (גדולות/קטנות) בין גבולות מילה.<br>
+✅ <span class="ans">מילים שמכילות שילובים של אותיות גדולות או קטנות</span> (מילים אלפבתיות).</p>
+</div>
+
+<div class="card q">
+<h3>26A-B Q4 — match מול search <span class="badge">מושגי</span></h3>
+<p>✅ <span class="ans"><code>re.match</code> מחפשת רק מתחילת המחרוזת, <code>re.search</code> בכל המחרוזת.</span></p>
+</div>
+
+<div class="card q">
+<h3>26A-B Q9 — מה עושה ? אחרי * או + <span class="badge">greedy/lazy</span></h3>
+<p>✅ <span class="ans">הופך ל-non-greedy: ההתאמה הקצרה ביותר האפשרית.</span></p>
+</div>
+
+<div class="card q">
+<h3>practice — [A-Z]\w\w עם search מול findall <span class="badge">סוג ב</span></h3>
+<pre><code>pattern = "[A-Z]\w\w"
+txt = "Dina and Dan came for a visit"
+re.search(pattern, txt).group(0)   # → "Din"   (התאמה ראשונה בלבד)
+re.findall(pattern, txt)           # → ["Din","Dan"]  (כל ההתאמות)</code></pre>
+<p>אות גדולה + שני תווי-מילה. מ-<span class="mono">Dina</span> נתפס <span class="mono">Din</span> (לא Dina — רק 2 תווים אחרי הגדולה). <code>search</code> מחזיר את הראשון, <code>findall</code> את כולם.</p>
+</div>
+
+<div class="card q">
+<h3>practice — pattern לטלפונים <span class="badge">סוג ג</span></h3>
+<p>פלט מבוקש: <span class="mono">["03-6610304", "02 3434884"]</span></p>
+<pre><code>✅ pattern = "0\d[ -]\d\d\d\d\d\d\d"</code></pre>
+<p><code>0</code> + ספרה + (רווח <b>או</b> מקף) + שבע ספרות. ה-<code>[ -]</code> הוא הטריק: תופס גם <code>-</code> וגם רווח.</p>
+</div>
+
+<div class="card q">
+<h3>practice — רגישות לאותיות <span class="badge">מלכודת</span></h3>
+<pre><code>re.search("mary", "Mary has a little lamb")   # → None</code></pre>
+<p>✅ <span class="no">לא תימצא התאמה</span> — regex <b>רגיש לאותיות גדולות/קטנות</b>. <span class="mono">mary ≠ Mary</span>.</p>
+</div>
+
+<div class="card q">
+<h3>practice — group(0) מול group(2) עם עצלן <span class="badge">קשה</span></h3>
+<pre><code>s = "A new day"
+m = re.search(r'(.*)(.*?)', s)
+print(m.group(2))   # ריק
+print(m.group(0))   # "A new day"</code></pre>
+<p>הקבוצה הראשונה החמדנית בולעת הכול, השנייה העצלנית נשארת ריקה.</p>
+</div>
+
+<h2 id="traps">7. מלכודות נפוצות + טיפים לבחינה</h2>
+<table>
+<tr><th>מלכודת</th><th>הכלל</th></tr>
+<tr><td>רגישות לאותיות</td><td><code>mary</code> לא תופס <code>Mary</code>. אין דגל <code>re.IGNORECASE</code>? אז גדולה≠קטנה.</td></tr>
+<tr><td><code>*</code> מול <code>+</code></td><td><code>*</code> = גם אפס פעמים (מתאים לריק); <code>+</code> = לפחות אחת.</td></tr>
+<tr><td><code>.</code> מול <code>\.</code></td><td><code>.</code> = כל תו; <code>\.</code> = נקודה ממש. בדומיינים/עשרוניים תמיד <code>\.</code>.</td></tr>
+<tr><td><code>^…$</code></td><td>מחייב התאמה <b>מלאה</b>. תו עודף בקצה = פסילה. כלי הפסילה מס׳ 1.</td></tr>
+<tr><td>findall עם קבוצות</td><td>אם יש <code>( )</code> בתבנית — findall מחזיר את <b>הקבוצות</b>, לא ההתאמה המלאה.</td></tr>
+<tr><td>מה נכלל בפלט</td><td>findall מחזיר רק את מה שהתבנית מכסה. <code>$</code> שלא בתבנית = לא בפלט.</td></tr>
+<tr><td><code>[^…]</code></td><td>שלילה: "כל מה ש<b>לא</b>". <code>[^aeiou]</code> = כל תו שאינו תנועה.</td></tr>
+<tr><td>גרידי כברירת מחדל</td><td><code>* +</code> תמיד חמדניים אלא אם הוספת <code>?</code>.</td></tr>
+</table>
+
+<h2 id="drill">8. תרגול מהיר (כסה את התשובות)</h2>
+<ol>
+<li>מה מחזיר <code>re.findall(r'\d+', "a12b3")</code>? → <span class="ans">['12','3']</span></li>
+<li><code>re.match(r'\d+', "abc123")</code> מוצא? → <span class="no">None</span> (match רק מההתחלה)</li>
+<li><code>re.search(r'\d+', "abc123").group()</code>? → <span class="ans">"123"</span></li>
+<li>מה ההבדל בין <code>[A-Z]+</code> ל-<code>[A-Z]*</code>? → <span class="ans">+ דורש אות אחת לפחות, * מתיר גם ריק</span></li>
+<li><code>r'^[A-Z][a-z]*$'</code> תופס "AB"? → <span class="no">לא</span> (B גדולה, אבל <code>[a-z]*</code> דורש קטנות)</li>
+<li>מה תופס <code>[^0-9]</code>? → <span class="ans">כל תו שאינו ספרה</span></li>
+<li><code>r'colou?r'</code> תופס "color" ו-"colour"? → <span class="ans">כן</span> (u אופציונלי)</li>
+<li>מתי <code>+?</code> שימושי? → <span class="ans">להתאמה הקצרה ביותר (non-greedy)</span></li>
+</ol>
+
+<hr>
+<p class="sub">המסמך מכסה את כל 15 שאלות הרגקס שמופיעות במאגר. שלוט בצ׳יטשיט (סעיף 2) ובשיטת 4 הצעדים (סעיף 5) — ותענה נכון על כל וריאציה. בהצלחה! 🍀</p>
+
+</div>
+</body>
+</html>
