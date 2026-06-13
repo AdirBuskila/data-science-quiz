@@ -11,9 +11,9 @@
       "אלגוריתם DBSCAN עם eps=5",
       "אלגוריתם KMeans עם K=5"
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "official": false,
-    "explanation": "לצורות שרירותיות/לא-עגולות DBSCAN עדיף על KMeans, ובחירת eps תלויה בצורת הנתונים; ללא איור קשה לקבוע את הערך המדויק, אך לפי הצ'יטשיט DBSCAN מתאים לצורות לא-מובנות.",
+    "explanation": "לפי מבנה הנתונים שבאיור, ארבעה אשכולות עגולים/כדוריים מופרדים — KMeans עם K=4 מאשכל אותם בצורה הטובה ביותר. רמז: (KMeans K=4); course_summary §clustering.",
     "hasImage": true
   },
   {
@@ -181,10 +181,10 @@
       "max",
       "dropna"
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "official": false,
-    "explanation": "למילוי ערכים חסרים מספריים מעדיפים חציון (median), שעמיד לחריגים. רמז: (median); course_summary §4-5 (טיפול בחסרים).",
-    "hasImage": false
+    "explanation": "העמודה 'A' מכילה מחרוזות (\"1\",\"2\",None,\"4\"), ולכן median/max אינם מתאימים לערכים טקסטואליים — הדרך המועדפת למילוי ערך חסר קטגורי/טקסטואלי היא mode (הערך השכיח). רמז: (mode); course_summary §4-5 (טיפול בחסרים).",
+    "hasImage": true
   },
   {
     "num": 12,
