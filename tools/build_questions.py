@@ -17,7 +17,7 @@ TOOLS = pathlib.Path(__file__).parent
 RAW = TOOLS / "raw"
 OUT = TOOLS.parent
 
-EXAM_CODES = ["24A-A","24A-B","24B-A","24B-B","25-S","25A-A","25A-B","26A-A","26A-B"]
+EXAM_CODES = ["24A-A","24A-B","24B-A","24B-B","25-S","25A-A","25A-B","26A-A","26A-B","26B-A"]
 PRACTICE_FILES = ["practice-A.json","practice-B.json"]
 
 TOPIC_LABEL = {
@@ -35,6 +35,7 @@ EXAM_LABEL = {
     "24B-A":"2024 סמסטר ב׳ מועד א׳","24B-B":"2024 סמסטר ב׳ מועד ב׳",
     "25-S":"2025 מבחן לדוגמה","25A-A":"2025 סמסטר א׳ מועד א׳","25A-B":"2025 סמסטר א׳ מועד ב׳",
     "26A-A":"2026 סמסטר א׳ מועד א׳","26A-B":"2026 סמסטר א׳ מועד ב׳",
+    "26B-A":"2026 סמסטר ב׳ מועד א׳",
 }
 
 def norm(s):

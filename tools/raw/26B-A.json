@@ -1,0 +1,428 @@
+[
+  {
+    "num": 1,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "cleaning",
+    "question": "מהי המטרה המרכזית של שלב טיוב הנתונים (Data Cleaning) בתהליך ניתוח נתונים?",
+    "options": [
+      "לשפר את איכות ומהימנות הנתונים על ידי טיפול בערכים חסרים, הסרת כפילויות ותיקון טעויות, כדי להבטיח שמודלי למידת המכונה יפעלו על בסיס נקי ומדויק.",
+      "להוסיף משתנים סינתטיים חדשים המבוססים על ידע מוקדם, כדי להגדיל את כמות המידע הכללי בבסיס הנתונים ולמנוע חוסר בנתונים עתידיים.",
+      "לצמצם את מורכבות החישובים על ידי דחיסת כל המשתנים למבנה אחיד של אפסים ואחדות, מה שמקצר את זמן הריצה של מודלים מורכבים במחשב.",
+      "לשנות את התפלגות הנתונים באופן יזום, כדי להבטיח שכל המשתנים יקיימו את הנחות התפלגות נורמלית מושלמת לפני הניתוח."
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "מטרת טיוב הנתונים היא לשפר איכות ומהימנות: טיפול בחסרים, הסרת כפילויות ותיקון טעויות, כדי שהמודלים יפעלו על בסיס נקי. course_summary §4-5 (ניקוי נתונים).",
+    "hasImage": false
+  },
+  {
+    "num": 2,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "clustering",
+    "question": "אתם מנסים לבצע אשכול (clustering) של מבנה נתונים שנראה כך. איזה אלגוריתם יאפשר לאשכל את הנתונים ל-2 קבוצות, כך שתתקבל קבוצה אחת עבור כל גל?",
+    "options": [
+      "DBSCAN",
+      "KMeans עם K=2",
+      "KNN עם K=2",
+      "PCA עם K=2"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "המבנה מורכב משתי צורות מאורכות/לא-קמורות (גלים). DBSCAN מאשכל לפי צפיפות ומזהה צורות לא-קמורות; KMeans מניח אשכולות כדוריים ויכשל כאן. רמז: (DBSCAN); course_summary §clustering.",
+    "hasImage": true
+  },
+  {
+    "num": 3,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "cleaning",
+    "question": "מה מהבאים נכון לגבי ההבדל בין סולם סדר (ordinal) וסולם שמי (nominal)?",
+    "options": [
+      "בסולם סדר אפשר לחשב חציון ובסולם שמי אי אפשר",
+      "בסולם סדר אפשר לחשב שכיח ובסולם שמי אי אפשר",
+      "בסולם סדר אי אפשר לחשב ממוצע ובסולם שמי אפשר",
+      "סולם סדר מיועד למשתנים רציפים וסולם שמי למשתנים בדידים"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "בסולם סדר יש דירוג ולכן אפשר חציון; בסולם שמי אין סדר ולכן חציון לא מוגדר (רק שכיח). שכיח אפשר בשניהם, ולכן ב' שגוי. course_summary §4-5 (סולמות מדידה).",
+    "hasImage": false
+  },
+  {
+    "num": 4,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "nlp",
+    "question": "אילו מחרוזות יחזיר הביטוי הרגולרי הבא?",
+    "options": [
+      "שמות ושמות משפחה, כולל שם אמצעי המיוצג ע\"י אות אמצעית עם נקודה אחריה",
+      "סיסמה המשלבת לפחות 8 תווים, כולל לפחות 3 אותיות גדולות, 2 אותיות קטנות ו-3 נקודות",
+      "בין 3 ל-4 משפטי טקסט, אחד מהם מאוד קצר",
+      "שם משתמש חוקי ברשת טוויטר"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "התבנית ^[A-Z][a-z]{1,} [A-Z]\\. [A-Z][a-z]+$ מתאימה: מילה (גדולה+קטנות), אות גדולה ונקודה (שם אמצעי), ומילה נוספת — כלומר \"John F. Kennedy\". רמז: (שם עם תחילית אמצעית); course_summary §12 (regex).",
+    "hasImage": false,
+    "code": "r'^[A-Z][a-z]{1,} [A-Z]\\. [A-Z][a-z]+$'"
+  },
+  {
+    "num": 5,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "eda",
+    "question": "סטודנטית טענה שאפשר להציג שלושה משתנים ויותר על תרשים פיזור (scatterplot). האם הטענה נכונה?",
+    "options": [
+      "כן, תרשים פיזור הוא אמנם גרף דו-מימדי, אך ניתן להציג שני משתנים ע\"י מיקום, ועוד כמה משתנים ע\"י צורות, צבעים, גדלים וכד'",
+      "כן, תרשים פיזור הוא גרף דו-מימדי או תלת מימדי, אבל אפשר ליצג בו גם מימד זמן",
+      "כן, תרשים פיזור הוא גרף דו-מימדי, אבל ניתן להציג עוד כמה משתנים, אבל בדידים או קטגוריאלים בלבד",
+      "כן, אפשר להציג בו שלושה משתנים בצורה מקבילה כך שיתארו את ה-IQR של כל המשתנים ואת הערכים הרחוקים מהמרכז"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "אפשר לקודד משתנים נוספים מעבר לשני הצירים באמצעות צבע, צורה וגודל הנקודה — כך מציגים 3+ משתנים בתרשים פיזור. course_summary §EDA (ויזואליזציה).",
+    "hasImage": false
+  },
+  {
+    "num": 6,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "eda",
+    "question": "נתון כי מקדם המתאם של פירסון (Pearson) בין משתנה X למשתנה Y הוא 0. איזו מהטענות הבאות לגבי הקשר בין המשתנים היא לא נכונה?",
+    "options": [
+      "ערך 0 בהכרח מעיד שאין כל תלות סטטיסטית, פונקציונלית או סיבתית בין המשתנים, ולכן הם בלתי-תלויים לחלוטין.",
+      "לא ניתן להסיק בוודאות שאין קשר, שכן פירסון מודד רק קשר לינארי; ייתכן קשר לא-לינארי (כגון פרבולי) שהמדד אינו מזהה.",
+      "אם נצייר את הנתונים בתרשים פיזור ייתכן שנראה תבנית מסודרת מאוד, אך לא בצורת קו ישר או מוטה.",
+      "ערך 0 מצביע שהמודל הלינארי אינו מסביר כלל את השונות של Y באמצעות X, אך ייתכן שקיימת תלות פונקציונלית חזקה ביניהם."
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "השאלה מבקשת את הטענה הלא-נכונה: פירסון 0 שולל רק קשר לינארי, ולא כל תלות. הטענה ש-0 מוכיח אי-תלות מוחלטת היא השגויה. course_summary §EDA (מתאם פירסון).",
+    "hasImage": false
+  },
+  {
+    "num": 7,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "eda",
+    "question": "נתון מסד נתונים שבו הרבעון הראשון (Q1) הוא 10 והרבעון השלישי (Q3) הוא 20. על פי שיטת ה-IQR הקלאסית לזיהוי חריגים, מהו הטווח התקין של הנתונים?",
+    "options": [
+      "בין -5 ל-35 (IQR=10; גבול תחתון 10-1.5·10=-5, גבול עליון 20+1.5·10=35)",
+      "בין 10 ל-20 (הטווח התקין הוא ערכי ה-IQR עצמם, כלומר תוכן הקופסה ב-Box Plot)",
+      "בין 0 ל-30 (סכום הרבעונים 30, לכן הטווח 0 עד 30 ללא תלות ב-IQR)",
+      "בין 2.5 ל-27.5 (IQR=10; גבול תחתון 10-0.75·10=2.5, גבול עליון 20+0.75·10=27.5)"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "IQR=Q3-Q1=10. הגבולות: Q1-1.5·IQR=-5 ו-Q3+1.5·IQR=35. כל ערך מחוץ ל[-5,35] חריג. course_summary §EDA (IQR/Box Plot).",
+    "hasImage": false
+  },
+  {
+    "num": 8,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "cleaning",
+    "question": "באיזו ספרייה בפייתון כנראה נרצה להשתמש לצורך ניקוי נתונים המייצגים dataset?",
+    "options": [
+      "Pandas",
+      "BeautifulSoup",
+      "requests",
+      "matplotlib"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "Pandas היא ספריית עיבוד וניקוי הנתונים (DataFrame). BeautifulSoup/requests לאיסוף מהאינטרנט, matplotlib לויזואליזציה. course_summary §1 (pandas).",
+    "hasImage": false
+  },
+  {
+    "num": 9,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "acquisition",
+    "question": "נרצה ליצור dataset של מאפייני בגדים מחברת אופנה, אם החברה פתחה את הנתונים לשאילתות דרך האינטרנט אך לא פרסמה אתר עם הנתונים. כיצד נוכל לבצע את ההרכשה?",
+    "options": [
+      "נוכל לבצע את ההרכשה באמצעות API, אך לא באמצעות scraping & crawling",
+      "נוכל לבצע את ההרכשה באמצעות HideousSoup, אך לא באמצעות BeautifulSoup",
+      "נוכל לבצע את ההרכשה באמצעות scraping & crawling, אך לא באמצעות API",
+      "נוכל לבצע את ההרכשה באמצעות BeautifulSoup, אך לא באמצעות HideousSoup"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "אין אתר לגרד, אך יש ממשק שאילתות — כלומר API. לכן ההרכשה דרך API ולא דרך scraping/crawling. (HideousSoup אינה ספרייה אמיתית.) course_summary §2-3 (הרכשת נתונים).",
+    "hasImage": false
+  },
+  {
+    "num": 10,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "ml_python",
+    "question": "איזו מהתוצאות הבאות תתקבל מהרצת שתי הפקודות הבאות?",
+    "options": [
+      "res1 יחזיר סכום שכר לפי מחלקה (HR: 11000, IT: 7000) ו-res2 יחזיר את מספר העובדים בכל מחלקה (HR: 2, IT: 1)",
+      "res1 יחזיר אובייקט DataFrame עם כל העמודות מסוכמות לפי מחלקה, ו-res2 יחזיר רשימת שמות המחלקות הייחודיות בלבד",
+      "res1 יחזיר ממוצע שכר לכל מחלקה (HR: 5500, IT: 7000), ו-res2 יחזיר את סכום השכר בכל מחלקה",
+      "הקוד יזרוק שגיאה מכיוון ש-groupby לא יודע להתמודד עם עמודה מסוג string (כמו Department)"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "groupby('Department')['Salary'].sum() מסכם שכר לכל מחלקה; value_counts() סופר כמה שורות (עובדים) בכל מחלקה. course_summary §1 (pandas groupby).",
+    "hasImage": true
+  },
+  {
+    "num": 11,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "cleaning",
+    "question": "ברצונך לבדוק כמה ערכים חסרים (Null/NaN) קיימים בכל עמודה ב-DataFrame. איזו פקודה תיתן את התוצאה המדויקת ביותר?",
+    "options": [
+      "df.isnull().sum()",
+      "df.count_null()",
+      "df.describe()",
+      "df.info()"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "df.isnull() מחזיר מסכת True/False לחסרים, ו-.sum() סופר אותם לכל עמודה. count_null אינה קיימת; describe/info לא נותנים ספירת חסרים מדויקת לכל עמודה. course_summary §4-5.",
+    "hasImage": false
+  },
+  {
+    "num": 12,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "nlp",
+    "question": "מה זה vectorizer?",
+    "options": [
+      "מתודה הממירה אובייקט מפורמט גולמי לווקטור מאפיינים, שניתן להשתמש בו ללמידת מכונה",
+      "מתודה שמבצעת המרה של אובייקטים בסקלות שונות לאובייקטים באותה הסקלה",
+      "אלגוריתם להמרת מטריצת נתונים למטריצה וקטורית, לצורך למידת מכונה",
+      "מתודה להמרת וקטורי מאפיינים לוקטורי יחידה, תוך שימוש ב-L1 או L2"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "vectorizer ממיר נתון גולמי (כגון טקסט) לווקטור מאפיינים מספרי שאפשר להזין למודל למידת מכונה. course_summary §12 (NLP/וקטוריזציה).",
+    "hasImage": false
+  },
+  {
+    "num": 13,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "eda",
+    "question": "מעוניינים להציג נתונים בהיסטוגרמה. נכנה בשם \"ערך תא\" (bin) את כמות הדגימות בו. איך עלולה להשפיע הקטנת מספר התאים על \"ערך התא\" בכל תא?",
+    "options": [
+      "ככל שנקטין את מספר התאים, ככל הנראה ערכי התאים יהיו גדולים יותר",
+      "ככל שנקטין את מספר התאים, יווצרו תאים עם שונות ערכים גבוהה יותר בתוך כל תא",
+      "ככל שנקטין את מספר התאים, הערכים בתא יהיו בלתי תלויים יותר",
+      "ככל שנקטין את מספר התאים, ככל הנראה ערכי התאים יהיו קטנים יותר"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "פחות תאים = כל תא רחב יותר ומכיל יותר דגימות, ולכן ערכי התאים (הספירות) גדלים. course_summary §EDA (היסטוגרמה).",
+    "hasImage": false
+  },
+  {
+    "num": 14,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "ml_python",
+    "question": "שירים מאופיינים לפי 50 תכונות, ונתון מאגר היסטורי מתויג (\"להיט\", \"מוצלח\", \"ללא פוטנציאל\"). ברצוננו לסווג את כל השירים ל-3 קבוצות אלו. איך תסווגו את הבעיה?",
+    "options": [
+      "הבעיה שייכת ללמידה מונחית (supervised) ומוגדרת כבעיית סיווג (classification)",
+      "הבעיה שייכת ללמידה מונחית (supervised) ומוגדרת כבעיית הורדת מימדים (dimension reduction)",
+      "הבעיה שייכת ללמידה לא מונחית (unsupervised) ומוגדרת כבעיית אשכול (cluster analysis)",
+      "הבעיה שייכת ללמידה לא מונחית (unsupervised) ומוגדרת כבעיית רגרסיה (regression)"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "יש תיוג היסטורי (label) של קטגוריות בדידות → למידה מונחית מסוג סיווג (classification). course_summary §6 (supervised/classification).",
+    "hasImage": false
+  },
+  {
+    "num": 15,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "cleaning",
+    "question": "מה הדרך המועדפת מבין האפשרויות הבאות כדי למלא ערכים חסרים (במקום הפקודה הרשומה כ-XXXX)?",
+    "options": [
+      "mode()[0]",
+      "max()",
+      "median()",
+      "next()"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "עמודת Fruit מכילה מחרוזות קטגוריות (Apple/Banana/Orange), ולכן median/max אינם מתאימים. ממלאים בערך השכיח mode()[0] (=Banana). course_summary §4-5 (מילוי חסרים).",
+    "hasImage": true
+  },
+  {
+    "num": 16,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "supervised",
+    "question": "הקוד הבא נוגע למודל רגרסיה לינארית. חסרים קטעי קוד במקומות המסומנים. השלימו את הקוד במקומות המתאימים.",
+    "options": [
+      "VVVV=fit; WWWW=predicted; XXXX=m; YYYY=predict; ZZZZ=X_test",
+      "VVVV=fit_predict; WWWW=predicted; XXXX=m; YYYY=predict; ZZZZ=X_test, Y_test",
+      "VVVV=fit; WWWW=m2; XXXX=LinearRegression(); YYYY=fit; ZZZZ=X_test, Y_test",
+      "VVVV=fit_transform; WWWW=transformed; XXXX=m; YYYY=transform; ZZZZ=X_test"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "מאמנים את המודל עם .fit(X_train, y_train), ואז מנבאים: predicted = m.predict(X_test). הניבוי מקבל רק את מאפייני המבחן X_test (לא את התוויות). course_summary §6 (רגרסיה לינארית).",
+    "hasImage": true
+  },
+  {
+    "num": 17,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "acquisition",
+    "question": "מהו הקובץ robots.txt?",
+    "options": [
+      "קובץ טקסט בתיקיית השורש של אתר, שמנחה סורקים אוטומטיים (בוטים של מנועי חיפוש) אילו דפים מותר או אסור להם לסרוק",
+      "קובץ המגדיר את הרובוטים והסקריפטים האוטומטיים שירוצו בצד השרת של האתר ומתזמן את פעולתם",
+      "קובץ אבטחה החוסם פיזית גישה של האקרים ובוטים זדוניים ומונע מהם להיכנס לאתר",
+      "קובץ המכיל את מפת האתר (sitemap) ומציג למשתמשים רשימה של כל הדפים לצורך ניווט"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "robots.txt בשורש האתר מנחה זחלנים אילו אזורים מותר/אסור לסרוק. course_summary §2-3 (crawling).",
+    "hasImage": false
+  },
+  {
+    "num": 18,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "acquisition",
+    "question": "איזו מתודה משמשת לקבלת מידע בתוך המודול requests?",
+    "options": [
+      "get",
+      "read",
+      "read_page",
+      "get_all"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "requests.get(url) שולחת בקשת HTTP GET ומחזירה את התגובה. course_summary §2-3 (requests/HTTP).",
+    "hasImage": false
+  },
+  {
+    "num": 19,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "cleaning",
+    "question": "במהלך חקירת הנתונים (EDA) הבחנת שקיים קשר לא-ליניארי מובהק בין משתנה מסביר X למשתנה המוסבר Y במודל רגרסיה ליניארית. מהי הפעולה הנכונה ביותר במסגרת Feature Engineering כדי לשפר את התאמת המודל?",
+    "options": [
+      "ביצוע טרנספורמציה מתמטית על X (כגון לוגריתם או שורש) כדי ליצור קשר לינארי יותר, שיאפשר למודל לתאר את הנתונים מדויק יותר",
+      "מחיקת המשתנה X ממסד הנתונים, שכן רגרסיה ליניארית לומדת רק קשרים לינאריים ישירים וכל קשר אחר הוא שגיאת מדידה",
+      "שימוש בערכים חסרים (NaN) כקטגוריה חדשה, שכן הוספתם תגרום למודל לזהות אוטומטית שהקשר לא ליניארי",
+      "אימון המודל מספר פעמים על אותם נתונים ללא שינוי, שכן ככל שנריץ fit יותר המודל \"ילמד\" עקמומיות"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "טרנספורמציה (log/שורש) על המשתנה ממירה קשר לא-ליניארי לקרוב-ליניארי, כך שמודל לינארי יתאים טוב יותר. course_summary §Feature Engineering.",
+    "hasImage": false
+  },
+  {
+    "num": 20,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "acquisition",
+    "question": "איזה יתרון יש להרכשה על ידי API ביחס ל-Scraping?",
+    "options": [
+      "צמצום של התלות במבנה האתר",
+      "מאפשר לעקוף הגבלות זכויות יוצרים",
+      "מחייב OCR",
+      "אינו מאפשר אוטומציה"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "API מחזיר נתונים מובְנים ויציבים, ולכן אינו תלוי במבנה ה-HTML של האתר (שעלול להשתנות) — בניגוד ל-scraping. course_summary §2-3 (API מול scraping).",
+    "hasImage": false
+  },
+  {
+    "num": 21,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "cleaning",
+    "question": "יש לך DataFrame עם עמודה Status הכוללת ערכים כמו \"Active\", \"Inactive\", \"Pending\". איזו פעולה תמיר את המשתנה בצורה אופטימלית למודל למידת מכונה, כך שכל מצב יהפוך לעמודה בינארית?",
+    "options": [
+      "שימוש ב-pd.get_dummies(df['Status']), שכן זו הדרך הסטנדרטית ל-One-Hot Encoding שאינו מניח סדר בין הקטגוריות",
+      "שימוש ב-df['Status'].astype('int'), כי פייתון ממיר אוטומטית מחרוזות למספרים לפי סדר אלפביתי",
+      "שימוש ב-df['Status'].fillna(0), כי זו הפעולה היחידה שמאפשרת למודלים להתעלם מהערכים הטקסטואליים",
+      "שימוש ב-df.drop('Status', axis=1), שכן משתנים קטגוריאליים תמיד פוגעים בביצועי המודל"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "get_dummies מבצע One-Hot Encoding: כל קטגוריה הופכת לעמודה בינארית, בלי להניח סדר בין הקטגוריות. astype('int') ייכשל על מחרוזות. course_summary §4-5 (קידוד קטגוריות).",
+    "hasImage": false
+  },
+  {
+    "num": 22,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "ml_python",
+    "question": "במהלך חקירת נתונים (EDA) את מעוניינת לבדוק מהם סוגי המשתנים (Dtypes) בכל אחת מעמודות ה-DataFrame. באיזו פקודה תשתמשי?",
+    "options": [
+      "df.dtypes",
+      "df.info_columns()",
+      "df.show_types()",
+      "df.describe_all()"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "df.dtypes מחזיר את סוג הנתונים של כל עמודה. שאר האפשרויות אינן מתודות קיימות ב-pandas. course_summary §1 (pandas).",
+    "hasImage": false
+  },
+  {
+    "num": 23,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "acquisition",
+    "question": "איזה קוד HTTP מציין שהבקשה הצליחה?",
+    "options": [
+      "200",
+      "404",
+      "400",
+      "500"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "קוד 200 (OK) מציין הצלחה. 404=לא נמצא, 400=בקשה שגויה, 500=שגיאת שרת. course_summary §2-3 (HTTP).",
+    "hasImage": false
+  },
+  {
+    "num": 24,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "eda",
+    "question": "לפי שיטת המרחק בסטיות תקן מהממוצע (המתאימה למשתנה המתפלג נורמלית), ערך נחשב חריג אם הוא מרוחק מהממוצע לפחות:",
+    "options": [
+      "3 סטיות תקן (מאחר שכ-99.7% מהנתונים נמצאים בטווח של ±3 סטיות תקן)",
+      "סטיית תקן אחת",
+      "חציון אחד",
+      "טווח בין-רבעוני אחד (IQR)"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "בהתפלגות נורמלית כ-99.7% מהערכים בטווח ±3σ, ולכן ערך מעבר ל-3 סטיות תקן מהממוצע נחשב חריג. course_summary §EDA (כלל 68-95-99.7).",
+    "hasImage": false
+  },
+  {
+    "num": 25,
+    "examCode": "26B-A",
+    "year": 2026,
+    "topic": "clustering",
+    "question": "איזה פרמטר מהפרמטרים הבאים אינו שייך לאלגוריתם clustering הירארכי (AgglomerativeClustering)?",
+    "options": [
+      "הפרמטר min_samples_split",
+      "הפרמטר n_clusters",
+      "הפרמטר compute_full_tree",
+      "הפרמטר linkage"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "min_samples_split שייך לעצי החלטה (Decision Trees), לא לאשכול הירארכי. n_clusters, linkage ו-compute_full_tree הם פרמטרים של AgglomerativeClustering. course_summary §clustering.",
+    "hasImage": false
+  }
+]

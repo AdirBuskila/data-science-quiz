@@ -3,7 +3,7 @@
 import json, pathlib, collections
 
 RAW = pathlib.Path(__file__).parent / "raw"
-CODES = ["24A-A","24A-B","24B-A","24B-B","25-S","25A-A","25A-B","26A-A","26A-B"]
+CODES = ["24A-A","24A-B","24B-A","24B-B","25-S","25A-A","25A-B","26A-A","26A-B","26B-A"]
 TOPICS = {"acquisition","cleaning","eda","nlp","supervised","evaluation","clustering","ml_python"}
 
 total=usable=0
