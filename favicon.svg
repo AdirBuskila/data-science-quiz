@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Data Science practice">
+  <rect width="32" height="32" rx="7.5" fill="#0d0f14"/>
+  <g stroke="#22d3ee" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8.5 7v17.5H26"/>
+    <path d="M11 20 22.5 9.5" stroke-width="1.8" opacity=".5"/>
+  </g>
+  <g fill="#22d3ee">
+    <circle cx="11" cy="19.5" r="2"/>
+    <circle cx="15.5" cy="15" r="2"/>
+    <circle cx="19.5" cy="16.5" r="2"/>
+    <circle cx="23" cy="10" r="2"/>
+  </g>
+</svg>
