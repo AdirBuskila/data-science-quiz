@@ -81,7 +81,7 @@
     ],
     "correctIndex": 0,
     "official": false,
-    "explanation": "רק האפשרות הראשונה אוכפת שלם ללא אפס מוביל ([1-9]\\d*), מפריד פסיק או רווח אופציונלי, ואז עשרוני שיכול להתחיל באפס ((?:0|[1-9]\\d*)\\.\\d+). מבוסס regex (course_summary §12).",
+    "explanation": "רק האפשרות `\\b[1-9]\\d*\\s*(?:,|\\s) \\s*(?:0|[1-9]\\d*)\\.\\d+\\b` אוכפת שלם ללא אפס מוביל ([1-9]\\d*), מפריד פסיק או רווח אופציונלי, ואז עשרוני שיכול להתחיל באפס ((?:0|[1-9]\\d*)\\.\\d+). מבוסס regex (course_summary §12).",
     "hasImage": false
   },
   {
@@ -336,7 +336,7 @@
     ],
     "correctIndex": 0,
     "official": false,
-    "explanation": "הייצוג הנכון ב-JSON הוא אובייקט עם זוגות מפתח-ערך (אפשרות א): {\"course_name\":\"intro2DS\",\"year\":2024,\"semester\":\"winter\"}. אפשרות ב היא XML, ג היא מערך ללא שמות שדות, ד אינה JSON תקין. רמז: (אובייקט key-value); course_summary §2-3 (JSON).",
+    "explanation": "הייצוג הנכון ב-JSON הוא אובייקט עם זוגות מפתח-ערך: {\"course_name\":\"intro2DS\",\"year\":2024,\"semester\":\"winter\"}. שאר האפשרויות שגויות: אחת מהן היא XML, אחת היא מערך ללא שמות שדות, ואחת אינה JSON תקין. רמז: (אובייקט key-value); course_summary §2-3 (JSON).",
     "hasImage": false
   }
 ]

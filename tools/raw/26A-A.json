@@ -217,7 +217,7 @@
     ],
     "correctIndex": 0,
     "official": false,
-    "explanation": "Precision = TP/(TP+FP) - חיזויים חיוביים נכונים חלקי כל החיזויים החיוביים. אפשרות ב היא recall.",
+    "explanation": "Precision = TP/(TP+FP) - חיזויים חיוביים נכונים חלקי כל החיזויים החיוביים. האפשרות \"כיחס החיזויים הנכונים של המחלקה החיובית חלקי סך הדוגמאות החיוביות\" היא recall.",
     "hasImage": false
   },
   {

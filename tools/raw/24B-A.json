@@ -45,7 +45,7 @@
     "options": ["2 True False", "7 1 0", "4 True False", "2 True True"],
     "correctIndex": 0,
     "official": false,
-    "explanation": "הספירה ב-count רגישה לאותיות גדולות/קטנות: רק שתי ההופעות של one באותיות קטנות נספרות (One ו-ONE לא), ולכן count(\"one\")=2. המחרוזת מתחילה ב-one ולכן startswith(\"one\")=True, אבל מסתיימת ב-ONE ולכן endswith(\"one\")=False. הפלט: ‎2 True False — תשובה א. (בטופס המבחן המקורי סדר המילים בתשובה א הוצג הפוך — ‎2 False True — עקב כיווניות RTL של המסמך.)",
+    "explanation": "הספירה ב-count רגישה לאותיות גדולות/קטנות: רק שתי ההופעות של one באותיות קטנות נספרות (One ו-ONE לא), ולכן count(\"one\")=2. המחרוזת מתחילה ב-one ולכן startswith(\"one\")=True, אבל מסתיימת ב-ONE ולכן endswith(\"one\")=False. הפלט: ‎2 True False. (בטופס המבחן המקורי סדר המילים בתשובה זו הוצג הפוך — ‎2 False True — עקב כיווניות RTL של המסמך.)",
     "hasImage": false
   },
   {
@@ -105,7 +105,7 @@
     "options": ["img:images/exams/24B-A-Q9-OP-A.png", "img:images/exams/24B-A-Q9-OP-B.png", "img:images/exams/24B-A-Q9-OP-C.png", "img:images/exams/24B-A-Q9-OP-D.png"],
     "correctIndex": 0,
     "official": false,
-    "explanation": "להשגת הפיצ'רים מורידים את עמודת התווית: X = df.drop(columns=[label_column]); y = df[label_column]; ואז train_test_split(X, y, test_size=test_ratio, random_state=rand_state). השילוב הנכון הוא אפשרות א.",
+    "explanation": "להשגת הפיצ'רים מורידים את עמודת התווית: X = df.drop(columns=[label_column]); y = df[label_column]; ואז train_test_split(X, y, test_size=test_ratio, random_state=rand_state). זה השילוב הנכון.",
     "hasImage": true
   },
   {
@@ -189,7 +189,7 @@
     "options": ["שם של בן אדם באנגלית עם תחילית השם האמצעי", "כתובת URL פשוטה", "כתובת דוא\"ל (email)", "כל התשובות נכונות"],
     "correctIndex": 0,
     "official": false,
-    "explanation": "הביטוי r'^[A-Z][a-z]+ [A-Z]\\. [A-Z][a-z]+$' מתאים לתבנית: מילה באות גדולה ואחריה אותיות קטנות, רווח, אות גדולה יחידה ונקודה, רווח, ומילה נוספת באות גדולה — כלומר שם באנגלית עם תחילית לשם האמצעי (למשל \"John F. Kennedy\"). זו תשובה א.",
+    "explanation": "הביטוי r'^[A-Z][a-z]+ [A-Z]\\. [A-Z][a-z]+$' מתאים לתבנית: מילה באות גדולה ואחריה אותיות קטנות, רווח, אות גדולה יחידה ונקודה, רווח, ומילה נוספת באות גדולה — כלומר שם באנגלית עם תחילית לשם האמצעי (למשל \"John F. Kennedy\"). זו התשובה \"שם של בן אדם באנגלית עם תחילית השם האמצעי\".",
     "hasImage": true
   },
   {

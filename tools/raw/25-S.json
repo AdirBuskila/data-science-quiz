@@ -404,7 +404,7 @@
     ],
     "correctIndex": 1,
     "official": true,
-    "explanation": "שיטת IQR מזהה חריגים מחוץ לטווח [Q1−1.5·IQR, Q3+1.5·IQR], כפי שמיושם בתשובה ב.",
+    "explanation": "שיטת IQR מזהה חריגים מחוץ לטווח [Q1−1.5·IQR, Q3+1.5·IQR], כפי שמיושם בתשובה שמחשבת q1, q3 ו-iqr ובוחרת ערכים מחוץ לגדרות 1.5·IQR.",
     "hasImage": false
   }
 ]
