@@ -4,3 +4,5 @@ tools/package.json
 tools/raw/*.png
 missing-questions.html
 *.pdf
+tools/verify/needhelp/*/course.json
+tools/raw/courseflow/

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>משחק תרגול — מבוא למדעי הנתונים</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20">
+<link rel="stylesheet" href="styles.css?v=22">
 <script>
   // Apply saved theme before first paint to avoid a flash of the wrong theme.
   (function(){ try{ var t=localStorage.getItem("dsq_theme"); if(t==="light"||t==="dark") document.documentElement.dataset.theme=t; }catch(e){} })();
@@ -23,6 +23,7 @@
   </div>
   <div class="topbar-right">
     <div class="topstats" id="topStats"></div>
+    <button id="crsHub" class="btn ghost crs-entry" type="button" title="קורסים מודרכים: סטטיסטיקה וגרפים · ניקוי נתונים · ביטויים רגולריים · מודלים והערכה">🧭 צריך עזרה?</button>
     <button id="learnEntry" class="btn ghost learn-entry" type="button">📖 מצב לימוד</button>
     <!-- label kept on all breakpoints for clarity -->
     <button id="themeToggle" class="theme-toggle" type="button" aria-label="החלפת מצב תצוגה (בהיר/כהה)" title="מצב בהיר/כהה"></button>
@@ -32,6 +33,28 @@
 <main id="app">
   <!-- START -->
   <section id="screen-start" class="screen">
+    <div class="crs-promos">
+      <div class="card crs-promo" data-course="eda" role="button" tabindex="0">
+        <span class="big-ico">📐</span>
+        <div><b>צריך עזרה בסטטיסטיקה ובגרפים?</b><span class="crs-promo-sub">קורס מודרך, מממוצע וחציון ועד IQR, חריגים, מתאם ובחירת הגרף.</span></div>
+        <span class="btn primary go">להתחיל ⟵</span>
+      </div>
+      <div class="card crs-promo" data-course="clean" role="button" tabindex="0">
+        <span class="big-ico">🧹</span>
+        <div><b>צריך עזרה בניקוי נתונים ובסולמות?</b><span class="crs-promo-sub">קורס מודרך: סולמות מדידה, ערכים חסרים, כפילויות וקידוד.</span></div>
+        <span class="btn primary go">להתחיל ⟵</span>
+      </div>
+      <div class="card crs-promo" data-course="text" role="button" tabindex="0">
+        <span class="big-ico">🔎</span>
+        <div><b>צריך עזרה בביטויים רגולריים וטקסט?</b><span class="crs-promo-sub">קורס מודרך, מתו בודד ועד ביטוי שלם, ואז Bag of Words.</span></div>
+        <span class="btn primary go">להתחיל ⟵</span>
+      </div>
+      <div class="card crs-promo" data-course="ml" role="button" tabindex="0">
+        <span class="big-ico">🤖</span>
+        <div><b>צריך עזרה במודלים, אשכול והערכה?</b><span class="crs-promo-sub">קורס מודרך: סוגי למידה, K-Means ו-DBSCAN, PCA, Precision, Recall ו-F1.</span></div>
+        <span class="btn primary go">להתחיל ⟵</span>
+      </div>
+    </div>
     <div class="help-links">
       <a href="regex-master.html" class="btn ghost regex-help">🧙 מתקשה עם ביטויים רגולריים?</a>
       <a href="scales-master.html" class="btn ghost regex-help">📏 מתקשה עם סולמות מדידה?</a>
@@ -129,6 +152,31 @@
     </div>
   </section>
 
+  <!-- GUIDED COURSE ("צריך עזרה?") -->
+  <section id="screen-course" class="screen hidden">
+    <div id="crsMapView">
+      <div class="card">
+        <div class="crs-head">
+          <div class="grow"><h2 id="crsTitle"></h2><p id="crsIntro" class="sub"></p></div>
+        </div>
+        <div id="crsOverall" class="crs-overall"></div>
+      </div>
+      <div id="crsMap" class="crs-map"></div>
+      <div class="crs-actions"><button id="crsHomeBtn" class="btn ghost">⟵ חזרה לדף הבית</button>
+        <button id="crsResetBtn" class="btn ghost">איפוס התקדמות הקורס</button></div>
+    </div>
+    <div id="crsLessonView" class="hidden">
+      <article id="crsLesson" class="card learn-content crs-lesson"></article>
+      <div class="crs-actions">
+        <button id="crsLessonBack" class="btn ghost">⟵ למפת השלבים</button>
+        <button id="crsLessonGo" class="btn primary">לשאלות ▶</button>
+      </div>
+    </div>
+    <div id="crsSumView" class="hidden">
+      <div id="crsSum" class="card crs-sum"></div>
+    </div>
+  </section>
+
   <!-- RESULTS -->
   <section id="screen-results" class="screen hidden">
     <div class="card">
@@ -164,7 +212,41 @@
 <script src="questions.js?v=19"></script>
 <script src="learn.js?v=12"></script>
 <script src="bidi.js?v=1"></script>
-<script src="app.js?v=19"></script>
+<script src="app.js?v=20"></script>
+<script src="courses.js?v=1"></script>
+<!-- COURSE LEVELS -->
+<script src="courses/eda/E01.js?v=1"></script>
+<script src="courses/eda/E02.js?v=1"></script>
+<script src="courses/eda/E03.js?v=1"></script>
+<script src="courses/eda/E04.js?v=1"></script>
+<script src="courses/eda/E05.js?v=1"></script>
+<script src="courses/eda/E06.js?v=1"></script>
+<script src="courses/eda/E07.js?v=1"></script>
+<script src="courses/eda/E08.js?v=1"></script>
+<script src="courses/clean/C01.js?v=1"></script>
+<script src="courses/clean/C02.js?v=1"></script>
+<script src="courses/clean/C03.js?v=1"></script>
+<script src="courses/clean/C04.js?v=1"></script>
+<script src="courses/clean/C05.js?v=1"></script>
+<script src="courses/clean/C06.js?v=1"></script>
+<script src="courses/clean/C07.js?v=1"></script>
+<script src="courses/text/T01.js?v=1"></script>
+<script src="courses/text/T02.js?v=1"></script>
+<script src="courses/text/T03.js?v=1"></script>
+<script src="courses/text/T04.js?v=1"></script>
+<script src="courses/text/T05.js?v=1"></script>
+<script src="courses/text/T06.js?v=1"></script>
+<script src="courses/text/T07.js?v=1"></script>
+<script src="courses/text/T08.js?v=1"></script>
+<script src="courses/ml/M01.js?v=1"></script>
+<script src="courses/ml/M02.js?v=1"></script>
+<script src="courses/ml/M03.js?v=1"></script>
+<script src="courses/ml/M04.js?v=1"></script>
+<script src="courses/ml/M05.js?v=1"></script>
+<script src="courses/ml/M06.js?v=1"></script>
+<script src="courses/ml/M07.js?v=1"></script>
+<!-- /COURSE LEVELS -->
+<script src="course-ui.js?v=1"></script>
 <script src="feedback.js?v=1"></script>
 </body>
 </html>
