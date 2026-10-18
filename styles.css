@@ -467,3 +467,7 @@ main{max-width:840px;margin:1.6rem auto;padding:0 1rem}
   .learn-content h2.learn-h{font-size:1.3rem}
   .learn-figs{grid-template-columns:1fr}
 }
+
+/* bidi isolates (bidi.js): a formula inside Hebrew keeps its left-to-right order */
+bdi.ltr{unicode-bidi:isolate;overflow-wrap:anywhere}
+bdi.ltr.nw{white-space:nowrap}

@@ -183,7 +183,7 @@ function renderQuestion(){
   badge.textContent = q.official ? "מחוון רשמי" : "תשובה לא רשמית";
   badge.className = "chip " + (q.official?"official":"unofficial");
 
-  $("#questionText").textContent = q.question;
+  $("#questionText").innerHTML = bidiText(q.question);
   $("#qExtras").innerHTML = extrasHtml(q);
   if(window.Feedback) window.Feedback.slot($("#qExtras"), "q", reportData(q));
 
@@ -239,7 +239,7 @@ function optionHtml(opt){
   if(s.startsWith("img:")) return `<img class="opt-img" src="${s.slice(4)}" alt="" loading="lazy">`;
   // options with no Hebrew (code/output answers) must render LTR, or the RTL page reorders them
   if(!/[֐-׿]/.test(s)) return `<span class="opt-ltr" dir="ltr">${escapeHtml(s)}</span>`;
-  return escapeHtml(opt);
+  return bidiText(opt);
 }
 
 /* ---------- answering ---------- */
@@ -275,7 +275,7 @@ function paintAnswered(v){
   const fb=$("#feedback");
   fb.className = "feedback " + (correct?"good":"bad");
   fb.innerHTML = `<div class="verdict">${correct?"✓ נכון":"✗ לא נכון"}</div>`+
-    `<div class="expl">${escapeHtml(q.explanation||"")}</div>`+
+    `<div class="expl">${bidiText(q.explanation||"")}</div>`+
     (q.official?"":`<span class="note">⚠ תשובה לא רשמית — נגזרה מחומר הקורס.</span>`)+
     `<span class="note">מקור: ${escapeHtml(q.sourceLabel||"")}</span>`;
   $("#nextBtn").classList.remove("hidden");
@@ -354,11 +354,11 @@ function renderResults(correct, byTopic, review){
   $("#resultsReview").innerHTML = review.map(r=>{
     const v=r.q; const chosenTxt = r.chosen!=null ? optionHtml(v.options[r.chosen]) : "— לא נענתה —";
     return `<div class="rev ${r.ok?"ok":"bad"}">
-      <div class="rq">${escapeHtml(v.question)}</div>
+      <div class="rq">${bidiText(v.question)}</div>
       ${extrasHtml(v)}
       <div class="ra"><span class="${r.ok?"good":"miss"}">תשובתך: ${chosenTxt}</span>`+
       (r.ok?"":` · <span class="good">הנכונה: ${optionHtml(v.options[v.correctIndex])}</span>`)+
-      `<br>${escapeHtml(v.explanation||"")}${v.official?"":" (לא רשמי)"}</div>${reportRowHtml(v)}</div>`;
+      `<br>${bidiText(v.explanation||"")}${v.official?"":" (לא רשמי)"}</div>${reportRowHtml(v)}</div>`;
   }).join("");
 }
 
@@ -452,7 +452,7 @@ function bindGlobal(){
   function go(i){
     idx = Math.max(0, Math.min(data.length-1, i));
     const s = data[idx];
-    content.innerHTML = `<h2 class="learn-h">${escapeHtml(s.title)}</h2>` + s.html;
+    content.innerHTML = `<h2 class="learn-h">${bidiText(s.title)}</h2>` + bidiHtml(s.html);
     toc.querySelectorAll("button").forEach((b,j)=> b.classList.toggle("active", j===idx));
     const active = toc.querySelector("button.active");
     if(active) active.scrollIntoView({block:"nearest"});
