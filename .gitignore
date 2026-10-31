@@ -6,3 +6,6 @@ missing-questions.html
 *.pdf
 tools/verify/needhelp/*/course.json
 tools/raw/courseflow/
+
+# rendered videos, review frames, TTS cache (regenerable)
+videos/out/
