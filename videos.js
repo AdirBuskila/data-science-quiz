@@ -11,31 +11,36 @@ window.VIDEO_COURSE = {
      "id": "E01",
      "level": "E01",
      "title": "ממוצע, חציון ושכיח",
-     "minutes": 5
+     "minutes": 5,
+     "youtube": "L6iHYikyZmc"
     },
     {
      "id": "E02",
      "level": "E02",
      "title": "פיזור וסטיית תקן",
-     "minutes": 5
+     "minutes": 5,
+     "youtube": "VdjjaE_sP0g"
     },
     {
      "id": "E03",
      "level": "E03",
      "title": "אחוזונים, רבעונים ו-IQR",
-     "minutes": 5
+     "minutes": 5,
+     "youtube": "whml0LM0ahM"
     },
     {
      "id": "E04",
      "level": "E04",
      "title": "ערכים חריגים",
-     "minutes": 5
+     "minutes": 5,
+     "youtube": "9iJYQiyOLAI"
     },
     {
      "id": "E05",
      "level": "E05",
      "title": "היסטוגרמה ו-box plot",
-     "minutes": 4
+     "minutes": 4,
+     "youtube": "VBp3aQmn9f4"
     },
     {
      "id": "E06",
@@ -83,31 +88,36 @@ window.VIDEO_COURSE = {
      "id": "C03",
      "level": "C03",
      "title": "מילוי ערכים חסרים",
-     "minutes": 5
+     "minutes": 5,
+     "youtube": "YYVSSPfhook"
     },
     {
      "id": "C04",
      "level": "C04",
      "title": "שורות כפולות",
-     "minutes": 4
+     "minutes": 4,
+     "youtube": "5hobYlmEvkA"
     },
     {
      "id": "C05",
      "level": "C05",
      "title": "קידוד קטגוריות ו-binning",
-     "minutes": 4
+     "minutes": 4,
+     "youtube": "eYHRFhiQn0Q"
     },
     {
      "id": "C06",
      "level": "C06",
      "title": "חריגים בקוד pandas",
-     "minutes": 5
+     "minutes": 5,
+     "youtube": "uaA50mmfOO0"
     },
     {
      "id": "C07",
      "level": "C07",
      "title": "מבחן גמר: ניקוי נתונים",
-     "minutes": 4
+     "minutes": 4,
+     "youtube": "if-ZdDMRbHc"
     }
    ]
   },
@@ -120,49 +130,57 @@ window.VIDEO_COURSE = {
      "id": "T01",
      "level": "T01",
      "title": "אבני הבניין של ביטוי רגולרי",
-     "minutes": 5
+     "minutes": 5,
+     "youtube": "6Clw-1NRJ2A"
     },
     {
      "id": "T02",
      "level": "T02",
      "title": "כמתים: כמה פעמים?",
-     "minutes": 5
+     "minutes": 5,
+     "youtube": "HXncQDHIDEY"
     },
     {
      "id": "T03",
      "level": "T03",
      "title": "עוגנים, או וקבוצות",
-     "minutes": 4
+     "minutes": 4,
+     "youtube": "HUcHWGYYImg"
     },
     {
      "id": "T04",
      "level": "T04",
      "title": "חמש הפונקציות: match, search, findall, split, sub",
-     "minutes": 4
+     "minutes": 4,
+     "youtube": "Xbzi8egNinU"
     },
     {
      "id": "T05",
      "level": "T05",
      "title": "חמדן מול עצלן, וקבוצות",
-     "minutes": 4
+     "minutes": 4,
+     "youtube": "vDEXN7PawyQ"
     },
     {
      "id": "T06",
      "level": "T06",
      "title": "לכתוב תבנית שתופסת בדיוק מה שצריך",
-     "minutes": 4
+     "minutes": 4,
+     "youtube": "SBd-AFx-6cI"
     },
     {
      "id": "T07",
      "level": "T07",
      "title": "מטקסט למספרים: Bag of Words",
-     "minutes": 4
+     "minutes": 4,
+     "youtube": "1pRpQ2sKb5k"
     },
     {
      "id": "T08",
      "level": "T08",
      "title": "מבחן גמר: ביטויים רגולריים וטקסט",
-     "minutes": 4
+     "minutes": 4,
+     "youtube": "W8ijCkQKFAI"
     }
    ]
   },
@@ -175,43 +193,50 @@ window.VIDEO_COURSE = {
      "id": "M01",
      "level": "M01",
      "title": "איזה סוג בעיה זו?",
-     "minutes": 4
+     "minutes": 4,
+     "youtube": "WPoC4a1kq4M"
     },
     {
      "id": "M02",
      "level": "M02",
      "title": "K-Means צעד אחר צעד",
-     "minutes": 5
+     "minutes": 5,
+     "youtube": "ViNVqGBwzu0"
     },
     {
      "id": "M03",
      "level": "M03",
      "title": "DBSCAN ואשכול היררכי",
-     "minutes": 5
+     "minutes": 5,
+     "youtube": "nVcwFIKxvgI"
     },
     {
      "id": "M04",
      "level": "M04",
      "title": "PCA: הורדת ממדים",
-     "minutes": 4
+     "minutes": 4,
+     "youtube": "aaw0mf8aV4I"
     },
     {
      "id": "M05",
      "level": "M05",
      "title": "אימון ובדיקה, KNN ושגיאת רגרסיה",
-     "minutes": 5
+     "minutes": 5,
+     "youtube": "WszSoOaqy20"
     },
     {
      "id": "M06",
      "level": "M06",
      "title": "מטריצת בלבול, Precision, Recall ו-F1",
-     "minutes": 6
+     "minutes": 6,
+     "youtube": "at4Hs13lyTA"
     },
     {
      "id": "M07",
      "level": "M07",
      "title": "מבחן גמר: מודלים והערכה",
-     "minutes": 4
+     "minutes": 4,
+     "youtube": "kkSU2t_LBO8"
     }
    ]
   }
